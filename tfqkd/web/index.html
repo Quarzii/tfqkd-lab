@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TF-QKD Lab Console</title>
+<link rel="stylesheet" href="/styles.css">
+<body>
+<main class="shell">
+  <header class="mast">
+    <section>
+      <p class="eyebrow">Twin-field QKD laboratory model</p>
+      <h1>Estimate key rate for your optical link.</h1>
+    </section>
+    <svg class="arms" viewBox="0 0 420 140" aria-hidden="true">
+      <path d="M32 70 C112 20 170 22 210 70 C250 118 308 120 388 70" />
+      <path d="M32 70 C112 120 170 118 210 70 C250 22 308 20 388 70" />
+      <circle cx="32" cy="70" r="10" />
+      <circle cx="210" cy="70" r="13" />
+      <circle cx="388" cy="70" r="10" />
+    </svg>
+  </header>
+
+  <nav class="tabs" aria-label="Run mode">
+    <button class="tab active" data-panel="single">Single run</button>
+    <button class="tab" data-panel="compare">Compare variants</button>
+  </nav>
+
+  <section id="single" class="panel active">
+    <div class="grid">
+      <section class="builder">
+        <h2>Link inputs</h2>
+        <div class="example-loader">
+          <label>Published example<select id="exampleChoice">
+            <option value="zhou2023">Zhou 2023 — 403 km, measured-phase input</option>
+            <option value="bertaina2024">Bertaina 2024 — spectral forecast</option>
+          </select></label>
+          <button id="loadExample" type="button">Load example</button>
+          <p id="exampleSource" class="source-note" aria-live="polite"></p>
+        </div>
+        <div class="row">
+          <label>Input mode
+            <select id="mode">
+              <option value="phase">Measured phase</option>
+              <option value="spectral">Spectral forecast</option>
+            </select>
+          </label>
+          <label>Protocol
+            <select id="protocol">
+              <option value="">Choose protocol</option>
+              <option>SNS-AOPP</option>
+              <option>CAL</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="row phase-fields">
+          <label>sigma_phi [rad]<input id="sigma" type="number" step="any"></label>
+          <label>tau [s]<input id="tau" type="number" step="any"></label>
+          <label>tau_PS [s]<input id="taups" type="number" step="any"></label>
+        </div>
+
+        <div class="row">
+          <label>Total length [km]<input id="length" type="number" step="any"></label>
+          <label>Imbalance [km]<input id="imbalance" type="number" step="any"></label>
+        </div>
+        <div class="row">
+          <label>Loss A [dB]<input id="lossA" type="number" step="any"></label>
+          <label>Loss B [dB]<input id="lossB" type="number" step="any"></label>
+          <label>Attenuation [dB/km]<input id="alpha" type="number" step="any"></label>
+        </div>
+
+        <div class="row">
+          <label>Detector mode
+            <select id="detectorMode">
+              <option value="scalar">Scalar receiver</option>
+              <option value="two">Two detector projections</option>
+            </select>
+          </label>
+          <label>Reach scan
+            <select id="reach">
+              <option value="false">Off</option>
+              <option value="true">On</option>
+            </select>
+          </label>
+        </div>
+        <div class="detector-scalar">
+          <div class="row">
+            <label>Efficiency<input id="detectorEfficiency" type="number" step="any"></label>
+            <label>Dark count [Hz]<input id="detectorDark" type="number" step="any"></label>
+            <label>Misalignment error<input id="detectorError" type="number" step="any"></label>
+          </div>
+        </div>
+        <div class="detector-two">
+          <div class="row">
+            <label>D0 efficiency<input id="d0Efficiency" type="number" step="any"></label>
+            <label>D0 dark [Hz]<input id="d0Dark" type="number" step="any"></label>
+            <label>D0 background [Hz]<input id="d0Background" type="number" step="any"></label>
+          </div>
+          <div class="row">
+            <label>D1 efficiency<input id="d1Efficiency" type="number" step="any"></label>
+            <label>D1 dark [Hz]<input id="d1Dark" type="number" step="any"></label>
+            <label>D1 background [Hz]<input id="d1Background" type="number" step="any"></label>
+          </div>
+          <label>Shared detector error<input id="twoDetectorError" type="number" step="any"></label>
+        </div>
+
+        <details open>
+          <summary>Protocol settings</summary>
+          <div class="row">
+            <label>Clock [Hz]<input id="clockrate" type="number" step="any"></label>
+            <label>f_EC<input id="fError" type="number" step="any"></label>
+            <label>Target key [bit/s]<input id="targetKey" type="number" step="any"></label>
+          </div>
+          <div class="protocol-sns">
+            <div class="row">
+              <label>decoy_big<input id="decoyBig" type="number" step="any"></label>
+              <label>decoy_medium<input id="decoyMedium" type="number" step="any"></label>
+              <label>decoy_mini<input id="decoyMini" type="number" step="any"></label>
+            </div>
+            <div class="row">
+              <label>p_z<input id="pzSns" type="number" step="any"></label>
+              <label>epsilon<input id="epsSns" type="number" step="any"></label>
+            </div>
+          </div>
+          <div class="protocol-cal">
+            <div class="row">
+              <label>p_z<input id="pzCal" type="number" step="any"></label>
+              <label>n_min<input id="nminCal" type="number" step="1"></label>
+              <label>n_max<input id="nmaxCal" type="number" step="1"></label>
+            </div>
+            <label>u<input id="uCal" type="number" step="any"></label>
+          </div>
+        </details>
+
+        <div class="spectral-only">
+          <details open>
+            <summary>Laser noise</summary>
+            <div class="row">
+              <label>Laser model
+                <select id="laserModel">
+                  <option value="">Choose model</option>
+                  <option value="free">Free</option>
+                  <option value="cavity">Cavity stabilized</option>
+                </select>
+              </label>
+              <label>Input method
+                <select id="laserInput">
+                  <option value="">Choose method</option>
+                  <option value="coefficients">Model coefficients</option>
+                  <option value="linewidth">Lorentz linewidth</option>
+                  <option value="csv">CSV spectrum</option>
+                </select>
+              </label>
+              <label>Linewidth [Hz]<input id="laserLinewidth" type="number" step="any"></label>
+            </div>
+            <div class="row">
+              <label>r3<input id="r3" type="number" step="any"></label>
+              <label>r2<input id="r2" type="number" step="any"></label>
+              <label>fc [Hz]<input id="fc" type="number" step="any"></label>
+            </div>
+            <div class="row cavity-fields">
+              <label>C4<input id="c4" type="number" step="any"></label>
+              <label>C3<input id="c3" type="number" step="any"></label>
+              <label>C2<input id="c2" type="number" step="any"></label>
+            </div>
+            <div class="row cavity-fields">
+              <label>B [Hz]<input id="bHz" type="number" step="any"></label>
+              <label>gamma<input id="gamma" type="number" step="any"></label>
+              <label>delta<input id="delta" type="number" step="any"></label>
+            </div>
+            <div class="csv-fields">
+              <div class="row">
+                <label>CSV file name<input id="laserCsvFile"></label>
+                <label>CSV mode
+                  <select id="laserCsvMode">
+                    <option value="">Choose mode</option>
+                    <option value="fit">Fit F1</option>
+                    <option value="direct">Direct PSD</option>
+                  </select>
+                </label>
+                <label>Quantity
+                  <select id="laserCsvQuantity">
+                    <option value="">Choose quantity</option>
+                    <option value="phase">Phase PSD</option>
+                    <option value="frequency">Frequency PSD</option>
+                  </select>
+                </label>
+              </div>
+              <div class="row">
+                <label>PSD unit<input id="laserCsvPsdUnit" placeholder="rad^2/Hz or Hz^2/Hz"></label>
+                <label>Sidedness
+                  <select id="laserCsvSidedness">
+                    <option value="">Choose sidedness</option>
+                    <option value="one-sided">One-sided</option>
+                    <option value="two-sided">Two-sided</option>
+                  </select>
+                </label>
+                <label>Pass
+                  <select id="laserCsvPass">
+                    <option value="">Choose pass</option>
+                    <option value="single">Single</option>
+                    <option value="round-trip">Round-trip</option>
+                  </select>
+                </label>
+              </div>
+              <div class="row">
+                <label>Round-trip PSD factor<input id="laserRoundTripFactor" type="number" step="any"></label>
+                <label>Extrapolation
+                  <select id="laserExtrapolation">
+                    <option value="">Reject outside band</option>
+                    <option value="power-law">Power-law endpoints</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+          </details>
+
+          <details open>
+            <summary>Fiber noise and stabilization</summary>
+            <div class="row">
+              <label>Laser arrangement
+                <select id="schemeLasers">
+                  <option value="">Choose arrangement</option>
+                  <option value="common">Common laser</option>
+                  <option value="independent">Independent lasers</option>
+                </select>
+              </label>
+              <label>Compensation
+                <select id="schemeCompensation">
+                  <option value="">Choose compensation</option>
+                  <option value="none">None</option>
+                  <option value="dual">Dual-band</option>
+                  <option value="classical">Classical round-trip</option>
+                </select>
+              </label>
+              <label>K<input id="kFactor" type="number" step="any"></label>
+            </div>
+            <div class="row">
+              <label>l<input id="fiberL" type="number" step="any"></label>
+              <label>fc1 [Hz]<input id="fc1" type="number" step="any"></label>
+              <label>n<input id="indexN" type="number" step="any"></label>
+            </div>
+            <div class="row dual-fields">
+              <label>lambda_s [nm]<input id="lambdaS" type="number" step="any"></label>
+              <label>lambda_q [nm]<input id="lambdaQ" type="number" step="any"></label>
+              <label>s0<input id="s0" type="number" step="any"></label>
+            </div>
+            <label class="dual-fields">fc2 [Hz]<input id="fc2" type="number" step="any"></label>
+            <div class="csv-fields">
+              <div class="row">
+                <label>Line CSV file<input id="lineCsvFile"></label>
+                <label>CSV mode
+                  <select id="lineCsvMode">
+                    <option value="">Choose mode</option>
+                    <option value="fit">Fit Eq. 6</option>
+                    <option value="direct">Direct PSD</option>
+                  </select>
+                </label>
+                <label>Measured length [km]<input id="lineCsvLength" type="number" step="any"></label>
+              </div>
+              <div class="row">
+                <label>Quantity
+                  <select id="lineCsvQuantity">
+                    <option value="">Choose quantity</option>
+                    <option value="phase">Phase PSD</option>
+                    <option value="frequency">Frequency PSD</option>
+                  </select>
+                </label>
+                <label>PSD unit<input id="lineCsvPsdUnit" placeholder="rad^2/Hz or Hz^2/Hz"></label>
+                <label>Sidedness
+                  <select id="lineCsvSidedness">
+                    <option value="">Choose sidedness</option>
+                    <option value="one-sided">One-sided</option>
+                    <option value="two-sided">Two-sided</option>
+                  </select>
+                </label>
+              </div>
+              <div class="row">
+                <label>Pass
+                  <select id="lineCsvPass">
+                    <option value="">Choose pass</option>
+                    <option value="single">Single</option>
+                    <option value="round-trip">Round-trip</option>
+                  </select>
+                </label>
+                <label>Round-trip PSD factor<input id="lineRoundTripFactor" type="number" step="any"></label>
+                <label>Extrapolation
+                  <select id="lineExtrapolation">
+                    <option value="">Reject outside band</option>
+                    <option value="power-law">Power-law endpoints</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+          </details>
+
+          <details open>
+            <summary>Classical loop and operating window</summary>
+            <div class="row">
+              <label>Actuator input
+                <select id="actuatorInput">
+                  <option value="">Choose actuator input</option>
+                  <option value="omega">omega_a</option>
+                  <option value="bandwidth">Bandwidth</option>
+                  <option value="csv">Measured response CSV</option>
+                </select>
+              </label>
+              <label>omega_a [rad/s]<input id="omegaA" type="number" step="any"></label>
+              <label>Bandwidth [Hz]<input id="actuatorBandwidth" type="number" step="any"></label>
+            </div>
+            <div class="row">
+              <label>Response CSV file<input id="actuatorCsvFile"></label>
+              <label>Magnitude unit
+                <select id="actuatorMagnitudeUnit">
+                  <option value="">Choose unit</option>
+                  <option value="linear">Linear</option>
+                  <option value="dB">dB</option>
+                </select>
+              </label>
+              <label>Phase unit
+                <select id="actuatorPhaseUnit">
+                  <option value="">Choose unit</option>
+                  <option value="deg">Degrees</option>
+                </select>
+              </label>
+            </div>
+            <div class="row">
+              <label>sigma threshold [rad]<input id="sigmaLimit" type="number" step="any"></label>
+              <label>tau cap [s]<input id="tauMax" type="number" step="any"></label>
+              <label>tau_PS [s]<input id="operationTauPs" type="number" step="any"></label>
+            </div>
+          </details>
+        </div>
+
+        <details>
+          <summary>Advanced — Additional TOML</summary>
+          <label>Additional settings<textarea id="extraToml" rows="6" spellcheck="false" placeholder="[ranges]
+# optional explicit ranges, requirements or numerical settings"></textarea></label>
+        </details>
+
+        <label>CSV uploads referenced by TOML
+          <input id="files" type="file" multiple accept=".csv,text/csv">
+        </label>
+        <button id="build" type="button">Build configuration</button>
+      </section>
+
+      <section>
+        <h2>Calculate</h2>
+        <p>The form builds the configuration when you run. Advanced edits use the core intensity convention.</p>
+        <details id="configurationAdvanced">
+          <summary>Advanced — Configuration editor</summary>
+          <label>Core TOML<textarea id="toml" rows="30" spellcheck="false"></textarea></label>
+        </details>
+        <button id="run" type="button">Run calculation</button>
+      </section>
+    </div>
+  </section>
+
+  <section id="compare" class="panel">
+    <div class="compare-grid">
+      <section>
+        <h2>Variant A</h2>
+        <label>Variant A name<input id="labelA" value="Variant A"></label>
+        <label>Core TOML
+        <textarea id="tomlA" rows="24" spellcheck="false" placeholder="Paste an explicit source-model configuration. Point observations with measured phase cannot be scanned across working lengths."></textarea></label>
+      </section>
+      <section>
+        <h2>Variant B</h2>
+        <label>Variant B name<input id="labelB" value="Variant B"></label>
+        <label>Core TOML
+        <textarea id="tomlB" rows="24" spellcheck="false" placeholder="Paste a second explicit source-model configuration."></textarea></label>
+      </section>
+      <section>
+        <h2>Variant C</h2>
+        <label>Variant C name<input id="labelC" value="Variant C"></label>
+        <label>Core TOML
+        <textarea id="tomlC" rows="24" spellcheck="false" placeholder="Optional"></textarea></label>
+      </section>
+    </div>
+    <label>Working total lengths [km]
+      <input id="lengths" placeholder="50,100,150,200,250">
+    </label>
+    <button id="compareRun" type="button">Run comparison</button>
+  </section>
+
+  <section class="output">
+    <div class="output-head">
+      <h2>Report</h2>
+      <div id="downloads"></div>
+    </div>
+    <pre id="status">Ready.</pre>
+    <iframe id="report" title="Generated report" sandbox=""></iframe>
+  </section>
+</main>
+<script src="/app.js"></script>
+</body>
+</html>

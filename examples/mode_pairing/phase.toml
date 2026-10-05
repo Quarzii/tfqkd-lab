@@ -1,0 +1,29 @@
+# Explicit research example: Bertaina Table III laser/fiber coefficients.
+# These coefficients are not apparatus defaults or a model of the measured MP experiments.
+# User-approved T_track band convention; numerical values below are demonstration/checking choices.
+[laser_A]
+model = "free"
+r3 = 3e6 # rad^2 Hz^2; Table III, bertaina2024
+r2 = 3e2 # rad^2 Hz; Table III, bertaina2024
+fc_hz = 2e6 # Hz; Table III, bertaina2024
+[laser_B]
+model = "free"
+r3 = 3e6 # rad^2 Hz^2; Table III, bertaina2024
+r2 = 3e2 # rad^2 Hz; Table III, bertaina2024
+fc_hz = 2e6 # Hz; Table III, bertaina2024
+[fiber_A]
+length_km = 100.93 # km; Table S1, zhou2023_async; geometry only
+l = 44 # rad^2 Hz/km; Table III, bertaina2024; coefficients of a different line
+fc1_hz = 100 # Hz; Table III, bertaina2024
+[fiber_B]
+length_km = 100.93 # km; Table S1, zhou2023_async; geometry only
+l = 44 # rad^2 Hz/km; Table III, bertaina2024
+fc1_hz = 100 # Hz; Table III, bertaina2024
+[operation]
+T_track_s = 0.01 # s; explicit demonstration window, not a measured tracking response
+delta_t_s = [1e-6, 1e-5, 1e-4] # s; numerical evaluation intervals
+[grid]
+positive_floor_hz = 1e-8 # Hz; numerical endpoint for convergent components, which also include f=0
+upper_hz = 1e8 # Hz; numerical truncation; convergence is checked separately
+points = 65537 # numerical quadrature choice; does not change the TF fast/reference configuration
+interval_batch = 32 # numerical memory bound, not a physical coefficient

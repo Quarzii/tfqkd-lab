@@ -1,0 +1,224 @@
+{
+  "numerics": {
+    "color_difference": 0.15,
+    "blue_green_difference": 0.025,
+    "black_threshold": 0.32,
+    "gray_difference": 0.1,
+    "pixel_step": 8,
+    "border_pixels": 4,
+    "reference_exclusion_pixels": 4,
+    "log_parameter_search_margin": 80,
+    "max_nfev": 5000,
+    "cutoff_start_shifts": [
+      -4,
+      0,
+      4,
+      12
+    ],
+    "cutoff_profile_multipliers": [
+      0.01,
+      0.1,
+      1,
+      10,
+      100,
+      10000
+    ]
+  },
+  "curves": [
+    {
+      "id": "jiang2008_urban86",
+      "image": "sources/data/b6/jiang_fig3_page.png",
+      "pdf": "sources/papers/jiang2008_urban.pdf",
+      "pdf_page": 18,
+      "figure": "3(a)",
+      "source": "https://arxiv.org/abs/0807.1882",
+      "model": "fiber",
+      "length_km": 86.0,
+      "quantity": "phase",
+      "color": "black",
+      "x_pixels": [
+        416,
+        1050
+      ],
+      "y_pixels": [
+        2572,
+        3046
+      ],
+      "x_log10": [
+        0,
+        3
+      ],
+      "y_log10": [
+        -8,
+        2
+      ],
+      "exclude_rectangles": [
+        [
+          548,
+          626,
+          2600,
+          2642
+        ]
+      ],
+      "exclude_white_linewidth_reference": true,
+      "upper_black_trace": true,
+      "normalization_to_one_sided_one_way": 1.0,
+      "normalization_evidence": "Fig. 1 dashed curve explicitly 1/(pi*f^2) for white-frequency 1 Hz linewidth; identical reference in Fig. 3. didomenico2010 Eqs. 1,5 give single-sided h0=1/pi. Sec. 3 PD2 single-trip spectrum; NOT round-trip divided by four.",
+      "route": "buried metropolitan Paris, Sec. 3"
+    },
+    {
+      "id": "li2013_newfocus6700",
+      "image": "sources/data/b6/li_figB1_page.png",
+      "pdf": "sources/papers/li2013_lasers.pdf",
+      "pdf_page": 131,
+      "figure": "B.1(a)",
+      "source": "https://thesis.caltech.edu/7799/",
+      "model": "laser",
+      "quantity": "frequency",
+      "color": "red",
+      "x_pixels": [
+        652,
+        1404
+      ],
+      "y_pixels": [
+        313,
+        900
+      ],
+      "x_log10": [
+        1,
+        7
+      ],
+      "y_log10": [
+        -1,
+        9
+      ],
+      "exclude_rectangles": [
+        [
+          1120,
+          1395,
+          320,
+          401
+        ]
+      ],
+      "normalization_to_one_sided_one_way": 1.0,
+      "normalization_evidence": "Appendix B Eq. B.1, printed p.115: S_nu one-sided, explicitly twice two-sided; MZI single laser not two-laser beat.",
+      "equipment": "free ECDL, New Focus 6700"
+    },
+    {
+      "id": "li2013_orbits",
+      "image": "sources/data/b6/li_figB1_page.png",
+      "pdf": "sources/papers/li2013_lasers.pdf",
+      "pdf_page": 131,
+      "figure": "B.1(a)",
+      "source": "https://thesis.caltech.edu/7799/",
+      "model": "laser",
+      "quantity": "frequency",
+      "color": "blue",
+      "x_pixels": [
+        652,
+        1404
+      ],
+      "y_pixels": [
+        313,
+        900
+      ],
+      "x_log10": [
+        1,
+        7
+      ],
+      "y_log10": [
+        -1,
+        9
+      ],
+      "exclude_rectangles": [
+        [
+          1120,
+          1395,
+          320,
+          401
+        ]
+      ],
+      "normalization_to_one_sided_one_way": 1.0,
+      "normalization_evidence": "Appendix B Eq. B.1, p.115: S_nu one-sided, twice two-sided. Fig. B.1(a) MZI, no heterodyne factor of two.",
+      "equipment": "free Orbits Lightwave fiber laser"
+    },
+    {
+      "id": "snigirev2023_dfb",
+      "image": "sources/data/b6/snigirev_fig2_page.png",
+      "pdf": "sources/papers/snigirev2023_dfb.pdf",
+      "pdf_page": 3,
+      "figure": "2(h)",
+      "source": "https://doi.org/10.1038/s41586-023-05724-2",
+      "model": "laser",
+      "quantity": "frequency",
+      "color": "blue",
+      "x_pixels": [
+        409,
+        1457
+      ],
+      "y_pixels": [
+        1029,
+        1300
+      ],
+      "x_log10": [
+        3,
+        7
+      ],
+      "y_log10": [
+        1,
+        9
+      ],
+      "exclude_rectangles": [
+        [
+          1050,
+          1456,
+          999,
+          1048
+        ]
+      ],
+      "normalization_to_one_sided_one_way": 1.0,
+      "normalization_evidence": "Main text p.414 and Methods Laser frequency noise measurements: single-sided Welch; Fig. 2(h) axis MHz label conflicts with tick values, resolved with authors FN_data.mat x3 in Hz, Zenodo 7371066. The blue free DFB ends near 1 MHz.",
+      "equipment": "free InP DFB, approximately1556nm"
+    },
+    {
+      "id": "droste2013_buried1840",
+      "image": "sources/data/b6/droste_fig4_page.png",
+      "pdf": "sources/papers/droste2013_buried.pdf",
+      "pdf_page": 4,
+      "figure": "4",
+      "source": "https://doi.org/10.1103/PhysRevLett.111.110801",
+      "model": "fiber",
+      "length_km": 1840.0,
+      "quantity": "phase",
+      "color": "black",
+      "x_pixels": [
+        199,
+        655
+      ],
+      "y_pixels": [
+        1072,
+        1398
+      ],
+      "x_log10": [
+        -2,
+        4
+      ],
+      "y_log10": [
+        -7,
+        5
+      ],
+      "exclude_rectangles": [
+        [
+          492,
+          651,
+          1075,
+          1166
+        ]
+      ],
+      "upper_black_trace": true,
+      "normalization_to_one_sided_one_way": 1.0,
+      "normalization_evidence": "Eq. 2 integrates f>0 with the one-sided Allan-variance prefactor 2; main text p.110801-4 says PSD between sent and transferred waves, remote single-pass not PD1 round-trip.",
+      "route": "buried intercity PTB-MPQ-PTB, independent of Jiang Paris and Clivati Italian link"
+    }
+  ]
+}

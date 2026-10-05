@@ -1,0 +1,7 @@
+# Explicit equal arms of 100 km; no apparatus presets.
+# Actuator poles 2*pi*100 and 2*pi*1e5 rad/s are user-requested engineering examples, not measured specifications.
+[comparison]
+configurations = ["actuator_100hz_100km_arms.toml", "actuator_100000hz_100km_arms.toml"]
+labels = ["100 Hz pole (engineering proxy)", "100 kHz pole (engineering proxy)"]
+working_total_lengths_km = [200.0] # km; twice the explicitly specified arm length
+workers = 1 # Numerical scheduling for this example.

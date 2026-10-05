@@ -1,0 +1,578 @@
+{
+  "method": "Reproducible B6 digitization and diagnostic fits, authorized by the user.\n\nPoppler renders are retained with calibrated log-axis anchors and exact extracted\npixel coordinates. Log least squares is an adopted numerical method, not an\nequation or parameter-estimation method attributed to Bertaina. Conditional fit\nSE describes point scatter; it is NOT a device/population uncertainty.\nRun: python -m tfqkd.published_fit\n",
+  "results": [
+    {
+      "id": "jiang2008_urban86",
+      "specification": {
+        "id": "jiang2008_urban86",
+        "image": "sources/b6/jiang_fig3_page.png",
+        "pdf": "sources/b6/jiang2008_urban.pdf",
+        "pdf_page": 18,
+        "figure": "3(a)",
+        "source": "https://arxiv.org/abs/0807.1882",
+        "model": "fiber",
+        "length_km": 86.0,
+        "quantity": "phase",
+        "color": "black",
+        "x_pixels": [
+          416,
+          1050
+        ],
+        "y_pixels": [
+          2572,
+          3046
+        ],
+        "x_log10": [
+          0,
+          3
+        ],
+        "y_log10": [
+          -8,
+          2
+        ],
+        "exclude_rectangles": [
+          [
+            548,
+            626,
+            2600,
+            2642
+          ]
+        ],
+        "exclude_white_linewidth_reference": true,
+        "upper_black_trace": true,
+        "normalization_to_one_sided_one_way": 1.0,
+        "normalization_evidence": "Fig. 1 dashed curve explicitly 1/(pi*f^2) for white-frequency 1 Hz linewidth; identical reference in Fig. 3. didomenico2010 Eqs. 1,5 give single-sided h0=1/pi. Sec. 3 PD2 single-trip spectrum; NOT round-trip divided by four.",
+        "route": "buried metropolitan Paris, Sec. 3"
+      },
+      "fit": {
+        "parameters": {
+          "l": 2.1826962333417033,
+          "fc1_hz": 52.26828601465103
+        },
+        "conditional_fit_se": {
+          "l": 0.4408249355350581,
+          "fc1_hz": 9.795332585200336
+        },
+        "covariance_log_parameters": [
+          [
+            0.04078924882050552,
+            -0.029873321082720096
+          ],
+          [
+            -0.029873321082720092,
+            0.03512059418803959
+          ]
+        ],
+        "jacobian_rank": 2,
+        "formal_jacobian_rank": 2,
+        "rank_tolerance": 1.4279580097511742e-05,
+        "formal_fit_se": {
+          "l": 0.4408249355350581,
+          "fc1_hz": 9.795332585200336
+        },
+        "singular_values": [
+          12.285723060782336,
+          4.201265234681778
+        ],
+        "rms_log10_residual": 0.46952449871638285,
+        "maximum_multiplicative_discrepancy": 12.095663834798799,
+        "frequency_range_hz": [
+          1.0445456981032246,
+          936.7179290002465
+        ],
+        "points": 78,
+        "success": true,
+        "uncertainty_label": "conditional local fit SE only; spectral features, digitization correlations and apparatus uncertainty are not represented",
+        "cutoff_profile": [
+          {
+            "cutoff_hz": 9.367179290002465,
+            "rms_log10_residual": 0.7300282278874829
+          },
+          {
+            "cutoff_hz": 93.67179290002466,
+            "rms_log10_residual": 0.504914811896574
+          },
+          {
+            "cutoff_hz": 936.7179290002465,
+            "rms_log10_residual": 0.839586769673282
+          },
+          {
+            "cutoff_hz": 9367.179290002465,
+            "rms_log10_residual": 0.9590416097957312
+          },
+          {
+            "cutoff_hz": 93671.79290002465,
+            "rms_log10_residual": 0.9749572971112116
+          },
+          {
+            "cutoff_hz": 9367179.290002465,
+            "rms_log10_residual": 0.9767735822173617
+          }
+        ]
+      }
+    },
+    {
+      "id": "li2013_newfocus6700",
+      "specification": {
+        "id": "li2013_newfocus6700",
+        "image": "sources/b6/li_figB1_page.png",
+        "pdf": "sources/b6/li2013_lasers.pdf",
+        "pdf_page": 131,
+        "figure": "B.1(a)",
+        "source": "https://thesis.caltech.edu/7799/",
+        "model": "laser",
+        "quantity": "frequency",
+        "color": "red",
+        "x_pixels": [
+          652,
+          1404
+        ],
+        "y_pixels": [
+          313,
+          900
+        ],
+        "x_log10": [
+          1,
+          7
+        ],
+        "y_log10": [
+          -1,
+          9
+        ],
+        "exclude_rectangles": [
+          [
+            1120,
+            1395,
+            320,
+            401
+          ]
+        ],
+        "normalization_to_one_sided_one_way": 1.0,
+        "normalization_evidence": "Appendix B Eq. B.1, printed p.115: S_nu one-sided, explicitly twice two-sided; MZI single laser not two-laser beat.",
+        "equipment": "free ECDL, New Focus 6700"
+      },
+      "fit": {
+        "parameters": {
+          "r3": 31145466.23042098,
+          "r2": 110307840.09210958,
+          "fc_hz": 84.25036484652688
+        },
+        "conditional_fit_se": {
+          "r3": 9346822.479085723,
+          "r2": 70817325.6844071,
+          "fc_hz": 36.38622892210421
+        },
+        "covariance_log_parameters": [
+          [
+            0.09006132164397855,
+            0.01638059698683891,
+            -0.022326862614713092
+          ],
+          [
+            0.01638059698683891,
+            0.41216041886006133,
+            -0.254579804404829
+          ],
+          [
+            -0.022326862614713092,
+            -0.254579804404829,
+            0.1865221936816184
+          ]
+        ],
+        "jacobian_rank": 3,
+        "formal_jacobian_rank": 3,
+        "rank_tolerance": 1.6378359839974435e-05,
+        "formal_fit_se": {
+          "r3": 9346822.479085723,
+          "r2": 70817325.6844071,
+          "fc_hz": 36.38622892210421
+        },
+        "singular_values": [
+          11.94709916352072,
+          5.559487328100744,
+          2.192382005459208
+        ],
+        "rms_log10_residual": 0.7126979496313656,
+        "maximum_multiplicative_discrepancy": 43.58813653794796,
+        "frequency_range_hz": [
+          12.466504003942793,
+          8021495.037291354
+        ],
+        "points": 92,
+        "success": true,
+        "uncertainty_label": "conditional local fit SE only; spectral features, digitization correlations and apparatus uncertainty are not represented",
+        "cutoff_profile": [
+          {
+            "cutoff_hz": 80214.95037291353,
+            "rms_log10_residual": 1.0834806970737676
+          },
+          {
+            "cutoff_hz": 802149.5037291354,
+            "rms_log10_residual": 1.083480697059417
+          },
+          {
+            "cutoff_hz": 8021495.037291354,
+            "rms_log10_residual": 1.083480697070076
+          },
+          {
+            "cutoff_hz": 80214950.37291354,
+            "rms_log10_residual": 1.083480697059791
+          },
+          {
+            "cutoff_hz": 802149503.7291354,
+            "rms_log10_residual": 1.0834806973351694
+          },
+          {
+            "cutoff_hz": 80214950372.91353,
+            "rms_log10_residual": 1.0834806970736086
+          }
+        ]
+      }
+    },
+    {
+      "id": "li2013_orbits",
+      "specification": {
+        "id": "li2013_orbits",
+        "image": "sources/b6/li_figB1_page.png",
+        "pdf": "sources/b6/li2013_lasers.pdf",
+        "pdf_page": 131,
+        "figure": "B.1(a)",
+        "source": "https://thesis.caltech.edu/7799/",
+        "model": "laser",
+        "quantity": "frequency",
+        "color": "blue",
+        "x_pixels": [
+          652,
+          1404
+        ],
+        "y_pixels": [
+          313,
+          900
+        ],
+        "x_log10": [
+          1,
+          7
+        ],
+        "y_log10": [
+          -1,
+          9
+        ],
+        "exclude_rectangles": [
+          [
+            1120,
+            1395,
+            320,
+            401
+          ]
+        ],
+        "normalization_to_one_sided_one_way": 1.0,
+        "normalization_evidence": "Appendix B Eq. B.1, p.115: S_nu one-sided, twice two-sided. Fig. B.1(a) MZI, no heterodyne factor of two.",
+        "equipment": "free Orbits Lightwave fiber laser"
+      },
+      "fit": {
+        "parameters": {
+          "r3": 1610186.641458509,
+          "r2": 9.089537293686832e+20,
+          "fc_hz": 4.115130269444375e-07
+        },
+        "conditional_fit_se": {
+          "r3": 249496.44507430334,
+          "r2": null,
+          "fc_hz": null
+        },
+        "covariance_log_parameters": [
+          [
+            0.024009122384947196,
+            -238115.26559513534,
+            119057.64712826982
+          ],
+          [
+            -238115.26559513528,
+            19441552900198.547,
+            -9720778196431.799
+          ],
+          [
+            119057.64712826982,
+            -9720778196431.799,
+            4860389971382.359
+          ]
+        ],
+        "jacobian_rank": 2,
+        "formal_jacobian_rank": 3,
+        "rank_tolerance": 1.2003995069687657e-05,
+        "formal_fit_se": {
+          "r3": 249496.44507430334,
+          "r2": 4.007811171945659e+27,
+          "fc_hz": 0.9072336411582181
+        },
+        "singular_values": [
+          8.75624426726456,
+          6.2820971893018855,
+          2.40664780273026e-07
+        ],
+        "rms_log10_residual": 0.5067787984637518,
+        "maximum_multiplicative_discrepancy": 11.672431978060647,
+        "frequency_range_hz": [
+          12.466504003942793,
+          8021495.037291354
+        ],
+        "points": 92,
+        "success": true,
+        "uncertainty_label": "conditional local fit SE only; spectral features, digitization correlations and apparatus uncertainty are not represented",
+        "cutoff_profile": [
+          {
+            "cutoff_hz": 80214.95037291353,
+            "rms_log10_residual": 0.5636765486881617
+          },
+          {
+            "cutoff_hz": 802149.5037291354,
+            "rms_log10_residual": 0.5533572235501742
+          },
+          {
+            "cutoff_hz": 8021495.037291354,
+            "rms_log10_residual": 0.5253478118731709
+          },
+          {
+            "cutoff_hz": 80214950.37291354,
+            "rms_log10_residual": 0.532959395747338
+          },
+          {
+            "cutoff_hz": 802149503.7291354,
+            "rms_log10_residual": 0.534624107538422
+          },
+          {
+            "cutoff_hz": 80214950372.91353,
+            "rms_log10_residual": 0.5348230128457326
+          }
+        ]
+      }
+    },
+    {
+      "id": "snigirev2023_dfb",
+      "specification": {
+        "id": "snigirev2023_dfb",
+        "image": "sources/b6/snigirev_fig2_page.png",
+        "pdf": "sources/b6/snigirev2023_dfb.pdf",
+        "pdf_page": 3,
+        "figure": "2(h)",
+        "source": "https://doi.org/10.1038/s41586-023-05724-2",
+        "model": "laser",
+        "quantity": "frequency",
+        "color": "blue",
+        "x_pixels": [
+          409,
+          1457
+        ],
+        "y_pixels": [
+          1029,
+          1300
+        ],
+        "x_log10": [
+          3,
+          7
+        ],
+        "y_log10": [
+          1,
+          9
+        ],
+        "exclude_rectangles": [
+          [
+            1050,
+            1456,
+            999,
+            1048
+          ]
+        ],
+        "normalization_to_one_sided_one_way": 1.0,
+        "normalization_evidence": "Main text p.414 and Methods Laser frequency noise measurements: single-sided Welch; Fig. 2(h) axis MHz label conflicts with tick values, resolved with authors FN_data.mat x3 in Hz, Zenodo 7371066. The blue free DFB ends near 1 MHz.",
+        "equipment": "free InP DFB, approximately1556nm"
+      },
+      "fit": {
+        "parameters": {
+          "r3": 67820589848.18699,
+          "r2": 747303.2484755164,
+          "fc_hz": 4.800897091817273e+25
+        },
+        "conditional_fit_se": {
+          "r3": 9763060635.286528,
+          "r2": 158827.02616116044,
+          "fc_hz": null
+        },
+        "covariance_log_parameters": [
+          [
+            0.020722819679208332,
+            -0.01203298075182467,
+            0.0
+          ],
+          [
+            -0.01203298075182467,
+            0.04517051774561053,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "jacobian_rank": 2,
+        "formal_jacobian_rank": 2,
+        "rank_tolerance": 1.0459720358319381e-05,
+        "formal_fit_se": {
+          "r3": 9763060635.286528,
+          "r2": 158827.02616116044,
+          "fc_hz": 0.0
+        },
+        "singular_values": [
+          7.3118744896300685,
+          4.105426121585047,
+          0.0
+        ],
+        "rms_log10_residual": 0.3927937205581914,
+        "maximum_multiplicative_discrepancy": 13.255741894840552,
+        "frequency_range_hz": [
+          1035.7791763594955,
+          948635.2024502888
+        ],
+        "points": 96,
+        "success": true,
+        "uncertainty_label": "conditional local fit SE only; spectral features, digitization correlations and apparatus uncertainty are not represented",
+        "cutoff_profile": [
+          {
+            "cutoff_hz": 9486.352024502889,
+            "rms_log10_residual": 0.5238272547998698
+          },
+          {
+            "cutoff_hz": 94863.52024502889,
+            "rms_log10_residual": 0.5238272543990646
+          },
+          {
+            "cutoff_hz": 948635.2024502888,
+            "rms_log10_residual": 0.4260906388590237
+          },
+          {
+            "cutoff_hz": 9486352.024502888,
+            "rms_log10_residual": 0.3960163947289031
+          },
+          {
+            "cutoff_hz": 94863520.24502888,
+            "rms_log10_residual": 0.3931092281858088
+          },
+          {
+            "cutoff_hz": 9486352024.502888,
+            "rms_log10_residual": 0.39279686697875493
+          }
+        ]
+      }
+    },
+    {
+      "id": "droste2013_buried1840",
+      "specification": {
+        "id": "droste2013_buried1840",
+        "image": "sources/b6/droste_fig4_page.png",
+        "pdf": "sources/b6/droste2013_buried.pdf",
+        "pdf_page": 4,
+        "figure": "4",
+        "source": "https://doi.org/10.1103/PhysRevLett.111.110801",
+        "model": "fiber",
+        "length_km": 1840.0,
+        "quantity": "phase",
+        "color": "black",
+        "x_pixels": [
+          199,
+          655
+        ],
+        "y_pixels": [
+          1072,
+          1398
+        ],
+        "x_log10": [
+          -2,
+          4
+        ],
+        "y_log10": [
+          -7,
+          5
+        ],
+        "exclude_rectangles": [
+          [
+            492,
+            651,
+            1075,
+            1166
+          ]
+        ],
+        "upper_black_trace": true,
+        "normalization_to_one_sided_one_way": 1.0,
+        "normalization_evidence": "Eq. 2 integrates f>0 with the one-sided Allan-variance prefactor 2; main text p.110801-4 says PSD between sent and transferred waves, remote single-pass not PD1 round-trip.",
+        "route": "buried intercity PTB-MPQ-PTB, independent of Jiang Paris and Clivati Italian link"
+      },
+      "fit": {
+        "parameters": {
+          "l": 0.09394910454739984,
+          "fc1_hz": 1355.1061087997375
+        },
+        "conditional_fit_se": {
+          "l": 0.04596066448587563,
+          "fc1_hz": 1592.934225694296
+        },
+        "covariance_log_parameters": [
+          [
+            0.23932458128468395,
+            -0.21563791916327224
+          ],
+          [
+            -0.21563791916327227,
+            1.3818123854418523
+          ]
+        ],
+        "jacobian_rank": 2,
+        "formal_jacobian_rank": 2,
+        "rank_tolerance": 4.869266110050991e-06,
+        "formal_fit_se": {
+          "l": 0.04596066448587563,
+          "fc1_hz": 1592.934225694296
+        },
+        "singular_values": [
+          6.9525727055153395,
+          2.6080551494234174
+        ],
+        "rms_log10_residual": 1.3212334511427886,
+        "maximum_multiplicative_discrepancy": 688.4304628091995,
+        "frequency_range_hz": [
+          0.011288378916846888,
+          6951.927961775606
+        ],
+        "points": 47,
+        "success": true,
+        "uncertainty_label": "conditional local fit SE only; spectral features, digitization correlations and apparatus uncertainty are not represented",
+        "cutoff_profile": [
+          {
+            "cutoff_hz": 69.51927961775606,
+            "rms_log10_residual": 1.4833974873350182
+          },
+          {
+            "cutoff_hz": 695.1927961775606,
+            "rms_log10_residual": 1.3260276455267501
+          },
+          {
+            "cutoff_hz": 6951.927961775606,
+            "rms_log10_residual": 1.3335534440109749
+          },
+          {
+            "cutoff_hz": 69519.27961775605,
+            "rms_log10_residual": 1.3463510563968848
+          },
+          {
+            "cutoff_hz": 695192.7961775606,
+            "rms_log10_residual": 1.3483512314936126
+          },
+          {
+            "cutoff_hz": 69519279.61775605,
+            "rms_log10_residual": 1.3485841426171432
+          }
+        ]
+      }
+    }
+  ]
+}

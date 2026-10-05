@@ -1,0 +1,1354 @@
+{
+  "config": {
+    "physics": {
+      "r3": 3000000.0,
+      "r2": 300.0,
+      "fc_hz": 2000000.0,
+      "C4": 0.5,
+      "C3": 0.0,
+      "C2": 0.002,
+      "B_hz": 300000.0,
+      "gamma": 0.1,
+      "delta": 10.0,
+      "l": 44.0,
+      "fc1_hz": 100.0,
+      "s0": 1e-08,
+      "fc2_hz": 200000.0,
+      "lambda_s_nm": 1543.33,
+      "lambda_q_nm": 1542.14,
+      "c_km_s": 299792.458,
+      "n": 1.45,
+      "K": 4.0
+    },
+    "operation": {
+      "sigma_limit_rad": 0.2,
+      "tau_max_s": 0.1,
+      "tau_ps_s": 0.001,
+      "LB_km": 100.0
+    },
+    "grid": {
+      "mode": "fast",
+      "fast_points": 4097,
+      "reference_points": 65537,
+      "f_min_hz": 0.001,
+      "f_max_hz": 1000000.0,
+      "points": 65537,
+      "refined_points": 131073,
+      "author_points": 10000,
+      "author_curve_points": 1000,
+      "relative_tolerance": 0.0001
+    },
+    "validation": {
+      "seed": 202409,
+      "realizations": 64,
+      "samples": 65536,
+      "sample_rate_hz": 1000.0,
+      "alpha": 0.5,
+      "input_variance": 1.0,
+      "welch_segment": 4096,
+      "welch_overlap": 2048,
+      "welch_window": "hann",
+      "comparison_min_hz": 10.0,
+      "comparison_max_hz": 100.0,
+      "confidence_sigma": 3.0,
+      "reference_rtol": 1e-12,
+      "measurement_length_km": 114.0,
+      "measurement_roundtrip_factor": 4.0,
+      "measurement_edges_hz": [
+        10.0,
+        100.0,
+        1000.0,
+        10000.0,
+        100000.0,
+        1000000.0
+      ],
+      "imbalance_min_km": 0.01,
+      "imbalance_max_km": 100.0,
+      "imbalance_points": 100,
+      "contour_tau_max_s": 1000.0,
+      "comparison_times_s": [
+        1e-05,
+        0.0001,
+        0.001,
+        0.01,
+        0.1
+      ],
+      "extended_cutoffs_hz": [
+        2000000.0,
+        10000000.0
+      ]
+    },
+    "plot": {
+      "figure8_f_min_hz": 10.0,
+      "figure8_psd_min": 1e-10,
+      "figure8_psd_max": 0.0001,
+      "figure8_sigma_min": 0.01,
+      "figure8_sigma_max": 1.0
+    },
+    "scenarios": [
+      {
+        "name": "1",
+        "common": true,
+        "cavity": false,
+        "stabilized": false,
+        "delta_L_km": 0.02
+      },
+      {
+        "name": "2",
+        "common": true,
+        "cavity": false,
+        "stabilized": true,
+        "delta_L_km": 0.02
+      },
+      {
+        "name": "3",
+        "common": true,
+        "cavity": false,
+        "stabilized": true,
+        "delta_L_km": 2.5
+      },
+      {
+        "name": "4",
+        "common": true,
+        "cavity": true,
+        "stabilized": false,
+        "delta_L_km": 2.5
+      },
+      {
+        "name": "5",
+        "common": true,
+        "cavity": true,
+        "stabilized": true,
+        "delta_L_km": 2.5
+      },
+      {
+        "name": "6",
+        "common": false,
+        "cavity": true,
+        "stabilized": false,
+        "delta_L_km": 2.5
+      },
+      {
+        "name": "7",
+        "common": false,
+        "cavity": true,
+        "stabilized": true,
+        "delta_L_km": 2.5
+      }
+    ],
+    "linewidth": {
+      "white_levels_hz2_per_hz": [
+        1.0,
+        100.0,
+        1000.0
+      ],
+      "filtered_h0_hz2_per_hz": 1.0,
+      "cutoffs_hz": [
+        0.03,
+        0.3,
+        3.0,
+        30.0
+      ],
+      "relative_tolerance": 1e-08,
+      "quadrature_tolerance": 1e-10
+    },
+    "sensitivity": {
+      "n_min": 1.44,
+      "n_max": 1.48,
+      "points": 9
+    },
+    "keyrate": {
+      "clockrate_hz": 1000000000.0,
+      "attenuation_db_per_km": 0.2,
+      "stab_overhead_s": 0.001,
+      "detector_efficiency": 0.9,
+      "detector_dark_count_rate_hz": 10.0,
+      "detector_error": 0.02,
+      "decoy_big": 0.4,
+      "decoy_medium": 0.16,
+      "decoy_mini": 1e-05,
+      "f_error": 1.15,
+      "pz_sns": 1.0,
+      "eps_sns_aopp": 0.25,
+      "duty_bb84": 1.0,
+      "pz_cal": 1.0,
+      "nmin_cal": 0,
+      "nmax_cal": 20,
+      "u_cal": 0.018
+    },
+    "keyrate_validation": {
+      "loss_min_db": 15.0,
+      "loss_max_db": 110.0,
+      "loss_points": 200,
+      "relative_tolerance": 1e-10
+    },
+    "classical": {
+      "controller": "integrator",
+      "length_km": 114.0,
+      "spatial_nodes": 64,
+      "low_frequency_fraction": 0.01,
+      "g_min_per_s": 0.01,
+      "g_max_times_reference_delay": 10.0,
+      "g_scan_points": 25,
+      "comparison_g_per_s": [
+        0.01,
+        1.0,
+        10.0,
+        100.0,
+        1000.0,
+        9000.0
+      ],
+      "comparison_tau_s": 0.1,
+      "length_min_km": 0.0001,
+      "length_max_km": 1000.0,
+      "length_points": 80,
+      "scaling_lengths_km": [
+        10.0,
+        30.0,
+        100.0,
+        300.0
+      ],
+      "scaling_f_min_hz": 0.01,
+      "scaling_f_max_hz": 0.1,
+      "high_gain_dimensionless": [
+        1.0,
+        10.0,
+        100.0,
+        1000.0,
+        1000000.0
+      ],
+      "pole_branches": 12,
+      "resonance_points": 2001,
+      "resonance_widths": 30.0,
+      "quadrature_rtol": 0.0001
+    },
+    "classical_actuator": {
+      "omega_a_min_rad_s": 628.3185307179587,
+      "omega_a_max_rad_s": 628318.5307179586,
+      "omega_a_points": 7,
+      "gain_fractions": [
+        0.01,
+        0.1,
+        0.3,
+        0.6,
+        0.9,
+        0.99
+      ],
+      "gain_scan_points": 25,
+      "gain_ceiling_fraction": 0.99,
+      "length_min_km": 1.0,
+      "length_max_km": 275.0,
+      "length_points": 80,
+      "resonance_branches": 24,
+      "resonance_points": 2001,
+      "resonance_widths": 30.0,
+      "resonance_tail_points": 257,
+      "resonance_tail_fraction": 0.25,
+      "max_refinement_levels": 5,
+      "root_xtol_km": 1e-07,
+      "root_rtol": 1e-10,
+      "root_crossing_fraction": 0.001,
+      "quadrature_frequency_multiple": 10.0,
+      "quadrature_frequency_points": 100,
+      "key_zero_loss_min_db": 15.0,
+      "key_zero_loss_max_db": 110.0
+    },
+    "performance": {
+      "workers": 2,
+      "cache_entries": 8,
+      "batch_memory_mb": 64.0,
+      "fast_peak_core_points": 513,
+      "fast_peak_tail_points": 129,
+      "fast_peak_branches": 24,
+      "regression_variance_rtol": 0.0001,
+      "regression_time_rtol": 0.0001,
+      "regression_key_rtol": 0.001,
+      "grid_candidates": [
+        257,
+        513,
+        1025,
+        2049,
+        4097,
+        8193,
+        16385,
+        32769,
+        65537
+      ],
+      "pole_iterations": 80,
+      "pole_step_limit": 2.0,
+      "pole_residual_rtol": 1e-09,
+      "stability_iterations": 60
+    }
+  },
+  "scope": "Table I: fixed LB=100 km, five configured Figure 8 times plus reference threshold time; smallest passing nested 2^k+1 grid, not a universal minimum",
+  "summary": [
+    {
+      "points": 257,
+      "variance_max_relative": 0.010150362500220389,
+      "tau_max_relative": 0.003583566116762249,
+      "key_max_relative": 0.0024733775612386655,
+      "passed": false
+    },
+    {
+      "points": 513,
+      "variance_max_relative": 0.009795784791552409,
+      "tau_max_relative": 0.001059570841357993,
+      "key_max_relative": 0.0008679651790223231,
+      "passed": false
+    },
+    {
+      "points": 1025,
+      "variance_max_relative": 0.0009685914516208705,
+      "tau_max_relative": 0.0002401062094451456,
+      "key_max_relative": 0.00018913057866509764,
+      "passed": false
+    },
+    {
+      "points": 2049,
+      "variance_max_relative": 0.0002105999918469159,
+      "tau_max_relative": 5.951939615378432e-05,
+      "key_max_relative": 4.662826943147014e-05,
+      "passed": false
+    },
+    {
+      "points": 4097,
+      "variance_max_relative": 5.1002731348726016e-05,
+      "tau_max_relative": 1.4839666608756907e-05,
+      "key_max_relative": 1.1595976503353533e-05,
+      "passed": true
+    },
+    {
+      "points": 8193,
+      "variance_max_relative": 1.2501932335817756e-05,
+      "tau_max_relative": 3.66944747487441e-06,
+      "key_max_relative": 2.8639034642674588e-06,
+      "passed": true
+    },
+    {
+      "points": 16385,
+      "variance_max_relative": 2.9691721474822685e-06,
+      "tau_max_relative": 8.731986034238304e-07,
+      "key_max_relative": 6.818189587365353e-07,
+      "passed": true
+    },
+    {
+      "points": 32769,
+      "variance_max_relative": 5.933789217760221e-07,
+      "tau_max_relative": 1.7456179390862303e-07,
+      "key_max_relative": 1.3635838125303223e-07,
+      "passed": true
+    },
+    {
+      "points": 65537,
+      "variance_max_relative": 0.0,
+      "tau_max_relative": 0.0,
+      "key_max_relative": 0.0,
+      "passed": true
+    }
+  ],
+  "scenarios": [
+    {
+      "scenario": "1",
+      "reference_tau_s": 0.0007215008266196752,
+      "reference_variances_rad2": [
+        0.0002538726083392722,
+        0.00041735687544377137,
+        0.1019595230815382,
+        40.02871819006617,
+        2152.0973901482716,
+        0.040000000000000015
+      ],
+      "times_s": [
+        1e-05,
+        0.0001,
+        0.001,
+        0.01,
+        0.1,
+        0.0007215008266196752
+      ],
+      "reference_keys_bps": [
+        33163.7588735179,
+        57716.80780251328
+      ],
+      "rows": [
+        {
+          "points": 257,
+          "variance_max_relative": 0.010150362500220389,
+          "tau_relative": 0.003495809748185863,
+          "key_max_relative": 0.0020336551916898538,
+          "tau_q_s": 0.0007189785969966539,
+          "variance_rad2": 0.04000000000000001,
+          "key_bps": [
+            33096.315223108824,
+            57599.43171667793
+          ],
+          "status": "threshold"
+        },
+        {
+          "points": 513,
+          "variance_max_relative": 0.0025924186179637765,
+          "tau_relative": 0.0008989536772575635,
+          "key_max_relative": 0.0005223886520695498,
+          "tau_q_s": 0.000720852230798441,
+          "variance_rad2": 0.04,
+          "key_bps": [
+            33146.43450222241,
+            57686.657197083565
+          ],
+          "status": "threshold"
+        },
+        {
+          "points": 1025,
+          "variance_max_relative": 0.0006398844250925517,
+          "tau_relative": 0.00022242232809277507,
+          "key_max_relative": 0.00012921461363368802,
+          "tau_q_s": 0.0007213403487260976,
+          "variance_rad2": 0.04,
+          "key_bps": [
+            33159.47363122842,
+            57709.349947492905
+          ],
+          "status": "threshold"
+        },
+        {
+          "points": 2049,
+          "variance_max_relative": 0.0001605224189464849,
+          "tau_relative": 5.581018591349629e-05,
+          "key_max_relative": 3.242025244476476e-05,
+          "tau_q_s": 0.0007214605595244048,
+          "variance_rad2": 0.040000000000000015,
+          "key_bps": [
+            33162.68369608321,
+            57714.93660903401
+          ],
+          "status": "threshold"
+        },
+        {
+          "points": 4097,
+          "variance_max_relative": 4.011582808116643e-05,
+          "tau_relative": 1.3949584578343277e-05,
+          "key_max_relative": 8.10320036936929e-06,
+          "tau_q_s": 0.0007214907619828709,
+          "variance_rad2": 0.04,
+          "key_bps": [
+            33163.49014093475,
+            57716.34011165497
+          ],
+          "status": "threshold"
+        },
+        {
+          "points": 8193,
+          "variance_max_relative": 9.901736291562102e-06,
+          "tau_relative": 3.443199763086824e-06,
+          "key_max_relative": 2.0001179660278368e-06,
+          "tau_q_s": 0.0007214983423481999,
+          "variance_rad2": 0.04000000000000001,
+          "key_bps": [
+            33163.69254208796,
+            57716.69236208905
+          ],
+          "status": "threshold"
+        },
+        {
+          "points": 16385,
+          "variance_max_relative": 2.3556636978838696e-06,
+          "tau_relative": 8.191583878991437e-07,
+          "key_max_relative": 4.758398352011639e-07,
+          "tau_q_s": 0.0007215002355962212,
+          "variance_rad2": 0.04,
+          "key_bps": [
+            33163.743092880344,
+            57716.78033855698
+          ],
+          "status": "threshold"
+        },
+        {
+          "points": 32769,
+          "variance_max_relative": 4.7131671099265304e-07,
+          "tau_relative": 1.6389587176313114e-07,
+          "key_max_relative": 9.520523058803576e-08,
+          "tau_q_s": 0.0007215007083686682,
+          "variance_rad2": 0.04000000000000001,
+          "key_bps": [
+            33163.75571615459,
+            57716.802307571284
+          ],
+          "status": "threshold"
+        },
+        {
+          "points": 65537,
+          "variance_max_relative": 0.0,
+          "tau_relative": 0.0,
+          "key_max_relative": 0.0,
+          "tau_q_s": 0.0007215008266196752,
+          "variance_rad2": 0.040000000000000015,
+          "key_bps": [
+            33163.7588735179,
+            57716.80780251328
+          ],
+          "status": "threshold"
+        }
+      ]
+    },
+    {
+      "scenario": "2",
+      "reference_tau_s": 0.1,
+      "reference_variances_rad2": [
+        0.0012539439414960983,
+        0.001875251821390045,
+        0.001993551484566065,
+        0.0022014753457141,
+        0.004096292605541473,
+        0.004096292605541473
+      ],
+      "times_s": [
+        1e-05,
+        0.0001,
+        0.001,
+        0.01,
+        0.1,
+        0.1
+      ],
+      "reference_keys_bps": [
+        88382.65621482844,
+        153042.49244446805
+      ],
+      "rows": [
+        {
+          "points": 257,
+          "variance_max_relative": 0.0019937547474571105,
+          "tau_relative": 0.0,
+          "key_max_relative": 2.8194139839787802e-05,
+          "tau_q_s": 0.1,
+          "variance_rad2": 0.004104459608370745,
+          "key_bps": [
+            88380.16434185971,
+            153038.49063534744
+          ],
+          "status": "capped"
+        },
+        {
+          "points": 513,
+          "variance_max_relative": 0.0005009013481866997,
+          "tau_relative": 0.0,
+          "key_max_relative": 7.083474165336945e-06,
+          "tau_q_s": 0.1,
+          "variance_rad2": 0.004098344444030157,
+          "key_bps": [
+            88382.03015856649,
+            153041.48703967687
+          ],
+          "status": "capped"
+        },
+        {
+          "points": 1025,
+          "variance_max_relative": 0.00012543993439573242,
+          "tau_relative": 0.0,
+          "key_max_relative": 1.773910450530991e-06,
+          "tau_q_s": 0.1,
+          "variance_rad2": 0.004096806444217178,
+          "key_bps": [
+            88382.49943191094,
+            153042.24066144027
+          ],
+          "status": "capped"
+        },
+        {
+          "points": 2049,
+          "variance_max_relative": 3.132099764524554e-05,
+          "tau_relative": 0.0,
+          "key_max_relative": 4.4292674239443386e-07,
+          "tau_q_s": 0.1,
+          "variance_rad2": 0.004096420905512526,
+          "key_bps": [
+            88382.61706778644,
+            153042.42957677838
+          ],
+          "status": "capped"
+        },
+        {
+          "points": 4097,
+          "variance_max_relative": 7.801781721106238e-06,
+          "tau_relative": 0.0,
+          "key_max_relative": 1.1032913704855929e-07,
+          "tau_q_s": 0.1,
+          "variance_rad2": 0.004096324563922248,
+          "key_bps": [
+            88382.64646364625,
+            153042.4767847431
+          ],
+          "status": "capped"
+        },
+        {
+          "points": 8193,
+          "variance_max_relative": 1.9269462356863443e-06,
+          "tau_relative": 0.0,
+          "key_max_relative": 2.724997161251963e-08,
+          "tau_q_s": 0.1,
+          "variance_rad2": 0.00409630049887709,
+          "key_bps": [
+            88382.65380640357,
+            153042.4885767092
+          ],
+          "status": "capped"
+        },
+        {
+          "points": 16385,
+          "variance_max_relative": 4.588220934298448e-07,
+          "tau_relative": 0.0,
+          "key_max_relative": 6.488447334973557e-09,
+          "tau_q_s": 0.1,
+          "variance_rad2": 0.004096294485011022,
+          "key_bps": [
+            88382.65564136223,
+            153042.49152333007
+          ],
+          "status": "capped"
+        },
+        {
+          "points": 32769,
+          "variance_max_relative": 9.177207216382044e-08,
+          "tau_relative": 0.0,
+          "key_max_relative": 1.2977977581485334e-09,
+          "tau_q_s": 0.1,
+          "variance_rad2": 0.004096292981466734,
+          "key_bps": [
+            88382.65610012563,
+            153042.49226024048
+          ],
+          "status": "capped"
+        },
+        {
+          "points": 65537,
+          "variance_max_relative": 0.0,
+          "tau_relative": 0.0,
+          "key_max_relative": 0.0,
+          "tau_q_s": 0.1,
+          "variance_rad2": 0.004096292605541473,
+          "key_bps": [
+            88382.65621482844,
+            153042.49244446805
+          ],
+          "status": "capped"
+        }
+      ]
+    },
+    {
+      "scenario": "3",
+      "reference_tau_s": 4.826420399480876e-05,
+      "reference_variances_rad2": [
+        0.0058507891761334484,
+        0.1178031120577053,
+        0.3288397737784395,
+        0.49468870605356424,
+        0.6567085259366103,
+        0.04
+      ],
+      "times_s": [
+        1e-05,
+        0.0001,
+        0.001,
+        0.01,
+        0.1,
+        4.826420399480876e-05
+      ],
+      "reference_keys_bps": [
+        3440.3769512897748,
+        5965.914464177066
+      ],
+      "rows": [
+        {
+          "points": 257,
+          "variance_max_relative": 0.005503639940409588,
+          "tau_relative": 0.0025924436858921762,
+          "key_max_relative": 0.0024733775612386655,
+          "tau_q_s": 4.8139081763907806e-05,
+          "variance_rad2": 0.04,
+          "key_bps": [
+            3431.867600136252,
+            5951.158505209101
+          ],
+          "status": "threshold"
+        },
+        {
+          "points": 513,
+          "variance_max_relative": 0.002946485747027605,
+          "tau_relative": 0.0009098187136772351,
+          "key_max_relative": 0.0008679651790223231,
+          "tau_q_s": 4.8220292318813546e-05,
+          "variance_rad2": 0.04000000000000001,
+          "key_bps": [
+            3437.390823893344,
+            5960.736258161135
+          ],
+          "status": "threshold"
+        },
+        {
+          "points": 1025,
+          "variance_max_relative": 0.00042064839871569504,
+          "tau_relative": 0.00019825700575859528,
+          "key_max_relative": 0.00018913057866509764,
+          "tau_q_s": 4.8254635278239426e-05,
+          "variance_rad2": 0.04,
+          "key_bps": [
+            3439.726270806151,
+            5964.78612732219
+          ],
+          "status": "threshold"
+        },
+        {
+          "points": 2049,
+          "variance_max_relative": 0.00010369541074761734,
+          "tau_relative": 4.887863573899143e-05,
+          "key_max_relative": 4.662826943147014e-05,
+          "tau_q_s": 4.826184490636247e-05,
+          "variance_rad2": 0.040000000000000015,
+          "key_bps": [
+            3440.2165324663442,
+            5965.636283910026
+          ],
+          "status": "threshold"
+        },
+        {
+          "points": 4097,
+          "variance_max_relative": 2.5787967776302878e-05,
+          "tau_relative": 1.2155640275790525e-05,
+          "key_max_relative": 1.1595976503353533e-05,
+          "tau_q_s": 4.8263617312506805e-05,
+          "variance_rad2": 0.04000000000000001,
+          "key_bps": [
+            3440.3370567594848,
+            5965.845283573119
+          ],
+          "status": "threshold"
+        },
+        {
+          "points": 8193,
+          "variance_max_relative": 6.368937783829409e-06,
+          "tau_relative": 3.0021270701618974e-06,
+          "key_max_relative": 2.8639034642674588e-06,
+          "tau_q_s": 4.826405909953543e-05,
+          "variance_rad2": 0.04,
+          "key_bps": [
+            3440.367098382306,
+            5965.897378373965
+          ],
+          "status": "threshold"
+        },
+        {
+          "points": 16385,
+          "variance_max_relative": 1.5162712432292835e-06,
+          "tau_relative": 7.147263845208585e-07,
+          "key_max_relative": 6.818189587365353e-07,
+          "tau_q_s": 4.8264169499108736e-05,
+          "variance_rad2": 0.040000000000000015,
+          "key_bps": [
+            3440.374605575544,
+            5965.910396503479
+          ],
+          "status": "threshold"
+        },
+        {
+          "points": 32769,
+          "variance_max_relative": 3.032422342119645e-07,
+          "tau_relative": 1.429396090379953e-07,
+          "key_max_relative": 1.3635838125303223e-07,
+          "tau_q_s": 4.8264197095942314e-05,
+          "variance_rad2": 0.04000000000000001,
+          "key_bps": [
+            3440.3764821655427,
+            5965.913650674627
+          ],
+          "status": "threshold"
+        },
+        {
+          "points": 65537,
+          "variance_max_relative": 0.0,
+          "tau_relative": 0.0,
+          "key_max_relative": 0.0,
+          "tau_q_s": 4.826420399480876e-05,
+          "variance_rad2": 0.04,
+          "key_bps": [
+            3440.3769512897748,
+            5965.914464177066
+          ],
+          "status": "threshold"
+        }
+      ]
+    },
+    {
+      "scenario": "4",
+      "reference_tau_s": 0.0007055827876353868,
+      "reference_variances_rad2": [
+        0.0018232643060416792,
+        0.0024523567851648044,
+        0.10524272222909405,
+        40.52703299675844,
+        2178.7827274149095,
+        0.04000000000000001
+      ],
+      "times_s": [
+        1e-05,
+        0.0001,
+        0.001,
+        0.01,
+        0.1,
+        0.0007055827876353868
+      ],
+      "reference_keys_bps": [
+        30911.979066649186,
+        53604.074681678096
+      ],
+      "rows": [
+        {
+          "points": 257,
+          "variance_max_relative": 0.00970377201340722,
+          "tau_relative": 0.003432532198658911,
+          "key_max_relative": 0.002015389324286243,
+          "tau_q_s": 0.0007031608519980088,
+          "variance_rad2": 0.04,
+          "key_bps": [
+            30849.679394045703,
+            53496.0416018264
+          ],
+          "status": "threshold"
+        },
+        {
+          "points": 513,
+          "variance_max_relative": 0.009795784791552409,
+          "tau_relative": 0.001059570841357993,
+          "key_max_relative": 0.0006215092569260561,
+          "tau_q_s": 0.0007048351726874442,
+          "variance_rad2": 0.04000000000000001,
+          "key_bps": [
+            30892.766985509366,
+            53570.75925305448
+          ],
+          "status": "threshold"
+        },
+        {
+          "points": 1025,
+          "variance_max_relative": 0.0009685914516208705,
+          "tau_relative": 0.0002401062094451456,
+          "key_max_relative": 0.00014079062195182512,
+          "tau_q_s": 0.0007054133728267979,
+          "variance_rad2": 0.04000000000000001,
+          "key_bps": [
+            30907.62694989063,
+            53596.52773066451
+          ],
+          "status": "threshold"
+        },
+        {
+          "points": 2049,
+          "variance_max_relative": 0.0002105999918469159,
+          "tau_relative": 5.951939615378432e-05,
+          "key_max_relative": 3.4897667907429764e-05,
+          "tau_q_s": 0.0007055407917739302,
+          "variance_rad2": 0.040000000000000015,
+          "key_bps": [
+            30910.90031066936,
+            53602.20402448137
+          ],
+          "status": "threshold"
+        },
+        {
+          "points": 4097,
+          "variance_max_relative": 5.1002731348726016e-05,
+          "tau_relative": 1.4839666608756907e-05,
+          "key_max_relative": 8.700696218499893e-06,
+          "tau_q_s": 0.0007055723170220534,
+          "variance_rad2": 0.040000000000000015,
+          "key_bps": [
+            30911.710110909822,
+            53603.60828890822
+          ],
+          "status": "threshold"
+        },
+        {
+          "points": 8193,
+          "variance_max_relative": 1.2501932335817756e-05,
+          "tau_relative": 3.66944747487441e-06,
+          "key_max_relative": 2.151436489516989e-06,
+          "tau_q_s": 0.0007055801985364084,
+          "variance_rad2": 0.04,
+          "key_bps": [
+            30911.91256148946,
+            53603.95935591584
+          ],
+          "status": "threshold"
+        },
+        {
+          "points": 16385,
+          "variance_max_relative": 2.9691721474822685e-06,
+          "tau_relative": 8.731986034238304e-07,
+          "key_max_relative": 5.119651332874398e-07,
+          "tau_q_s": 0.000705582171521482,
+          "variance_rad2": 0.040000000000000015,
+          "key_bps": [
+            30911.96324079371,
+            53604.04723826086
+          ],
+          "status": "threshold"
+        },
+        {
+          "points": 32769,
+          "variance_max_relative": 5.933789217760221e-07,
+          "tau_relative": 1.7456179390862303e-07,
+          "key_max_relative": 1.0234730796199187e-07,
+          "tau_q_s": 0.0007055826644675896,
+          "variance_rad2": 0.040000000000000015,
+          "key_bps": [
+            30911.97590289135,
+            53604.06919544536
+          ],
+          "status": "threshold"
+        },
+        {
+          "points": 65537,
+          "variance_max_relative": 0.0,
+          "tau_relative": 0.0,
+          "key_max_relative": 0.0,
+          "tau_q_s": 0.0007055827876353868,
+          "variance_rad2": 0.04000000000000001,
+          "key_bps": [
+            30911.979066649186,
+            53604.074681678096
+          ],
+          "status": "threshold"
+        }
+      ]
+    },
+    {
+      "scenario": "5",
+      "reference_tau_s": 0.1,
+      "reference_variances_rad2": [
+        0.002823336523417352,
+        0.003908844054683624,
+        0.00401675530003146,
+        0.004216450485438573,
+        0.006124380915706147,
+        0.006124380915706147
+      ],
+      "times_s": [
+        1e-05,
+        0.0001,
+        0.001,
+        0.01,
+        0.1,
+        0.1
+      ],
+      "reference_keys_bps": [
+        82880.90112869204,
+        143123.93157613772
+      ],
+      "rows": [
+        {
+          "points": 257,
+          "variance_max_relative": 0.005430806110706454,
+          "tau_relative": 0.0,
+          "key_max_relative": 2.4262447737344317e-05,
+          "tau_q_s": 0.1,
+          "variance_rad2": 0.006117328203802584,
+          "key_bps": [
+            82882.9120222241,
+            143127.17466623647
+          ],
+          "status": "capped"
+        },
+        {
+          "points": 513,
+          "variance_max_relative": 0.006430707957282733,
+          "tau_relative": 0.0,
+          "key_max_relative": 7.028102966344374e-05,
+          "tau_q_s": 0.1,
+          "variance_rad2": 0.006144811966987821,
+          "key_bps": [
+            82875.07617362129,
+            143114.53705270833
+          ],
+          "status": "capped"
+        },
+        {
+          "points": 1025,
+          "variance_max_relative": 0.0006516781757881507,
+          "tau_relative": 0.0,
+          "key_max_relative": 8.265365145088133e-06,
+          "tau_q_s": 0.1,
+          "variance_rad2": 0.006126783586471243,
+          "key_bps": [
+            82880.21608778066,
+            143122.82675868692
+          ],
+          "status": "capped"
+        },
+        {
+          "points": 2049,
+          "variance_max_relative": 0.00014254012414838257,
+          "tau_relative": 0.0,
+          "key_max_relative": 1.8610098635463146e-06,
+          "tau_q_s": 0.1,
+          "variance_rad2": 0.006124921892692138,
+          "key_bps": [
+            82880.74688651755,
+            143123.6828188982
+          ],
+          "status": "capped"
+        },
+        {
+          "points": 4097,
+          "variance_max_relative": 3.4566310849415416e-05,
+          "tau_relative": 0.0,
+          "key_max_relative": 4.538324654967951e-07,
+          "tau_q_s": 0.1,
+          "variance_rad2": 0.006124512840132188,
+          "key_bps": [
+            82880.86351464834,
+            143123.87091359877
+          ],
+          "status": "capped"
+        },
+        {
+          "points": 8193,
+          "variance_max_relative": 8.476153275260856e-06,
+          "tau_relative": 0.0,
+          "key_max_relative": 1.1153154899634643e-07,
+          "tau_q_s": 0.1,
+          "variance_rad2": 0.006124413336771052,
+          "key_bps": [
+            82880.89188485676,
+            143123.91666846315
+          ],
+          "status": "capped"
+        },
+        {
+          "points": 16385,
+          "variance_max_relative": 2.0133049614123877e-06,
+          "tau_relative": 0.0,
+          "key_max_relative": 2.6521191798245525e-08,
+          "tau_q_s": 0.1,
+          "variance_rad2": 0.006124388625140989,
+          "key_bps": [
+            82880.89893059176,
+            143123.92803064547
+          ],
+          "status": "capped"
+        },
+        {
+          "points": 32769,
+          "variance_max_relative": 4.0236707543606087e-07,
+          "tau_relative": 0.0,
+          "key_max_relative": 5.302637773318963e-09,
+          "tau_q_s": 0.1,
+          "variance_rad2": 0.006124382457127919,
+          "key_bps": [
+            82880.90068920465,
+            143123.9308673937
+          ],
+          "status": "capped"
+        },
+        {
+          "points": 65537,
+          "variance_max_relative": 0.0,
+          "tau_relative": 0.0,
+          "key_max_relative": 0.0,
+          "tau_q_s": 0.1,
+          "variance_rad2": 0.006124380915706147,
+          "key_bps": [
+            82880.90112869204,
+            143123.93157613772
+          ],
+          "status": "capped"
+        }
+      ]
+    },
+    {
+      "scenario": "6",
+      "reference_tau_s": 0.001142905737633146,
+      "reference_variances_rad2": [
+        0.0018022972486650415,
+        0.002356782618160918,
+        0.028062922504454173,
+        10.133546852786353,
+        544.6981634564679,
+        0.040000000000000015
+      ],
+      "times_s": [
+        1e-05,
+        0.0001,
+        0.001,
+        0.01,
+        0.1,
+        0.001142905737633146
+      ],
+      "reference_keys_bps": [
+        39852.81311830898,
+        69108.26272438868
+      ],
+      "rows": [
+        {
+          "points": 257,
+          "variance_max_relative": 0.009586204848360369,
+          "tau_relative": 0.003583566116762249,
+          "key_max_relative": 0.0016754952601260031,
+          "tau_q_s": 0.0011388100593571107,
+          "variance_rad2": 0.04000000000000001,
+          "key_bps": [
+            39786.039918826566,
+            68992.47215775843
+          ],
+          "status": "threshold"
+        },
+        {
+          "points": 513,
+          "variance_max_relative": 0.0023952650993848135,
+          "tau_relative": 0.0008944875235236127,
+          "key_max_relative": 0.00041761727741107535,
+          "tau_q_s": 0.0011418834227102696,
+          "variance_rad2": 0.04000000000000001,
+          "key_bps": [
+            39836.16989499734,
+            69079.40191986311
+          ],
+          "status": "threshold"
+        },
+        {
+          "points": 1025,
+          "variance_max_relative": 0.0005984537304641879,
+          "tau_relative": 0.00022343053526518997,
+          "key_max_relative": 0.00010427764492160208,
+          "tau_q_s": 0.001142650377592429,
+          "variance_rad2": 0.04000000000000001,
+          "key_bps": [
+            39848.65736081351,
+            69101.05627750716
+          ],
+          "status": "threshold"
+        },
+        {
+          "points": 2049,
+          "variance_max_relative": 0.0001494052852173411,
+          "tau_relative": 5.577896456288034e-05,
+          "key_max_relative": 2.603036756232413e-05,
+          "tau_q_s": 0.0011428419875345079,
+          "variance_rad2": 0.04000000000000001,
+          "key_bps": [
+            39851.77573493513,
+            69106.46381090838
+          ],
+          "status": "threshold"
+        },
+        {
+          "points": 4097,
+          "variance_max_relative": 3.7201210841608656e-05,
+          "tau_relative": 1.3889037174918961e-05,
+          "key_max_relative": 6.4814517115596715e-06,
+          "tau_q_s": 0.0011428898637728686,
+          "variance_rad2": 0.04000000000000001,
+          "key_bps": [
+            39852.554814225194,
+            69107.81480252097
+          ],
+          "status": "threshold"
+        },
+        {
+          "points": 8193,
+          "variance_max_relative": 9.178018537614463e-06,
+          "tau_relative": 3.4266772872548756e-06,
+          "key_max_relative": 1.5990827270107033e-06,
+          "tau_q_s": 0.0011429018212640134,
+          "variance_rad2": 0.04,
+          "key_bps": [
+            39852.74939036391,
+            69108.15221455946
+          ],
+          "status": "threshold"
+        },
+        {
+          "points": 16385,
+          "variance_max_relative": 2.1858724899015414e-06,
+          "tau_relative": 8.161198689071725e-07,
+          "key_max_relative": 3.8084746811772874e-07,
+          "tau_q_s": 0.0011429048048850652,
+          "variance_rad2": 0.04,
+          "key_bps": [
+            39852.79794046602,
+            69108.2364046818
+          ],
+          "status": "threshold"
+        },
+        {
+          "points": 32769,
+          "variance_max_relative": 4.3716510300662037e-07,
+          "tau_relative": 1.632204438273277e-07,
+          "key_max_relative": 7.616781982910936e-08,
+          "tau_q_s": 0.0011429055510875643,
+          "variance_rad2": 0.04,
+          "key_bps": [
+            39852.8100828071,
+            69108.25746056298
+          ],
+          "status": "threshold"
+        },
+        {
+          "points": 65537,
+          "variance_max_relative": 0.0,
+          "tau_relative": 0.0,
+          "key_max_relative": 0.0,
+          "tau_q_s": 0.001142905737633146,
+          "variance_rad2": 0.040000000000000015,
+          "key_bps": [
+            39852.81311830898,
+            69108.26272438868
+          ],
+          "status": "threshold"
+        }
+      ]
+    },
+    {
+      "scenario": "7",
+      "reference_tau_s": 0.1,
+      "reference_variances_rad2": [
+        0.002802315316549332,
+        0.003899475878575508,
+        0.003998968100087538,
+        0.004091966607422753,
+        0.0052626229878340244,
+        0.0052626229878340244
+      ],
+      "times_s": [
+        1e-05,
+        0.0001,
+        0.001,
+        0.01,
+        0.1,
+        0.1
+      ],
+      "reference_keys_bps": [
+        83127.15692728345,
+        143520.73410547446
+      ],
+      "rows": [
+        {
+          "points": 257,
+          "variance_max_relative": 0.0018322390454315052,
+          "tau_relative": 0.0,
+          "key_max_relative": 3.3220707113090775e-05,
+          "tau_q_s": 0.1,
+          "variance_rad2": 0.00527226537115372,
+          "key_bps": [
+            83124.39538435002,
+            143516.28821266105
+          ],
+          "status": "capped"
+        },
+        {
+          "points": 513,
+          "variance_max_relative": 0.00046197738305564506,
+          "tau_relative": 0.0,
+          "key_max_relative": 8.376366033902016e-06,
+          "tau_q_s": 0.1,
+          "variance_rad2": 0.005265054200629953,
+          "key_bps": [
+            83126.46062378967,
+            143519.61311385353
+          ],
+          "status": "capped"
+        },
+        {
+          "points": 1025,
+          "variance_max_relative": 0.00011582241008278871,
+          "tau_relative": 0.0,
+          "key_max_relative": 2.1000498329204476e-06,
+          "tau_q_s": 0.1,
+          "variance_rad2": 0.0052632325175118325,
+          "key_bps": [
+            83126.98235611143,
+            143520.4530613392
+          ],
+          "status": "capped"
+        },
+        {
+          "points": 2049,
+          "variance_max_relative": 2.8909592433068454e-05,
+          "tau_relative": 0.0,
+          "key_max_relative": 5.241788467724717e-07,
+          "tau_q_s": 0.1,
+          "variance_rad2": 0.005262775128119732,
+          "key_bps": [
+            83127.11335378619,
+            143520.66395616916
+          ],
+          "status": "capped"
+        },
+        {
+          "points": 4097,
+          "variance_max_relative": 7.197486714183299e-06,
+          "tau_relative": 0.0,
+          "key_max_relative": 1.3050240754708398e-07,
+          "tau_q_s": 0.1,
+          "variance_rad2": 0.005262660865493061,
+          "key_bps": [
+            83127.14607898933,
+            143520.71664116686
+          ],
+          "status": "capped"
+        },
+        {
+          "points": 8193,
+          "variance_max_relative": 1.7773203577764463e-06,
+          "tau_relative": 0.0,
+          "key_max_relative": 3.222577660277892e-08,
+          "tau_q_s": 0.1,
+          "variance_rad2": 0.005262632341200996,
+          "key_bps": [
+            83127.15424844626,
+            143520.72979315967
+          ],
+          "status": "capped"
+        },
+        {
+          "points": 16385,
+          "variance_max_relative": 4.232118504532423e-07,
+          "tau_relative": 0.0,
+          "key_max_relative": 7.673535140639842e-09,
+          "tau_q_s": 0.1,
+          "variance_rad2": 0.0052626252150384375,
+          "key_bps": [
+            83127.15628940429,
+            143520.73307869962
+          ],
+          "status": "capped"
+        },
+        {
+          "points": 32769,
+          "variance_max_relative": 8.465449918837464e-08,
+          "tau_relative": 0.0,
+          "key_max_relative": 1.5349266302422393e-09,
+          "tau_q_s": 0.1,
+          "variance_rad2": 0.005262623433338737,
+          "key_bps": [
+            83127.15679968936,
+            143520.73390025913
+          ],
+          "status": "capped"
+        },
+        {
+          "points": 65537,
+          "variance_max_relative": 0.0,
+          "tau_relative": 0.0,
+          "key_max_relative": 0.0,
+          "tau_q_s": 0.1,
+          "variance_rad2": 0.0052626229878340244,
+          "key_bps": [
+            83127.15692728345,
+            143520.73410547446
+          ],
+          "status": "capped"
+        }
+      ]
+    }
+  ],
+  "selected_fast_points": 4097,
+  "passed": true
+}

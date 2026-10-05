@@ -1,0 +1,66 @@
+# Published calculation example; never defaults for another installation.
+# Laser/fiber: bertaina2024 Table III; protocol: Table II/Appendix D and author QKD.ipynb.
+# Actuator pole is an explicit user-authorized engineering proxy, not a measured hardware specification.
+# Reach is disabled unless [reach] enabled=true is explicitly supplied.
+# Fully specified EXAMPLE ONLY: Table III; Table II/Appendix D; QKD.ipynb Cells 3,7,23.
+# No values here are instrument defaults. Length in km, PSDs one-sided rad^2/Hz.
+[physics]
+r3 = 3000000.0 # rad^2 Hz^2; Table III, bertaina2024 / QKD.ipynb Cell 3
+r2 = 300.0 # rad^2 Hz; Table III, bertaina2024 / QKD.ipynb Cell 3
+fc_hz = 2000000.0 # Hz; Table III, bertaina2024 / QKD.ipynb Cell 3
+C4 = 0.5 # rad^2 Hz^3; Table III, bertaina2024 / QKD.ipynb Cell 3
+C3 = 0.0 # rad^2 Hz^2; Table III, bertaina2024 / QKD.ipynb Cell 3
+C2 = 0.002 # rad^2 Hz; Table III, bertaina2024 / QKD.ipynb Cell 3
+B_hz = 300000.0 # Hz; Table III, bertaina2024 / QKD.ipynb Cell 3
+gamma = 0.1 # dimensionless; Table III, bertaina2024 / QKD.ipynb Cell 3
+delta = 10.0 # dimensionless; Table III, bertaina2024 / QKD.ipynb Cell 3
+l = 44.0 # rad^2 Hz/km; Table III, bertaina2024 / QKD.ipynb Cell 3
+fc1_hz = 100.0 # Hz; Table III, bertaina2024 / QKD.ipynb Cell 3
+s0 = 1e-08 # rad^2/Hz; Table III, bertaina2024 / QKD.ipynb Cell 3
+fc2_hz = 200000.0 # Hz; Table III, bertaina2024 / QKD.ipynb Cell 3
+lambda_s_nm = 1543.33 # nm; Table III, bertaina2024 / QKD.ipynb Cell 3
+lambda_q_nm = 1542.14 # nm; Table III, bertaina2024 / QKD.ipynb Cell 3
+c_km_s = 299792.458 # km/s; Table III, bertaina2024 / QKD.ipynb Cell 3
+n = 1.45 # dimensionless; Table III, bertaina2024 / QKD.ipynb Cell 3
+K = 4.0 # dimensionless; Table III, bertaina2024 / QKD.ipynb Cell 3
+
+[keyrate]
+clockrate_hz = 1000000000.0 # Hz; Table II/Appendix D, bertaina2024 / QKD.ipynb Cell 23
+attenuation_db_per_km = 0.2 # dB/km; Table II/Appendix D, bertaina2024 / QKD.ipynb Cell 23
+stab_overhead_s = 0.001 # s; Table II/Appendix D, bertaina2024 / QKD.ipynb Cell 23
+detector_efficiency = 0.9 # dimensionless; Table II/Appendix D, bertaina2024 / QKD.ipynb Cell 23
+detector_dark_count_rate_hz = 10.0 # Hz; Table II/Appendix D, bertaina2024 / QKD.ipynb Cell 23
+detector_error = 0.02 # dimensionless; Table II/Appendix D, bertaina2024 / QKD.ipynb Cell 23
+decoy_big = 0.4 # dimensionless; Table II/Appendix D, bertaina2024 / QKD.ipynb Cell 23
+decoy_medium = 0.16 # dimensionless; Table II/Appendix D, bertaina2024 / QKD.ipynb Cell 23
+decoy_mini = 1e-05 # dimensionless; Table II/Appendix D, bertaina2024 / QKD.ipynb Cell 23
+f_error = 1.15 # dimensionless; Table II/Appendix D, bertaina2024 / QKD.ipynb Cell 23
+pz_sns = 1.0 # dimensionless; Table II/Appendix D, bertaina2024 / QKD.ipynb Cell 23
+eps_sns_aopp = 0.25 # dimensionless; Table II/Appendix D, bertaina2024 / QKD.ipynb Cell 23
+duty_bb84 = 1.0 # dimensionless; Table II/Appendix D, bertaina2024 / QKD.ipynb Cell 23
+pz_cal = 1.0 # dimensionless; Table II/Appendix D, bertaina2024 / QKD.ipynb Cell 23
+nmin_cal = 0 # dimensionless; Table II/Appendix D, bertaina2024 / QKD.ipynb Cell 23
+nmax_cal = 20 # dimensionless; Table II/Appendix D, bertaina2024 / QKD.ipynb Cell 23
+u_cal = 0.018 # dimensionless; Table II/Appendix D, bertaina2024 / QKD.ipynb Cell 23
+
+[operation]
+sigma_limit_rad = 0.2 # rad; explicit example: QKD.ipynb Cell 3
+tau_max_s = 0.1 # s; explicit example: QKD.ipynb Cell 3
+tau_ps_s = 0.001 # s; explicit example: QKD.ipynb Cell 3
+
+[line]
+length_km = 200.0 # km; explicit demonstration geometry, Table I imbalance
+imbalance_km = 0.02 # km; explicit demonstration geometry, Table I imbalance
+
+[laser]
+model = "free" # explicit model selection
+
+[scheme]
+lasers = "common" # explicit model selection
+compensation = "classical" # explicit model selection
+
+[protocol]
+name = "SNS-AOPP" # explicit model selection
+
+[actuator]
+omega_a_rad_s = 6283.185307179586 # rad/s; user-authorized engineering scan example, NOT a measured Bertaina apparatus pole

@@ -1,0 +1,557 @@
+{
+  "zhang": {
+    "lengths_km": [
+      101,
+      202,
+      403
+    ],
+    "mu": [
+      0.266,
+      0.234,
+      0.292
+    ],
+    "nu": [
+      0.016,
+      0.02,
+      0.018
+    ],
+    "p_mu": [
+      0.206,
+      0.185,
+      0.199
+    ],
+    "p_nu": [
+      0.227,
+      0.303,
+      0.325
+    ],
+    "N": [
+      700000000000.0,
+      1000000000000.0,
+      100000000000000.0
+    ],
+    "loss_db": [
+      19.2,
+      38.4,
+      76.5
+    ],
+    "f_ec": 1.06,
+    "clock_hz": 1250000000.0,
+    "reference_fraction": 0.125,
+    "recovery_fraction": 0,
+    "phase_slices": 32,
+    "phase_sifting_probability": 0.125,
+    "L_max": 200000,
+    "L_min_published": 25,
+    "linewidth_hz": 100,
+    "sigma_L_rad_s": 4000,
+    "eta_d": 0.7,
+    "insertion_db": 1.91,
+    "dark_rate_hz": 10,
+    "gate_s": 1e-10,
+    "published_bps": [
+      97500,
+      6300,
+      47.8
+    ],
+    "published_bits_per_round": [
+      8.91e-05,
+      5.76e-06,
+      4.37e-08
+    ],
+    "z_pairs": [
+      [
+        [
+          0,
+          912,
+          13639
+        ],
+        [
+          899,
+          1256956,
+          19087863
+        ],
+        [
+          14166,
+          18607910,
+          281215881
+        ]
+      ],
+      [
+        [
+          0,
+          220,
+          1452
+        ],
+        [
+          204,
+          558753,
+          4080155
+        ],
+        [
+          1557,
+          3638570,
+          26646030
+        ]
+      ],
+      [
+        [
+          19,
+          3885,
+          36123
+        ],
+        [
+          3799,
+          392658,
+          3665849
+        ],
+        [
+          34656,
+          3674645,
+          34412624
+        ]
+      ]
+    ],
+    "z_signal_errors": [
+      9756,
+      1096,
+      29609
+    ],
+    "x_pairs": [
+      [
+        [
+          0,
+          624375,
+          13488265
+        ],
+        [
+          641524,
+          53991,
+          3059991
+        ],
+        [
+          145543908,
+          2969156,
+          9037747
+        ]
+      ],
+      [
+        [
+          0,
+          299088,
+          12774216
+        ],
+        [
+          264452,
+          50269,
+          734656
+        ],
+        [
+          14008155,
+          651638,
+          863571
+        ]
+      ],
+      [
+        [
+          0,
+          200568,
+          17723656
+        ],
+        [
+          190050,
+          44713,
+          1132510
+        ],
+        [
+          16903994,
+          1159813,
+          1502874
+        ]
+      ]
+    ],
+    "x_error_pairs": [
+      [
+        [
+          0,
+          null,
+          null
+        ],
+        [
+          null,
+          14808,
+          1386915
+        ],
+        [
+          null,
+          1342262,
+          2412570
+        ]
+      ],
+      [
+        [
+          0,
+          null,
+          null
+        ],
+        [
+          null,
+          14377,
+          317844
+        ],
+        [
+          null,
+          286390,
+          239806
+        ]
+      ],
+      [
+        [
+          0,
+          null,
+          null
+        ],
+        [
+          null,
+          13583,
+          516815
+        ],
+        [
+          null,
+          531537,
+          441223
+        ]
+      ]
+    ],
+    "sources": {
+      "hardware": "Table I/II, Appendix E, Tables III, zhang2025; PDF p5,13-14",
+      "phase": "Eq3, Appendix B; sigma4000 used in source simulations, not per-length measured values",
+      "reference_timing": "Main setup and Appendix E: 1.25GHz, reference1/8; nominal rate conversion reported by authors,32ns buffer is not separately double counted",
+      "raw_counts": "TableIII PDF p13; visual inspection confirms printed X2mu,0=145543908 at101km. It is retained literally, not corrected to expected symmetry."
+    },
+    "limits": [
+      "L_min=25 and frame gaps absent from Zeng Eq4/IID gap law",
+      "single-click p not tabulated; source Eq73/74 approximation evaluated with hardware values",
+      "vacuum X-error counts absent; random vacuum model e0=1/2 from Zeng Supplement Eq85 used and flagged",
+      "sigma4000 used across lengths as in source simulation, not inferred field noise"
+    ]
+  },
+  "zhu": {
+    "lengths_km": [
+      101,
+      202,
+      304,
+      407
+    ],
+    "mu": [
+      0.309,
+      0.338,
+      0.531,
+      0.429
+    ],
+    "nu": [
+      0.032,
+      0.035,
+      0.053,
+      0.038
+    ],
+    "p_mu": [
+      0.22,
+      0.25,
+      0.2,
+      0.23
+    ],
+    "p_nu": [
+      0.18,
+      0.25,
+      0.4,
+      0.41
+    ],
+    "N": [
+      507000000000.0,
+      2100000000000.0,
+      6330000000000.0,
+      76600000000000.0
+    ],
+    "f_ec": 1.1,
+    "clock_hz": 625000000.0,
+    "reference_fraction": 0.257552,
+    "recovery_fraction": 0.03072,
+    "quantum_effective_hz": 444830000.0,
+    "phase_slices": 32,
+    "phase_sifting_probability": 0.125,
+    "L_max": [
+      500,
+      1000,
+      2000,
+      2000
+    ],
+    "L_min_published": 63,
+    "linewidth_hz": 2000,
+    "sigma_L_rad_s": null,
+    "click_probability": [
+      0.00635,
+      0.00113,
+      0.000189,
+      5e-05
+    ],
+    "measured_pairing_rate": [
+      0.00246,
+      0.000429,
+      4.42e-05,
+      4.21e-06
+    ],
+    "published_bps": [
+      17200,
+      2080,
+      19.2,
+      0.769
+    ],
+    "published_bits_per_potential_pair": [
+      7.75e-05,
+      9.34e-06,
+      8.65e-08,
+      3.46e-09
+    ],
+    "z_pairs": [
+      [
+        [
+          395,
+          7624,
+          89296
+        ],
+        [
+          7796,
+          1484349,
+          17793988
+        ],
+        [
+          87784,
+          17282569,
+          207389568
+        ]
+      ],
+      [
+        [
+          1,
+          2089,
+          19612
+        ],
+        [
+          2170,
+          1151368,
+          11133038
+        ],
+        [
+          21241,
+          11257634,
+          108781949
+        ]
+      ],
+      [
+        [
+          3,
+          1130,
+          5674
+        ],
+        [
+          1183,
+          589395,
+          2890760
+        ],
+        [
+          5491,
+          2951821,
+          14657476
+        ]
+      ],
+      [
+        [
+          79,
+          3235,
+          18641
+        ],
+        [
+          3088,
+          401910,
+          2593713
+        ],
+        [
+          18580,
+          2495312,
+          16100111
+        ]
+      ]
+    ],
+    "z_signal_errors": [
+      64238,
+      20550,
+      5494,
+      23545
+    ],
+    "x_pairs": [
+      [
+        [
+          null,
+          728841,
+          104986314
+        ],
+        [
+          757883,
+          33604,
+          1424753
+        ],
+        [
+          102882407,
+          1397813,
+          6811157
+        ]
+      ],
+      [
+        [
+          null,
+          540202,
+          50434095
+        ],
+        [
+          620721,
+          72245,
+          1941081
+        ],
+        [
+          59256669,
+          2214830,
+          6799900
+        ]
+      ],
+      [
+        [
+          null,
+          312052,
+          7705544
+        ],
+        [
+          285196,
+          147652,
+          1153426
+        ],
+        [
+          7160291,
+          1087743,
+          920505
+        ]
+      ],
+      [
+        [
+          null,
+          195135,
+          8211680
+        ],
+        [
+          213627,
+          129574,
+          1576219
+        ],
+        [
+          8244022,
+          1565764,
+          1658149
+        ]
+      ]
+    ],
+    "x_error_pairs": [
+      [
+        [
+          null,
+          371608,
+          53565167
+        ],
+        [
+          387259,
+          10596,
+          623114
+        ],
+        [
+          52564215,
+          611618,
+          2113807
+        ]
+      ],
+      [
+        [
+          null,
+          269911,
+          25204023
+        ],
+        [
+          310412,
+          22978,
+          841632
+        ],
+        [
+          29637863,
+          977362,
+          2129516
+        ]
+      ],
+      [
+        [
+          null,
+          155379,
+          3840896
+        ],
+        [
+          142195,
+          48961,
+          515419
+        ],
+        [
+          3573229,
+          480065,
+          303172
+        ]
+      ],
+      [
+        [
+          null,
+          96467,
+          4050328
+        ],
+        [
+          105084,
+          45226,
+          714854
+        ],
+        [
+          4063596,
+          711299,
+          566112
+        ]
+      ]
+    ],
+    "sources": {
+      "parameters": "Table I,VI,VII zhu2023, PDF p4,16,17",
+      "phase_slices": "D16 modulation and32slice width Appendix B; phase-match probability2/D=1/8 from protocol",
+      "normalization": "Main Eq1 paragraph PDF p2-3: R=K/N_pair,N_pair=N_rounds/2",
+      "timing": "Table VI PDF p16:444.83MHz quantum,160.97MHz strong,19.20MHz recovery"
+    },
+    "limits": [
+      "No published sigma_L/residual tracking; no modeb forecast by user decision",
+      "Table VII304km header says303; use304 from Table I/VI and retain typographical discrepancy",
+      "X00 absent; zero-basis counts Z00 reused under source basis0 rule, error e0=1/2 flagged",
+      "Minimum gap63/frame gaps not modelled by Zeng Eq4; observed pair normalization retained for count checks"
+    ],
+    "published_finite_single_photon_counts": [
+      107000000.0,
+      50300000.0,
+      4510000.0,
+      6020000.0
+    ],
+    "published_finite_phase_errors": [
+      0.2474,
+      0.2571,
+      0.337,
+      0.3468
+    ]
+  }
+}

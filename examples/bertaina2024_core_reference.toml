@@ -1,0 +1,215 @@
+# Physical coefficients: Table III, bertaina2024; QKD.ipynb, cell 3.
+[physics]
+r3 = 3e6 # rad^2 Hz^2
+r2 = 3e2 # rad^2 Hz
+fc_hz = 2e6 # Hz
+C4 = 0.5 # rad^2 Hz^3
+C3 = 0.0 # rad^2 Hz^2
+C2 = 2e-3 # rad^2 Hz
+B_hz = 300e3 # Hz
+gamma = 0.1 # dimensionless
+delta = 10.0 # dimensionless
+# G0 is computed from B, gamma, delta exactly as QKD.ipynb G1;
+# Table III displays its rounded value 3.55e13 Hz^2.
+l = 44.0 # rad^2 Hz km^-1
+fc1_hz = 100.0 # Hz
+s0 = 1e-8 # rad^2 Hz^-1
+fc2_hz = 200e3 # Hz
+lambda_s_nm = 1543.33 # nm
+lambda_q_nm = 1542.14 # nm
+c_km_s = 299792.458 # km/s; QKD.ipynb calc_spectra
+n = 1.45 # dimensionless; Eq. 5 discussion / QKD.ipynb
+K = 4.0 # Eq. 5: correlated round trip; set 2 for uncorrelated paths.
+
+[operation]
+sigma_limit_rad = 0.2 # rad; QKD.ipynb cell 7
+tau_max_s = 0.1 # s; QKD.ipynb plot_panel_scenarios
+tau_ps_s = 0.001 # s; QKD.ipynb simulation parameters
+LB_km = 100.0 # km; QKD.ipynb LBref
+
+[grid]
+mode = "fast" # numerical execution mode; reference is reserved for validation
+fast_points = 4097 # smallest passing nested grid 2^k+1 in the executed Table I convergence calibration
+reference_points = 65537 # current validated reference base grid
+f_min_hz = 0.001 # Hz; QKD.ipynb calc_sigma
+f_max_hz = 1e6 # Hz; QKD.ipynb calc_sigma
+points = 65537 # numerical choice; convergence checked against refined_points
+refined_points = 131073 # numerical choice
+author_points = 10000 # QKD.ipynb calc_sigma_tau
+author_curve_points = 1000 # QKD.ipynb calc_sigma / Figure 8
+relative_tolerance = 0.0001 # numerical convergence criterion, not a physical coefficient
+
+[validation]
+seed = 202409 # reproducibility setting, not a physical coefficient
+realizations = 64 # Monte Carlo sample size, numerical choice
+samples = 65536 # samples per realization, numerical choice
+sample_rate_hz = 1000.0 # Hz, synthetic test setting
+alpha = 0.5 # exponent; stationary alpha < 1, Kasdin Sec. VI-B
+input_variance = 1.0 # synthetic input units^2, test normalization
+welch_segment = 4096 # samples, numerical choice
+welch_overlap = 2048 # samples, numerical choice
+welch_window = "hann" # Welch numerical setting
+comparison_min_hz = 10.0 # Hz, avoids finite-record / Welch low-frequency bias
+comparison_max_hz = 100.0 # Hz, below Nyquist for Eq. 99 approximation
+confidence_sigma = 3.0 # statistical reporting threshold, not a physical coefficient
+reference_rtol = 1e-12 # numerical identity check against author functions
+measurement_length_km = 114.0 # km; Appendix G / QKD.ipynb plot_laser_fiber_spectra
+measurement_roundtrip_factor = 4.0 # Appendix G / QKD.ipynb
+measurement_edges_hz = [10.0, 100.0, 1000.0, 10000.0, 100000.0, 1000000.0] # reporting decades; author plot spans 10..1e6 Hz
+imbalance_min_km = 0.01 # km; QKD.ipynb plot2_sigma
+imbalance_max_km = 100.0 # km; QKD.ipynb plot2_sigma
+imbalance_points = 100 # QKD.ipynb plot2_sigma
+contour_tau_max_s = 1000.0 # s; reciprocal of minimum frequency, author calc_sigma
+comparison_times_s = [0.00001, 0.0001, 0.001, 0.01, 0.1] # s, numerical Figure 8 reporting points
+extended_cutoffs_hz = [2e6, 1e7] # Hz, numerical upper-cutoff sensitivity (not reference defaults)
+
+[plot]
+figure8_f_min_hz = 10.0 # Hz; QKD.ipynb plot_spectra_scenarios
+figure8_psd_min = 1e-10 # rad^2/Hz; QKD.ipynb plot_spectra_scenarios
+figure8_psd_max = 1e-4 # rad^2/Hz; QKD.ipynb plot_spectra_scenarios
+figure8_sigma_min = 1e-2 # rad; QKD.ipynb plot_spectra_scenarios
+figure8_sigma_max = 1.0 # rad; QKD.ipynb plot_spectra_scenarios
+
+[[scenarios]]
+name = "1"
+common = true
+cavity = false
+stabilized = false
+delta_L_km = 0.020 # km; Table I / QKD.ipynb cell 7
+[[scenarios]]
+name = "2"
+common = true
+cavity = false
+stabilized = true
+delta_L_km = 0.020 # km; Table I
+[[scenarios]]
+name = "3"
+common = true
+cavity = false
+stabilized = true
+delta_L_km = 2.5 # km; Table I / QKD.ipynb Figure 8
+[[scenarios]]
+name = "4"
+common = true
+cavity = true
+stabilized = false
+delta_L_km = 2.5 # km; Table I
+[[scenarios]]
+name = "5"
+common = true
+cavity = true
+stabilized = true
+delta_L_km = 2.5 # km; Table I
+[[scenarios]]
+name = "6"
+common = false
+cavity = true
+stabilized = false
+delta_L_km = 2.5 # km; QKD.ipynb instantiates Table I ANY with 2.5
+[[scenarios]]
+name = "7"
+common = false
+cavity = true
+stabilized = true
+delta_L_km = 2.5 # km; QKD.ipynb instantiates Table I ANY with 2.5
+
+[linewidth]
+white_levels_hz2_per_hz = [1.0, 100.0, 1000.0] # didomenico2010 Fig. 1 h0, Fig. 6 ha,hb; not fiber coefficients
+filtered_h0_hz2_per_hz = 1.0 # Fig. 1, didomenico2010
+cutoffs_hz = [0.03, 0.3, 3.0, 30.0] # Fig. 1, didomenico2010
+relative_tolerance = 1e-8 # numerical comparison tolerance
+quadrature_tolerance = 1e-10 # numerical absolute integration tolerance
+
+[sensitivity]
+n_min = 1.44 # user-requested T7 range, dimensionless
+n_max = 1.48 # user-requested T7 range, dimensionless
+points = 9 # numerical sampling of the requested range
+
+[keyrate]
+clockrate_hz = 1000000000.0 # Hz; Table II, bertaina2024
+attenuation_db_per_km = 0.2 # dB/km; Table II, bertaina2024
+stab_overhead_s = 0.001 # s; Table II, bertaina2024
+detector_efficiency = 0.9 # SNSPD eta_D; Table II, bertaina2024
+detector_dark_count_rate_hz = 10.0 # Hz; SNSPD P_DC, Table II, bertaina2024
+detector_error = 0.02 # e_theta; Table II, bertaina2024
+decoy_big = 0.4 # u; Table II, bertaina2024
+decoy_medium = 0.16 # v; Table II, bertaina2024
+decoy_mini = 1e-05 # w; Table II, bertaina2024
+f_error = 1.15 # f_EC; Table II, bertaina2024
+pz_sns = 1.0 # QKD.ipynb Cell 23, asymptotic pZ_SNS
+eps_sns_aopp = 0.25 # epsilon; Table II, bertaina2024
+duty_bb84 = 1.0 # QKD.ipynb Cell 23, asymptotic efficient BB84
+pz_cal = 1.0 # QKD.ipynb Cell 23, asymptotic pZ_CAL
+nmin_cal = 0 # QKD.ipynb Cell 23, CAL B5 truncation
+nmax_cal = 20 # QKD.ipynb Cell 23, CAL B5 truncation
+u_cal = 0.018 # mu_zeta; Table II, bertaina2024
+
+[keyrate_validation]
+loss_min_db = 15.0 # QKD.ipynb Figure 3
+loss_max_db = 110.0 # QKD.ipynb Figure 3
+loss_points = 200 # QKD.ipynb Figure 3
+relative_tolerance = 1e-10 # numerical source-fidelity tolerance
+
+[classical]
+controller = "integrator" # LEGACY ideal-loop diagnostic only; main controller is the pole model in classical_actuator
+length_km = 114.0 # Appendix G bertaina2024 reference link, comparison length
+spatial_nodes = 64 # numerical Gauss-Legendre quadrature, uniform noise Eq. A11
+low_frequency_fraction = 0.01 # numerical diagnostic f / (1/(4*tau_oneway)); not a loop coefficient
+
+g_min_per_s = 0.01 # s^-1, user-requested lower scan endpoint
+g_max_times_reference_delay = 10.0 # numerical scan endpoint g*tau_RT(ref); NOT a stability limit
+g_scan_points = 25 # numerical logarithmic scan
+comparison_g_per_s = [0.01, 1.0, 10.0, 100.0, 1000.0, 9000.0] # s^-1, numerical scan samples, no fitted coefficients
+comparison_tau_s = 0.1 # s, LEGACY fixed-time diagnostic only; main calculation solves tau_Q under operation.tau_max_s
+length_min_km = 0.0001 # km, numerical search domain
+length_max_km = 1000.0 # km, numerical search domain
+length_points = 80 # numerical search and plotting resolution
+scaling_lengths_km = [10.0, 30.0, 100.0, 300.0] # km, numerical scaling diagnostics
+scaling_f_min_hz = 0.01 # Hz, fixed low-frequency diagnostic band
+scaling_f_max_hz = 0.1 # Hz, fixed band; no length-dependent integration window
+high_gain_dimensionless = [1.0, 10.0, 100.0, 1000.0, 1000000.0] # g*tau_RT; pointwise asymptotic diagnostics only
+pole_branches = 12 # numerical root branches for diagnostics, analytic proof covers all roots
+resonance_points = 2001 # local numerical refinement around each pole
+resonance_widths = 30.0 # number of pole linewidths refined on each side
+quadrature_rtol = 0.0001 # numerical integration convergence criterion
+
+# User-authorized engineering assumption, NOT a measured apparatus parameter or source coefficient.
+[classical_actuator]
+omega_a_min_rad_s = 628.3185307179587 # rad/s; user example 2*pi*100 Hz
+omega_a_max_rad_s = 628318.5307179586 # rad/s; user example 2*pi*100000 Hz
+omega_a_points = 7 # numerical logarithmic scan, includes both endpoints
+gain_fractions = [0.01, 0.1, 0.3, 0.6, 0.9, 0.99] # numerical stable scan g/g_crit(L,omega_a); gain changes with L
+gain_scan_points = 25 # numerical gain scan at reference length, starts at classical.g_min_per_s
+gain_ceiling_fraction = 0.99 # numerical distance from marginal stability, not an apparatus limit
+length_min_km = 1.0 # km per balanced arm; numerical curve domain
+length_max_km = 275.0 # km per arm; 110 dB total loss at Table II attenuation (author validation domain)
+length_points = 80 # numerical logarithmic length sampling; root crossings refined independently
+resonance_branches = 24 # numerical delay-root seeds; doubled in convergence checks
+resonance_points = 2001 # numerical local grid points around each root, doubled on refinement
+resonance_widths = 30.0 # numerical linewidth window around each pole
+resonance_tail_points = 257 # numerical logarithmic samples outside each narrow peak core
+resonance_tail_fraction = 0.25 # fraction of pole center frequency covered by logarithmic tails
+max_refinement_levels = 5 # numerical maximum doublings of branch/tail counts; failure is reported
+root_xtol_km = 1e-7 # km; numerical length-root tolerance
+root_rtol = 1e-10 # numerical relative root tolerance
+root_crossing_fraction = 0.001 # numerical gain offset on each side of g_crit for root sign check
+quadrature_frequency_multiple = 10.0 # numerical spatial-integral verification range relative to critical frequency
+quadrature_frequency_points = 100 # numerical spatial-integral verification samples
+key_zero_loss_min_db = 15.0 # dB; QKD.ipynb Figure 3 validation interval
+key_zero_loss_max_db = 110.0 # dB; QKD.ipynb Figure 3 validation interval
+
+[performance]
+workers = 2 # computational setting, independent omega_a/scenario jobs only
+cache_entries = 8 # computational setting, bounded process-local spectral cache
+batch_memory_mb = 64.0 # computational working-array budget, not a physical coefficient
+fast_peak_core_points = 513 # computational peak mesh; calibrated against reference adaptive grids
+fast_peak_tail_points = 129 # computational peak-wing mesh; calibrated against reference adaptive grids
+fast_peak_branches = 24 # same starting delay-root count as the existing reference method
+regression_variance_rtol = 1e-4 # requested A5 numerical tolerance
+regression_time_rtol = 1e-4 # requested A5 numerical tolerance
+regression_key_rtol = 1e-3 # requested A5 numerical tolerance
+grid_candidates = [257, 513, 1025, 2049, 4097, 8193, 16385, 32769, 65537] # nested numerical calibration grids
+pole_iterations = 80 # numerical Newton iteration limit; independent of physical coefficients
+pole_step_limit = 2.0 # numerical damping of dimensionless root steps
+pole_residual_rtol = 1e-9 # same characteristic-root acceptance as the pre-A implementation
+stability_iterations = 60 # vectorized bisection iterations of the unchanged crossing equation

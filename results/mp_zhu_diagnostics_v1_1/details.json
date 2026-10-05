@@ -1,0 +1,352 @@
+{
+  "scope": "Diagnosis only: no model or estimator change",
+  "rows": [
+    {
+      "length_km": 101,
+      "signal_count": 207389568,
+      "observed_z_error": 0.0003097455702304178,
+      "f_ec": 1.1,
+      "N_rounds": 507000000000.0,
+      "N_potential_pairs": 253500000000.0,
+      "effective_quantum_rounds_hz": 444830000.0,
+      "published_bps": 17200,
+      "q_analytic": 0.5197956088035389,
+      "q_finite_published_derived": 0.5159372336413758,
+      "q_difference_absolute": 0.0038583751621631412,
+      "q_difference_relative_percent": 0.7478380916476013,
+      "single_count_analytic": 107800186.75806293,
+      "single_count_finite_published": 107000000.0,
+      "phase_upper_analytic": 0.22122309705858242,
+      "phase_upper_raw_analytic": 0.22122309705858242,
+      "privacy_entropy_error_analytic": 0.22122309705858242,
+      "phase_upper_finite_published": 0.2474,
+      "phase_upper_difference_percentage_points": -2.6176902941417586,
+      "phase_upper_relative_difference_percent": -10.5808015122949,
+      "Y_X_11_lower_analytic_raw": 0.09759269442063706,
+      "Y_Z_11_lower_analytic_raw": 0.11855250276163584,
+      "YE_X_11_upper_analytic": 0.021589758110025167,
+      "rp_eq4": 0.003107932755914665,
+      "rp_published": 0.00246,
+      "rp_b7_diagnostic": 0.0024598719387030404,
+      "b7_to_published_ratio": 0.9999479425622115,
+      "rs_eq4_conditioned": 0.13161558968365766,
+      "rs_inferred_using_published_rp": 0.16628146437677394,
+      "rp_rs_product": 0.0004090524023668639,
+      "analytic": {
+        "privacy_bits": 25613910.586420495,
+        "error_correction_bits": 925606.0065036683,
+        "signed_key_bits": 24688304.579916827,
+        "bits_per_round": 4.8694880828238315e-05,
+        "bits_per_potential_pair": 9.738976165647663e-05,
+        "signed_key_bps": 21660.94383882525,
+        "key_bps": 21660.94383882525
+      },
+      "finite_component_replay": {
+        "privacy_bits": 20636966.468199518,
+        "error_correction_bits": 925606.0065036683,
+        "signed_key_bits": 19711360.46169585,
+        "bits_per_round": 3.8878423001372485e-05,
+        "bits_per_potential_pair": 7.775684600274497e-05,
+        "signed_key_bps": 17294.288903700522,
+        "key_bps": 17294.288903700522
+      },
+      "q_only_replaced_by_published_finite": {
+        "privacy_bits": 25423781.86132412,
+        "error_correction_bits": 925606.0065036683,
+        "signed_key_bits": 24498175.854820453,
+        "bits_per_round": 4.831987348090819e-05,
+        "bits_per_potential_pair": 9.663974696181638e-05,
+        "signed_key_bps": 21494.12932051239,
+        "key_bps": 21494.12932051239
+      },
+      "phase_only_replaced_by_published_finite": {
+        "privacy_bits": 20791297.564409256,
+        "error_correction_bits": 925606.0065036683,
+        "signed_key_bits": 19865691.55790559,
+        "bits_per_round": 3.91828235856126e-05,
+        "bits_per_potential_pair": 7.83656471712252e-05,
+        "signed_key_bps": 17429.695415588056,
+        "key_bps": 17429.695415588056
+      },
+      "notes": []
+    },
+    {
+      "length_km": 202,
+      "signal_count": 108781949,
+      "observed_z_error": 0.0001889100185178701,
+      "f_ec": 1.1,
+      "N_rounds": 2100000000000.0,
+      "N_potential_pairs": 1050000000000.0,
+      "effective_quantum_rounds_hz": 444830000.0,
+      "published_bps": 2080,
+      "q_analytic": 0.4830585723333717,
+      "q_finite_published_derived": 0.46239289204130735,
+      "q_difference_absolute": 0.020665680292064337,
+      "q_difference_relative_percent": 4.469290217856159,
+      "single_count_analytic": 52548052.97958165,
+      "single_count_finite_published": 50300000.0,
+      "phase_upper_analytic": 0.27823144255277843,
+      "phase_upper_raw_analytic": 0.27823144255277843,
+      "privacy_entropy_error_analytic": 0.27823144255277843,
+      "phase_upper_finite_published": 0.2571,
+      "phase_upper_difference_percentage_points": 2.1131442552778434,
+      "phase_upper_relative_difference_percent": 8.219153073815022,
+      "Y_X_11_lower_analytic_raw": 0.0099874229816125,
+      "Y_Z_11_lower_analytic_raw": 0.013779611772169324,
+      "YE_X_11_upper_analytic": 0.0027788151035588174,
+      "rp_eq4": 0.00045624723250428005,
+      "rp_published": 0.000429,
+      "rp_b7_diagnostic": 0.00042790727489859704,
+      "b7_to_published_ratio": 0.9974528552414849,
+      "rs_eq4_conditioned": 0.11353696944288237,
+      "rs_inferred_using_published_rp": 0.12074808413808413,
+      "rp_rs_product": 5.18009280952381e-05,
+      "analytic": {
+        "privacy_bits": 7722996.750530891,
+        "error_correction_bits": 312233.18842064205,
+        "signed_key_bits": 7410763.562110249,
+        "bits_per_round": 3.528935029576309e-06,
+        "bits_per_potential_pair": 7.057870059152618e-06,
+        "signed_key_bps": 1569.7761692064296,
+        "key_bps": 1569.7761692064296
+      },
+      "finite_component_replay": {
+        "privacy_bits": 8936367.135798506,
+        "error_correction_bits": 312233.18842064205,
+        "signed_key_bits": 8624133.947377864,
+        "bits_per_round": 4.106730451132316e-06,
+        "bits_per_potential_pair": 8.213460902264633e-06,
+        "signed_key_bps": 1826.7969065771883,
+        "key_bps": 1826.7969065771883
+      },
+      "q_only_replaced_by_published_finite": {
+        "privacy_bits": 7392600.001804987,
+        "error_correction_bits": 312233.18842064205,
+        "signed_key_bits": 7080366.813384345,
+        "bits_per_round": 3.3716032444687357e-06,
+        "bits_per_potential_pair": 6.743206488937471e-06,
+        "signed_key_bps": 1499.7902712370278,
+        "key_bps": 1499.7902712370278
+      },
+      "phase_only_replaced_by_published_finite": {
+        "privacy_bits": 9335759.318030462,
+        "error_correction_bits": 312233.18842064205,
+        "signed_key_bits": 9023526.12960982,
+        "bits_per_round": 4.296917204576105e-06,
+        "bits_per_potential_pair": 8.59383440915221e-06,
+        "signed_key_bps": 1911.3976801115887,
+        "key_bps": 1911.3976801115887
+      },
+      "notes": []
+    },
+    {
+      "length_km": 304,
+      "signal_count": 14657476,
+      "observed_z_error": 0.00037482578856004947,
+      "f_ec": 1.1,
+      "N_rounds": 6330000000000.0,
+      "N_potential_pairs": 3165000000000.0,
+      "effective_quantum_rounds_hz": 444830000.0,
+      "published_bps": 19.2,
+      "q_analytic": 0.3169001796308556,
+      "q_finite_published_derived": 0.3076928115045182,
+      "q_difference_absolute": 0.009207368126337379,
+      "q_difference_relative_percent": 2.9923897413515643,
+      "single_count_analytic": 4644956.777334955,
+      "single_count_finite_published": 4510000.0,
+      "phase_upper_analytic": 1.0,
+      "phase_upper_raw_analytic": null,
+      "privacy_entropy_error_analytic": 0.5,
+      "phase_upper_finite_published": 0.337,
+      "phase_upper_difference_percentage_points": 66.3,
+      "phase_upper_relative_difference_percent": 196.73590504451036,
+      "Y_X_11_lower_analytic_raw": -1.568684833688255e-05,
+      "Y_Z_11_lower_analytic_raw": 0.0005880302866033713,
+      "YE_X_11_upper_analytic": 0.00016843027718313716,
+      "rp_eq4": 4.525124315723086e-05,
+      "rp_published": 4.42e-05,
+      "rp_b7_diagnostic": 4.396606249511774e-05,
+      "b7_to_published_ratio": 0.9947072962696323,
+      "rs_eq4_conditioned": 0.05117112522124791,
+      "rs_inferred_using_published_rp": 0.05238816809990493,
+      "rp_rs_product": 2.3155570300157977e-06,
+      "analytic": {
+        "privacy_bits": 0.0,
+        "error_correction_bits": 77500.05873512715,
+        "signed_key_bits": -77500.05873512715,
+        "bits_per_round": -1.2243295218819455e-08,
+        "bits_per_potential_pair": -2.448659043763891e-08,
+        "signed_key_bps": -5.446185012187458,
+        "key_bps": 0.0
+      },
+      "finite_component_replay": {
+        "privacy_bits": 352145.58714331064,
+        "error_correction_bits": 77500.05873512715,
+        "signed_key_bits": 274645.5284081835,
+        "bits_per_round": 4.338791917980782e-08,
+        "bits_per_potential_pair": 8.677583835961564e-08,
+        "signed_key_bps": 19.30024808875391,
+        "key_bps": 19.30024808875391
+      },
+      "q_only_replaced_by_published_finite": {
+        "privacy_bits": 0.0,
+        "error_correction_bits": 77500.05873512715,
+        "signed_key_bits": -77500.05873512715,
+        "bits_per_round": -1.2243295218819455e-08,
+        "bits_per_potential_pair": -2.448659043763891e-08,
+        "signed_key_bps": -5.446185012187458,
+        "key_bps": 0.0
+      },
+      "phase_only_replaced_by_published_finite": {
+        "privacy_bits": 362683.1555676092,
+        "error_correction_bits": 77500.05873512715,
+        "signed_key_bits": 285183.096832482,
+        "bits_per_round": 4.5052621932461615e-08,
+        "bits_per_potential_pair": 9.010524386492323e-08,
+        "signed_key_bps": 20.0407578142169,
+        "key_bps": 20.0407578142169
+      },
+      "notes": [
+        "VACUOUS_ANALYTIC_DECOY_BOUND: C4/C5 does not establish a positive one-photon yield"
+      ]
+    },
+    {
+      "length_km": 407,
+      "signal_count": 16100111,
+      "observed_z_error": 0.001462412277778706,
+      "f_ec": 1.1,
+      "N_rounds": 76600000000000.0,
+      "N_potential_pairs": 38300000000000.0,
+      "effective_quantum_rounds_hz": 444830000.0,
+      "published_bps": 0.769,
+      "q_analytic": 0.38870802454432557,
+      "q_finite_published_derived": 0.37391046558623103,
+      "q_difference_absolute": 0.014797558958094537,
+      "q_difference_relative_percent": 3.957513982630667,
+      "single_count_analytic": 6258242.341754366,
+      "single_count_finite_published": 6020000.0,
+      "phase_upper_analytic": 0.5559579689110535,
+      "phase_upper_raw_analytic": 0.5559579689110535,
+      "privacy_entropy_error_analytic": 0.5,
+      "phase_upper_finite_published": 0.3468,
+      "phase_upper_difference_percentage_points": 20.915796891105355,
+      "phase_upper_relative_difference_percent": 60.31083301933493,
+      "Y_X_11_lower_analytic_raw": 4.005330510955058e-05,
+      "Y_Z_11_lower_analytic_raw": 7.635597354680335e-05,
+      "YE_X_11_upper_analytic": 2.226795415688046e-05,
+      "rp_eq4": 4.344772599313508e-06,
+      "rp_published": 4.21e-06,
+      "rp_b7_diagnostic": 4.215370966109001e-06,
+      "b7_to_published_ratio": 1.0012757639213778,
+      "rs_eq4_conditioned": 0.04837634465458393,
+      "rs_inferred_using_published_rp": 0.04992499209267999,
+      "rp_rs_product": 2.1018421671018277e-07,
+      "analytic": {
+        "privacy_bits": 0.0,
+        "error_correction_bits": 281244.58228886395,
+        "signed_key_bits": -281244.58228886395,
+        "bits_per_round": -3.671600290977336e-09,
+        "bits_per_potential_pair": -7.343200581954672e-09,
+        "signed_key_bps": -1.6332379574354483,
+        "key_bps": 0.0
+      },
+      "finite_component_replay": {
+        "privacy_bits": 414310.429903668,
+        "error_correction_bits": 281244.58228886395,
+        "signed_key_bits": 133065.84761480405,
+        "bits_per_round": 1.7371520576345176e-09,
+        "bits_per_potential_pair": 3.4743041152690352e-09,
+        "signed_key_bps": 0.7727373497975625,
+        "key_bps": 0.7727373497975625
+      },
+      "q_only_replaced_by_published_finite": {
+        "privacy_bits": 0.0,
+        "error_correction_bits": 281244.58228886395,
+        "signed_key_bits": -281244.58228886395,
+        "bits_per_round": -3.671600290977336e-09,
+        "bits_per_potential_pair": -7.343200581954672e-09,
+        "signed_key_bps": -1.6332379574354483,
+        "key_bps": 0.0
+      },
+      "phase_only_replaced_by_published_finite": {
+        "privacy_bits": 430706.8230986029,
+        "error_correction_bits": 281244.58228886395,
+        "signed_key_bits": 149462.24080973893,
+        "bits_per_round": 1.951204188116696e-09,
+        "bits_per_potential_pair": 3.902408376233392e-09,
+        "signed_key_bps": 0.86795415899995,
+        "key_bps": 0.86795415899995
+      },
+      "notes": [
+        "NO_SINGLE_PHOTON_PRIVACY_BOUND: upper error interval contains 1/2; privacy contribution is zero"
+      ]
+    }
+  ],
+  "zhu202_component_diagnosis": {
+    "target_key_bits_from_published_bps": 9819481.599712249,
+    "target_key_bits_from_published_bits_per_potential_pair": 9807000.0,
+    "target_privacy_bits_at_published_EC": 10131714.788132891,
+    "missing_privacy_or_key_bits": 1195347.6523343846,
+    "missing_privacy_relative_percent": 13.376214676161858,
+    "component_replay_relative_error_percent": -12.173225645327479,
+    "no_EC_ceiling_bps": 1892.9353300082141,
+    "required_M11_if_only_that_entry_changed": 57028235.98210941,
+    "required_M11_difference_relative_percent": 13.376214676161858,
+    "required_phase_upper_if_only_that_entry_changed": 0.24213593509176035,
+    "phase_upper_difference_percentage_points": -1.496406490823965,
+    "required_f_EC_if_only_that_entry_changed": -3.1112192628171456,
+    "required_N_rounds_if_only_denominator_changed": 1844362261448.1228,
+    "required_quantum_clock_if_only_clock_changed": 506485639.79320776,
+    "sent_entries": [
+      [
+        523787325000,
+        261893662500,
+        261893662500
+      ],
+      [
+        261893662500,
+        130946831250,
+        130946831250
+      ],
+      [
+        261893662500,
+        130946831250,
+        130946831250
+      ]
+    ],
+    "exact_sent_total": 2095149300000,
+    "replay_bps_with_exact_sent_total": 1831.0263157914785,
+    "bps_from_published_bits_per_potential_pair": 2077.3561,
+    "printed_rounding_convention": "Half final printed decimal unit; deterministic precision envelope, not statistical uncertainty; EC setting and exact signal/error counts held fixed",
+    "printed_rounding_half_units": {
+      "single_count": 50000.0,
+      "phase_error": 5e-05,
+      "rounds": 5000000000.0,
+      "clock_hz": 5000.0
+    },
+    "printed_rounding_replay_bps": [
+      1819.7474029447712,
+      1833.8819470587075
+    ],
+    "conclusion": "At the stated count/time normalization, the published privacy numerator is insufficient. The loss is not a pairing prefactor, factor2, EC or an omitted nonnegative finite penalty. M11 and/or phase-error entries, or unreported provenance of their relation to the final key, remain internally unclosed; no unique erroneous scalar is identified."
+  },
+  "source_method": {
+    "ours": "Zhang2025 C4-C7, asymptotic analytical bounds; PDF p10; plug-in observed gains",
+    "zhu": "Zhu2023 Appendix A step9/p6: decoy-state estimation, weak-weak X pairs only, with Chernoff-Hoeffding; A2/p7 and A3/p8. Ref22 points to Zeng2022.",
+    "zeng_reference": "Zeng2022 Supplement Note3 Eqs64/65, PDF p33: linear programs; Eq67/68 p34: finite key and phase-error random sampling. The same supplement p34 notes that the programs may also be solved analytically.",
+    "implementation_not_identified": "Zhu does not specify whether it used the LP or an analytical solution of the cited decoy problem, nor the intermediate single-photon X/error counts. It is not justified to label its actual solver as LP.",
+    "protocol_difference": "Zhu EqB7/p11 and Algorithm1/p7 include L_min=63; base Zeng Eq4 does not. This explains pairing-prefactor differences but cannot alter a count-conditioned key replay.",
+    "explicit_penalties": "Zhu Eq1/p2 and A1/p6 have only privacy and f*M*h(E) terms. Chernoff/random-sampling reductions are inside tabulated M11 lower/e11 upper. No additional numerical penalty is supplied. Extra nonnegative costs cannot explain a published rate larger than the replay."
+  },
+  "uncertainties": [
+    "Rounded table entries only; no empirical standard errors available.",
+    "Analytical/asymptotic and published finite bounds are different estimators; their differences are not pure finite-size penalties.",
+    "202km table/privacy closure remains unresolved; no guessed scalar replacement.",
+    "304km analytical error upper is trivial1; worst entropy uses1/2, not a claimed measured50% error."
+  ],
+  "checks": {
+    "assertions_passed": true,
+    "model_test_config_web_files_unchanged": 59
+  },
+  "runtime_s": 0.006077905003621709
+}

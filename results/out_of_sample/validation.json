@@ -1,0 +1,549 @@
+{
+  "zhou": [
+    {
+      "anchor_km": 403.73,
+      "detector": "D0",
+      "sigma_rad": 0.05,
+      "e_d": 0.03522196347503552,
+      "fitted_rate_bps": 146.69999999999996,
+      "relative_residual": 2.220446049250313e-16,
+      "f_ec": 1.1,
+      "predictions": [
+        {
+          "length_km": 403.73,
+          "published_key_bps": 146.7,
+          "predicted_key_bps": 146.69999999999996,
+          "raw_bound_bps": 146.69999999999996,
+          "ratio": 0.9999999999999998,
+          "within_factor_1_5": true,
+          "held_out": false,
+          "protocol_edge": false,
+          "x11_qber": 0.0517,
+          "e_d_below_x11": true,
+          "phase_endpoint_effect": {
+            "sigma_bounds_rad": [
+              0.0,
+              0.099
+            ],
+            "low_key_bps": 148.47872296260903,
+            "high_key_bps": 141.62132459390702,
+            "change_percent": -4.618438407790515,
+            "raw_low_bps": 148.47872296260903,
+            "raw_high_bps": 141.62132459390702
+          }
+        },
+        {
+          "length_km": 518.16,
+          "published_key_bps": 14.38,
+          "predicted_key_bps": 12.853403561748456,
+          "raw_bound_bps": 12.853403561748456,
+          "ratio": 0.8938389124998926,
+          "within_factor_1_5": true,
+          "held_out": true,
+          "protocol_edge": false,
+          "x11_qber": 0.0481,
+          "e_d_below_x11": true,
+          "phase_endpoint_effect": {
+            "sigma_bounds_rad": [
+              0.0,
+              0.099
+            ],
+            "low_key_bps": 13.096846208851993,
+            "high_key_bps": 12.158233845752054,
+            "change_percent": -7.166705236758009,
+            "raw_low_bps": 13.096846208851993,
+            "raw_high_bps": 12.158233845752054
+          }
+        },
+        {
+          "length_km": 615.59,
+          "published_key_bps": 0.32,
+          "predicted_key_bps": 0.0,
+          "raw_bound_bps": -3.347049833808404,
+          "ratio": 0.0,
+          "within_factor_1_5": false,
+          "held_out": true,
+          "protocol_edge": true,
+          "x11_qber": 0.0475,
+          "e_d_below_x11": true,
+          "phase_endpoint_effect": {
+            "sigma_bounds_rad": [
+              0.0,
+              0.099
+            ],
+            "low_key_bps": 0.0,
+            "high_key_bps": 0.0,
+            "change_percent": null,
+            "raw_low_bps": -3.3117059595107765,
+            "raw_high_bps": -3.4480476500266786
+          }
+        }
+      ],
+      "x11_source": "zhou2023 Table S5",
+      "calibration_caveat": "Fitted e_d also absorbs the asymptotic/finite-key discrepancy; it is not a uniquely identified intrinsic apparatus error."
+    },
+    {
+      "anchor_km": 403.73,
+      "detector": "D1",
+      "sigma_rad": 0.05,
+      "e_d": 0.03962004967709673,
+      "fitted_rate_bps": 146.69999999999828,
+      "relative_residual": 1.1657341758564144e-14,
+      "f_ec": 1.1,
+      "predictions": [
+        {
+          "length_km": 403.73,
+          "published_key_bps": 146.7,
+          "predicted_key_bps": 146.69999999999828,
+          "raw_bound_bps": 146.69999999999828,
+          "ratio": 0.9999999999999883,
+          "within_factor_1_5": true,
+          "held_out": false,
+          "protocol_edge": false,
+          "x11_qber": 0.0517,
+          "e_d_below_x11": true,
+          "phase_endpoint_effect": {
+            "sigma_bounds_rad": [
+              0.0,
+              0.099
+            ],
+            "low_key_bps": 148.49414042147782,
+            "high_key_bps": 141.5733792540601,
+            "change_percent": -4.660629131745009,
+            "raw_low_bps": 148.49414042147782,
+            "raw_high_bps": 141.5733792540601
+          }
+        },
+        {
+          "length_km": 518.16,
+          "published_key_bps": 14.38,
+          "predicted_key_bps": 12.801008627894838,
+          "raw_bound_bps": 12.801008627894838,
+          "ratio": 0.8901953148744671,
+          "within_factor_1_5": true,
+          "held_out": true,
+          "protocol_edge": false,
+          "x11_qber": 0.0481,
+          "e_d_below_x11": true,
+          "phase_endpoint_effect": {
+            "sigma_bounds_rad": [
+              0.0,
+              0.099
+            ],
+            "low_key_bps": 13.04681146276918,
+            "high_key_bps": 12.09858300348925,
+            "change_percent": -7.2678942436305345,
+            "raw_low_bps": 13.04681146276918,
+            "raw_high_bps": 12.09858300348925
+          }
+        },
+        {
+          "length_km": 615.59,
+          "published_key_bps": 0.32,
+          "predicted_key_bps": 0.0,
+          "raw_bound_bps": -3.4354150661170877,
+          "ratio": 0.0,
+          "within_factor_1_5": false,
+          "held_out": true,
+          "protocol_edge": true,
+          "x11_qber": 0.0475,
+          "e_d_below_x11": true,
+          "phase_endpoint_effect": {
+            "sigma_bounds_rad": [
+              0.0,
+              0.099
+            ],
+            "low_key_bps": 0.0,
+            "high_key_bps": 0.0,
+            "change_percent": null,
+            "raw_low_bps": -3.3995077590106924,
+            "raw_high_bps": -3.5380808966579815
+          }
+        }
+      ],
+      "x11_source": "zhou2023 Table S5",
+      "calibration_caveat": "Fitted e_d also absorbs the asymptotic/finite-key discrepancy; it is not a uniquely identified intrinsic apparatus error."
+    },
+    {
+      "anchor_km": 518.16,
+      "detector": "D0",
+      "sigma_rad": 0.05,
+      "e_d": 0.03140869248500018,
+      "fitted_rate_bps": 14.38,
+      "relative_residual": 0.0,
+      "f_ec": 1.1,
+      "predictions": [
+        {
+          "length_km": 403.73,
+          "published_key_bps": 146.7,
+          "predicted_key_bps": 157.8560941755968,
+          "raw_bound_bps": 157.8560941755968,
+          "ratio": 1.0760469950620097,
+          "within_factor_1_5": true,
+          "held_out": true,
+          "protocol_edge": false,
+          "x11_qber": 0.0517,
+          "e_d_below_x11": true,
+          "phase_endpoint_effect": {
+            "sigma_bounds_rad": [
+              0.0,
+              0.099
+            ],
+            "low_key_bps": 159.7536203977304,
+            "high_key_bps": 152.4428326338368,
+            "change_percent": -4.576289254473432,
+            "raw_low_bps": 159.7536203977304,
+            "raw_high_bps": 152.4428326338368
+          }
+        },
+        {
+          "length_km": 518.16,
+          "published_key_bps": 14.38,
+          "predicted_key_bps": 14.38,
+          "raw_bound_bps": 14.38,
+          "ratio": 1.0,
+          "within_factor_1_5": true,
+          "held_out": false,
+          "protocol_edge": false,
+          "x11_qber": 0.0481,
+          "e_d_below_x11": true,
+          "phase_endpoint_effect": {
+            "sigma_bounds_rad": [
+              0.0,
+              0.099
+            ],
+            "low_key_bps": 14.639590197824733,
+            "high_key_bps": 13.639332033539818,
+            "change_percent": -6.832555766714988,
+            "raw_low_bps": 14.639590197824733,
+            "raw_high_bps": 13.639332033539818
+          }
+        },
+        {
+          "length_km": 615.59,
+          "published_key_bps": 0.32,
+          "predicted_key_bps": 0.0,
+          "raw_bound_bps": -3.1256389381986285,
+          "ratio": 0.0,
+          "within_factor_1_5": false,
+          "held_out": true,
+          "protocol_edge": true,
+          "x11_qber": 0.0475,
+          "e_d_below_x11": true,
+          "phase_endpoint_effect": {
+            "sigma_bounds_rad": [
+              0.0,
+              0.099
+            ],
+            "low_key_bps": 0.0,
+            "high_key_bps": 0.0,
+            "change_percent": null,
+            "raw_low_bps": -3.088045031640092,
+            "raw_high_bps": -3.2329940256916734
+          }
+        }
+      ],
+      "x11_source": "zhou2023 Table S5",
+      "calibration_caveat": "Fitted e_d also absorbs the asymptotic/finite-key discrepancy; it is not a uniquely identified intrinsic apparatus error."
+    },
+    {
+      "anchor_km": 518.16,
+      "detector": "D1",
+      "sigma_rad": 0.05,
+      "e_d": 0.03571252144474864,
+      "fitted_rate_bps": 14.380000000000008,
+      "relative_residual": 4.440892098500626e-16,
+      "f_ec": 1.1,
+      "predictions": [
+        {
+          "length_km": 403.73,
+          "published_key_bps": 146.7,
+          "predicted_key_bps": 158.22675866641944,
+          "raw_bound_bps": 158.22675866641944,
+          "ratio": 1.0785736787076992,
+          "within_factor_1_5": true,
+          "held_out": true,
+          "protocol_edge": false,
+          "x11_qber": 0.0517,
+          "e_d_below_x11": true,
+          "phase_endpoint_effect": {
+            "sigma_bounds_rad": [
+              0.0,
+              0.099
+            ],
+            "low_key_bps": 160.13832465751528,
+            "high_key_bps": 152.76826937147626,
+            "change_percent": -4.6023057265031415,
+            "raw_low_bps": 160.13832465751528,
+            "raw_high_bps": 152.76826937147626
+          }
+        },
+        {
+          "length_km": 518.16,
+          "published_key_bps": 14.38,
+          "predicted_key_bps": 14.380000000000008,
+          "raw_bound_bps": 14.380000000000008,
+          "ratio": 1.0000000000000004,
+          "within_factor_1_5": true,
+          "held_out": false,
+          "protocol_edge": false,
+          "x11_qber": 0.0481,
+          "e_d_below_x11": true,
+          "phase_endpoint_effect": {
+            "sigma_bounds_rad": [
+              0.0,
+              0.099
+            ],
+            "low_key_bps": 14.641805212743,
+            "high_key_bps": 13.63233278923494,
+            "change_percent": -6.894453305726945,
+            "raw_low_bps": 14.641805212743,
+            "raw_high_bps": 13.63233278923494
+          }
+        },
+        {
+          "length_km": 615.59,
+          "published_key_bps": 0.32,
+          "predicted_key_bps": 0.0,
+          "raw_bound_bps": -3.2049349085140877,
+          "ratio": 0.0,
+          "within_factor_1_5": false,
+          "held_out": true,
+          "protocol_edge": true,
+          "x11_qber": 0.0475,
+          "e_d_below_x11": true,
+          "phase_endpoint_effect": {
+            "sigma_bounds_rad": [
+              0.0,
+              0.099
+            ],
+            "low_key_bps": 0.0,
+            "high_key_bps": 0.0,
+            "change_percent": null,
+            "raw_low_bps": -3.166763388290876,
+            "raw_high_bps": -3.314014987044263
+          }
+        }
+      ],
+      "x11_source": "zhou2023 Table S5",
+      "calibration_caveat": "Fitted e_d also absorbs the asymptotic/finite-key discrepancy; it is not a uniquely identified intrinsic apparatus error."
+    }
+  ],
+  "pittaluga": [
+    {
+      "detector": "D0",
+      "sigma_rad": 0.0,
+      "e_d": 0.031743596545887307,
+      "fitted_rate_bps": 852.7000000817238,
+      "relative_residual": 9.584111282379126e-11,
+      "f_ec": 1.0,
+      "f_ec_status": "unpublished; ideal conditional value retained, not calibrated",
+      "published_key_bps": 852.7,
+      "qber_plausibility": "unverified: no CAL QBER located in Table III or CAL supplementary section; SNS errors in Tables V-X are not substituted",
+      "out_of_sample": false,
+      "phase_endpoint_effect": {
+        "sigma_bounds_rad": [
+          0.0,
+          0.104
+        ],
+        "low_key_bps": 852.7000000817238,
+        "high_key_bps": 804.4498942133608,
+        "change_percent": -5.658508955522301,
+        "raw_low_bps": 852.7000000817238,
+        "raw_high_bps": 804.4498942133608
+      }
+    },
+    {
+      "detector": "D0",
+      "sigma_rad": 0.104,
+      "e_d": 0.029199793614830053,
+      "fitted_rate_bps": 852.6999998951678,
+      "relative_residual": 1.2294154583258887e-10,
+      "f_ec": 1.0,
+      "f_ec_status": "unpublished; ideal conditional value retained, not calibrated",
+      "published_key_bps": 852.7,
+      "qber_plausibility": "unverified: no CAL QBER located in Table III or CAL supplementary section; SNS errors in Tables V-X are not substituted",
+      "out_of_sample": false,
+      "phase_endpoint_effect": {
+        "sigma_bounds_rad": [
+          0.0,
+          0.104
+        ],
+        "low_key_bps": 902.3170712128336,
+        "high_key_bps": 852.6999998951678,
+        "change_percent": -5.498851002671811,
+        "raw_low_bps": 902.3170712128336,
+        "raw_high_bps": 852.6999998951678
+      }
+    },
+    {
+      "detector": "D1",
+      "sigma_rad": 0.0,
+      "e_d": 0.03593895466119464,
+      "fitted_rate_bps": 852.6999999004444,
+      "relative_residual": 1.1675349576023564e-10,
+      "f_ec": 1.0,
+      "f_ec_status": "unpublished; ideal conditional value retained, not calibrated",
+      "published_key_bps": 852.7,
+      "qber_plausibility": "unverified: no CAL QBER located in Table III or CAL supplementary section; SNS errors in Tables V-X are not substituted",
+      "out_of_sample": false,
+      "phase_endpoint_effect": {
+        "sigma_bounds_rad": [
+          0.0,
+          0.104
+        ],
+        "low_key_bps": 852.6999999004444,
+        "high_key_bps": 803.9328472800922,
+        "change_percent": -5.71914537657393,
+        "raw_low_bps": 852.6999999004444,
+        "raw_high_bps": 803.9328472800922
+      }
+    },
+    {
+      "detector": "D1",
+      "sigma_rad": 0.104,
+      "e_d": 0.03341794221624105,
+      "fitted_rate_bps": 852.6999999873855,
+      "relative_residual": 1.479372180313021e-11,
+      "f_ec": 1.0,
+      "f_ec_status": "unpublished; ideal conditional value retained, not calibrated",
+      "published_key_bps": 852.7,
+      "qber_plausibility": "unverified: no CAL QBER located in Table III or CAL supplementary section; SNS errors in Tables V-X are not substituted",
+      "out_of_sample": false,
+      "phase_endpoint_effect": {
+        "sigma_bounds_rad": [
+          0.0,
+          0.104
+        ],
+        "low_key_bps": 902.7635991288927,
+        "high_key_bps": 852.6999999873855,
+        "change_percent": -5.545593463207343,
+        "raw_low_bps": 902.7635991288927,
+        "raw_high_bps": 852.6999999873855
+      }
+    }
+  ],
+  "ideal_phase_endpoint_effects": [
+    {
+      "paper": "zhou2023",
+      "length_km": 403.73,
+      "detector": "D0",
+      "sigma_bounds_rad": [
+        0.0,
+        0.099
+      ],
+      "low_key_bps": 304.97752296077596,
+      "high_key_bps": 284.69389680070503,
+      "change_percent": -6.650859369291839,
+      "raw_low_bps": 304.97752296077596,
+      "raw_high_bps": 284.69389680070503
+    },
+    {
+      "paper": "zhou2023",
+      "length_km": 403.73,
+      "detector": "D1",
+      "sigma_bounds_rad": [
+        0.0,
+        0.099
+      ],
+      "low_key_bps": 331.25921599992995,
+      "high_key_bps": 309.2498809394249,
+      "change_percent": -6.64414271285051,
+      "raw_low_bps": 331.25921599992995,
+      "raw_high_bps": 309.2498809394249
+    },
+    {
+      "paper": "zhou2023",
+      "length_km": 518.16,
+      "detector": "D0",
+      "sigma_bounds_rad": [
+        0.0,
+        0.099
+      ],
+      "low_key_bps": 34.17116565240214,
+      "high_key_bps": 31.606518117422436,
+      "change_percent": -7.505297188477433,
+      "raw_low_bps": 34.17116565240214,
+      "raw_high_bps": 31.606518117422436
+    },
+    {
+      "paper": "zhou2023",
+      "length_km": 518.16,
+      "detector": "D1",
+      "sigma_bounds_rad": [
+        0.0,
+        0.099
+      ],
+      "low_key_bps": 37.72433711230537,
+      "high_key_bps": 34.92892816583992,
+      "change_percent": -7.410094279837221,
+      "raw_low_bps": 37.72433711230537,
+      "raw_high_bps": 34.92892816583992
+    },
+    {
+      "paper": "zhou2023",
+      "length_km": 615.59,
+      "detector": "D0",
+      "sigma_bounds_rad": [
+        0.0,
+        0.099
+      ],
+      "low_key_bps": 0.0,
+      "high_key_bps": 0.0,
+      "change_percent": null,
+      "raw_low_bps": -0.40964692499141064,
+      "raw_high_bps": -0.7153714976038096
+    },
+    {
+      "paper": "zhou2023",
+      "length_km": 615.59,
+      "detector": "D1",
+      "sigma_bounds_rad": [
+        0.0,
+        0.099
+      ],
+      "low_key_bps": 0.03321076615838136,
+      "high_key_bps": 0.0,
+      "change_percent": -100.0,
+      "raw_low_bps": 0.03321076615838136,
+      "raw_high_bps": -0.30326786984852666
+    },
+    {
+      "paper": "pittaluga2021",
+      "length_km": 368.702,
+      "detector": "D0",
+      "sigma_bounds_rad": [
+        0.0,
+        0.104
+      ],
+      "low_key_bps": 1605.5440723524218,
+      "high_key_bps": 1521.530140335468,
+      "change_percent": -5.232739073543935,
+      "raw_low_bps": 1605.5440723524218,
+      "raw_high_bps": 1521.530140335468
+    },
+    {
+      "paper": "pittaluga2021",
+      "length_km": 368.702,
+      "detector": "D1",
+      "sigma_bounds_rad": [
+        0.0,
+        0.104
+      ],
+      "low_key_bps": 1733.264499799295,
+      "high_key_bps": 1644.0009428041062,
+      "change_percent": -5.150025111892909,
+      "raw_low_bps": 1733.264499799295,
+      "raw_high_bps": 1644.0009428041062
+    }
+  ],
+  "interior_held_out_passed": true,
+  "protocol_edge_passed": false,
+  "x11_plausibility_passed": true,
+  "ratio_range_interior": [
+    0.8901953148744671,
+    1.0785736787076992
+  ],
+  "no_rate_correction_applied": true,
+  "seconds": 0.4809612100000322
+}

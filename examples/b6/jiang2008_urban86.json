@@ -1,0 +1,9 @@
+{
+  "file": "jiang2008_urban86.csv",
+  "quantity": "phase",
+  "frequency_unit": "Hz",
+  "psd_unit": "rad^2/Hz",
+  "sidedness": "one-sided",
+  "pass": "single",
+  "measurement_length_km": 86.0
+}

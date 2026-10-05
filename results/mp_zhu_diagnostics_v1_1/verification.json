@@ -1,0 +1,350 @@
+{
+  "execution": [
+    {
+      "name": "quick",
+      "discovered": 121,
+      "executed": 115,
+      "skipped": 6,
+      "seconds": 3.182,
+      "runtime_kind": "unittest reported runtime",
+      "passed": true
+    },
+    {
+      "name": "full_units",
+      "discovered": 121,
+      "executed": 121,
+      "skipped": 0,
+      "seconds": 9.204,
+      "runtime_kind": "unittest reported runtime",
+      "passed": true
+    }
+  ],
+  "regression": {
+    "passed": true,
+    "maximum": {
+      "variance_max_relative": 5.1002731348726016e-05,
+      "tau_relative": 1.4839666608756907e-05,
+      "key_max_relative": 1.1595976503353533e-05
+    },
+    "fast_points": 4097,
+    "reference_points": 65537,
+    "rows": [
+      {
+        "scenario": "1",
+        "reference_tau_s": 0.0007215008266196752,
+        "reference_variances_rad2": [
+          0.0002538726083392722,
+          0.00041735687544377137,
+          0.1019595230815382,
+          40.02871819006617,
+          2152.0973901482716,
+          0.040000000000000015
+        ],
+        "times_s": [
+          1e-05,
+          0.0001,
+          0.001,
+          0.01,
+          0.1,
+          0.0007215008266196752
+        ],
+        "reference_keys_bps": [
+          33163.7588735179,
+          57716.80780251328
+        ],
+        "rows": [
+          {
+            "points": 4097,
+            "variance_max_relative": 4.011582808116643e-05,
+            "tau_relative": 1.3949584578343277e-05,
+            "key_max_relative": 8.10320036936929e-06,
+            "tau_q_s": 0.0007214907619828709,
+            "variance_rad2": 0.04,
+            "key_bps": [
+              33163.49014093475,
+              57716.34011165497
+            ],
+            "status": "threshold"
+          }
+        ]
+      },
+      {
+        "scenario": "2",
+        "reference_tau_s": 0.1,
+        "reference_variances_rad2": [
+          0.0012539439414960983,
+          0.001875251821390045,
+          0.001993551484566065,
+          0.0022014753457141,
+          0.004096292605541473,
+          0.004096292605541473
+        ],
+        "times_s": [
+          1e-05,
+          0.0001,
+          0.001,
+          0.01,
+          0.1,
+          0.1
+        ],
+        "reference_keys_bps": [
+          88382.65621482844,
+          153042.49244446805
+        ],
+        "rows": [
+          {
+            "points": 4097,
+            "variance_max_relative": 7.801781721106238e-06,
+            "tau_relative": 0.0,
+            "key_max_relative": 1.1032913704855929e-07,
+            "tau_q_s": 0.1,
+            "variance_rad2": 0.004096324563922248,
+            "key_bps": [
+              88382.64646364625,
+              153042.4767847431
+            ],
+            "status": "capped"
+          }
+        ]
+      },
+      {
+        "scenario": "3",
+        "reference_tau_s": 4.826420399480876e-05,
+        "reference_variances_rad2": [
+          0.0058507891761334484,
+          0.1178031120577053,
+          0.3288397737784395,
+          0.49468870605356424,
+          0.6567085259366103,
+          0.04
+        ],
+        "times_s": [
+          1e-05,
+          0.0001,
+          0.001,
+          0.01,
+          0.1,
+          4.826420399480876e-05
+        ],
+        "reference_keys_bps": [
+          3440.3769512897748,
+          5965.914464177066
+        ],
+        "rows": [
+          {
+            "points": 4097,
+            "variance_max_relative": 2.5787967776302878e-05,
+            "tau_relative": 1.2155640275790525e-05,
+            "key_max_relative": 1.1595976503353533e-05,
+            "tau_q_s": 4.8263617312506805e-05,
+            "variance_rad2": 0.04000000000000001,
+            "key_bps": [
+              3440.3370567594848,
+              5965.845283573119
+            ],
+            "status": "threshold"
+          }
+        ]
+      },
+      {
+        "scenario": "4",
+        "reference_tau_s": 0.0007055827876353868,
+        "reference_variances_rad2": [
+          0.0018232643060416792,
+          0.0024523567851648044,
+          0.10524272222909405,
+          40.52703299675844,
+          2178.7827274149095,
+          0.04000000000000001
+        ],
+        "times_s": [
+          1e-05,
+          0.0001,
+          0.001,
+          0.01,
+          0.1,
+          0.0007055827876353868
+        ],
+        "reference_keys_bps": [
+          30911.979066649186,
+          53604.074681678096
+        ],
+        "rows": [
+          {
+            "points": 4097,
+            "variance_max_relative": 5.1002731348726016e-05,
+            "tau_relative": 1.4839666608756907e-05,
+            "key_max_relative": 8.700696218499893e-06,
+            "tau_q_s": 0.0007055723170220534,
+            "variance_rad2": 0.040000000000000015,
+            "key_bps": [
+              30911.710110909822,
+              53603.60828890822
+            ],
+            "status": "threshold"
+          }
+        ]
+      },
+      {
+        "scenario": "5",
+        "reference_tau_s": 0.1,
+        "reference_variances_rad2": [
+          0.002823336523417352,
+          0.003908844054683624,
+          0.00401675530003146,
+          0.004216450485438573,
+          0.006124380915706147,
+          0.006124380915706147
+        ],
+        "times_s": [
+          1e-05,
+          0.0001,
+          0.001,
+          0.01,
+          0.1,
+          0.1
+        ],
+        "reference_keys_bps": [
+          82880.90112869204,
+          143123.93157613772
+        ],
+        "rows": [
+          {
+            "points": 4097,
+            "variance_max_relative": 3.4566310849415416e-05,
+            "tau_relative": 0.0,
+            "key_max_relative": 4.538324654967951e-07,
+            "tau_q_s": 0.1,
+            "variance_rad2": 0.006124512840132188,
+            "key_bps": [
+              82880.86351464834,
+              143123.87091359877
+            ],
+            "status": "capped"
+          }
+        ]
+      },
+      {
+        "scenario": "6",
+        "reference_tau_s": 0.001142905737633146,
+        "reference_variances_rad2": [
+          0.0018022972486650415,
+          0.002356782618160918,
+          0.028062922504454173,
+          10.133546852786353,
+          544.6981634564679,
+          0.040000000000000015
+        ],
+        "times_s": [
+          1e-05,
+          0.0001,
+          0.001,
+          0.01,
+          0.1,
+          0.001142905737633146
+        ],
+        "reference_keys_bps": [
+          39852.81311830898,
+          69108.26272438868
+        ],
+        "rows": [
+          {
+            "points": 4097,
+            "variance_max_relative": 3.7201210841608656e-05,
+            "tau_relative": 1.3889037174918961e-05,
+            "key_max_relative": 6.4814517115596715e-06,
+            "tau_q_s": 0.0011428898637728686,
+            "variance_rad2": 0.04000000000000001,
+            "key_bps": [
+              39852.554814225194,
+              69107.81480252097
+            ],
+            "status": "threshold"
+          }
+        ]
+      },
+      {
+        "scenario": "7",
+        "reference_tau_s": 0.1,
+        "reference_variances_rad2": [
+          0.002802315316549332,
+          0.003899475878575508,
+          0.003998968100087538,
+          0.004091966607422753,
+          0.0052626229878340244,
+          0.0052626229878340244
+        ],
+        "times_s": [
+          1e-05,
+          0.0001,
+          0.001,
+          0.01,
+          0.1,
+          0.1
+        ],
+        "reference_keys_bps": [
+          83127.15692728345,
+          143520.73410547446
+        ],
+        "rows": [
+          {
+            "points": 4097,
+            "variance_max_relative": 7.197486714183299e-06,
+            "tau_relative": 0.0,
+            "key_max_relative": 1.3050240754708398e-07,
+            "tau_q_s": 0.1,
+            "variance_rad2": 0.005262660865493061,
+            "key_bps": [
+              83127.14607898933,
+              143520.71664116686
+            ],
+            "status": "capped"
+          }
+        ]
+      }
+    ]
+  },
+  "phase_result_rechecks": {
+    "drift": [
+      {
+        "length_km": 201.86,
+        "predicted_rad_s": 5921.494647596044,
+        "ratio": 2.8197593559981162
+      },
+      {
+        "length_km": 306.31,
+        "predicted_rad_s": 7294.353297182635,
+        "ratio": 2.145398028583128
+      },
+      {
+        "length_km": 413.73,
+        "predicted_rad_s": 8477.439775544473,
+        "ratio": 1.599516938781976
+      },
+      {
+        "length_km": 508.16,
+        "predicted_rad_s": 9395.208983053713,
+        "ratio": 1.5924083022124937
+      },
+      {
+        "length_km": 403.0,
+        "predicted_rad_s": 8366.787322266928,
+        "ratio": 2.091696830566732
+      }
+    ],
+    "alpha": 1.1675484906055529,
+    "conditional_ci95": [
+      0.7427779110564952,
+      1.5923190701546106
+    ],
+    "independent_sections_alpha_excluded": true,
+    "source_model": "Same formulas and inputs as accepted phase/spatial reports; no model changes",
+    "analytic_phase_tests": "Existing test_mp_phase.py executed in quick/full units"
+  },
+  "model_test_config_web_files_unchanged": 59,
+  "full_T1_T7_scope": "Previous accepted results/mp_key/tf_reference/full_suite.json retained; not rerun because no core/test/config change",
+  "release_version": "v1.1",
+  "status_lines": 39,
+  "supervisor_words": 377,
+  "passed": true
+}

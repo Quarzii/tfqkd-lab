@@ -1,0 +1,1975 @@
+{
+  "scope": "Zeng Eq4/7, analytical decoy bounds, no async variant",
+  "count_checks": [
+    {
+      "scope": "Count-conditioned asymptotic analytical-decoy check; not a phase prediction",
+      "family": "zhang",
+      "length_km": 101,
+      "r_p": 0.002866881606350613,
+      "r_s": 0.14013029766113452,
+      "signed_bits_per_quantum_round": 0.00012322920935307606,
+      "bits_per_quantum_round": 0.00012322920935307606,
+      "bits_per_potential_pair": 0.0002464584187061521,
+      "status": "positive_asymptotic_bound",
+      "effective_quantum_rounds_hz": 1093750000.0,
+      "active_round_clock_hz": 1250000000.0,
+      "reference_fraction": 0.125,
+      "recovery_fraction": 0.0,
+      "key_bps": 134781.94772992693,
+      "denominator": "one quantum emission round shared by Alice and Bob; not one successful pair",
+      "decoy": {
+        "q_11_lower": 0.591827524364713,
+        "e_11_x_upper": 0.10372552641197161,
+        "e_11_x_upper_raw": 0.10372552641197161,
+        "e_11_x_privacy_worst_case": 0.10372552641197161,
+        "Y_Z_11_lower_raw": 0.2096465881226153,
+        "Y_X_11_lower_raw": 0.21825795262435102,
+        "YE_X_11_upper": 0.02263892102955997,
+        "notes": [],
+        "method": "Zhang C4-C7 asymptotic analytical bounds; Zeng Supplement Note3/Eq70; no finite-key inference"
+      },
+      "published_bps": 97500,
+      "ratio_model_published": 1.3823789510761737,
+      "relative_difference_percent": 38.23789510761737,
+      "normalization": {
+        "N_quantum_rounds": 700000000000.0,
+        "N_potential_pairs": 350000000000.0,
+        "Z_setting_exposures": [
+          [
+            36174311992.35001,
+            28964969390.70001,
+            26285390724.600006
+          ],
+          [
+            28964969390.70001,
+            23192409353.400005,
+            21046856065.200005
+          ],
+          [
+            26285390724.600006,
+            21046856065.200005,
+            19099790085.600002
+          ]
+        ],
+        "X_setting_exposures": [
+          [
+            36174311992.35001,
+            5798102338.350002,
+            4774947521.400001
+          ],
+          [
+            5798102338.350002,
+            116166655.54375002,
+            95667453.175
+          ],
+          [
+            4774947521.400001,
+            95667453.175,
+            78785616.69999999
+          ]
+        ],
+        "assumed_vacuum_error_entries": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "source_setting_rule": "Zeng Supplement Eq53/56/69; Zhang Appendix C; explicit nonzero X phase-sifting factor1/8"
+      },
+      "source_inputs": {
+        "protocol": {
+          "mu": 0.266,
+          "nu": 0.016,
+          "click_probability": 0.005733763212701226,
+          "max_pairing_gap": 200000,
+          "z_pair_fraction": 0.14013029766113452,
+          "e_z": 3.4692208581207406e-05,
+          "f_ec": 1.06
+        },
+        "timing": {
+          "active_round_clock_hz": 1250000000.0,
+          "reference_fraction": 0.125,
+          "recovery_fraction": 0
+        },
+        "decoy": {
+          "Q_Z": [
+            [
+              0.0,
+              3.148630981439333e-08,
+              5.188813871134704e-07
+            ],
+            [
+              3.103749180168816e-08,
+              5.419687022796234e-05,
+              0.0009069222947536041
+            ],
+            [
+              5.389305469498806e-07,
+              0.0008841182712684253,
+              0.014723506370471498
+            ]
+          ],
+          "Q_X": [
+            [
+              0.0,
+              0.0001076860951332711,
+              0.0028247985846020945
+            ],
+            [
+              0.0001106437869778204,
+              0.0004647719239852457,
+              0.031985705675706674
+            ],
+            [
+              0.030480734573042376,
+              0.031036218708244086,
+              0.11471315931198392
+            ]
+          ],
+          "QE_X": [
+            [
+              0.0,
+              5.384304756663555e-05,
+              0.0014123992923010472
+            ],
+            [
+              5.53218934889102e-05,
+              0.0001274720351609253,
+              0.014497250151135321
+            ],
+            [
+              0.015240367286521188,
+              0.014030497890904057,
+              0.030621959959856483
+            ]
+          ],
+          "error_mode": "observed"
+        },
+        "limitations": [
+          "L_min=25 and frame gaps absent from Zeng Eq4/IID gap law",
+          "single-click p not tabulated; source Eq73/74 approximation evaluated with hardware values",
+          "vacuum X-error counts absent; random vacuum model e0=1/2 from Zeng Supplement Eq85 used and flagged",
+          "sigma4000 used across lengths as in source simulation, not inferred field noise",
+          "OBSERVED_GAIN_CONDITIONING: signal Z counts and decoy detection gains are taken from each tested length; this is not a hardware-only rate forecast.",
+          "PUBLISHED_TABLE_ANOMALY: X2mu,0=145543908 at101km retained literally; opposite X0,2mu=13488265 (ratio10.7904); no guessed correction."
+        ],
+        "intervals": {
+          "mode": "iid_zeng"
+        },
+        "phase": {
+          "mode": "published_drift",
+          "sigma_L_rad_s": 4000,
+          "linewidth_hz": 100,
+          "phase_slices": 32,
+          "intrinsic_x_error": 0.0
+        }
+      },
+      "limitations": [
+        "Published mode-pairing drift parameters were obtained on laboratory fiber spools; they are not transferable to field routes. For Zhou's four empirical drift values, alpha=0.5 is rejected within the conditional residual-based 95% log-regression interval [0.743,1.592], not by a test using published measurement uncertainties. The data do not identify spatial correlation or a universal spool-to-field coefficient. Sources: Zhang2025 PDF p5; Zhu2023 Fig2/p3 and Appendix B2/p8; Zhou async PDF p3-4,26-27; executed fit: results/mp_spatial_analysis/details.json.",
+        "L_min=25 and frame gaps absent from Zeng Eq4/IID gap law",
+        "single-click p not tabulated; source Eq73/74 approximation evaluated with hardware values",
+        "vacuum X-error counts absent; random vacuum model e0=1/2 from Zeng Supplement Eq85 used and flagged",
+        "sigma4000 used across lengths as in source simulation, not inferred field noise",
+        "OBSERVED_GAIN_CONDITIONING: signal Z counts and decoy detection gains are taken from each tested length; this is not a hardware-only rate forecast.",
+        "PUBLISHED_TABLE_ANOMALY: X2mu,0=145543908 at101km retained literally; opposite X0,2mu=13488265 (ratio10.7904); no guessed correction."
+      ]
+    },
+    {
+      "scope": "Count-conditioned asymptotic analytical-decoy check; not a phase prediction",
+      "family": "zhang",
+      "length_km": 202,
+      "r_p": 0.00026735250442364933,
+      "r_s": 0.09966628162860389,
+      "signed_bits_per_quantum_round": 8.697651999948048e-06,
+      "bits_per_quantum_round": 8.697651999948048e-06,
+      "bits_per_potential_pair": 1.7395303999896096e-05,
+      "status": "positive_asymptotic_bound",
+      "effective_quantum_rounds_hz": 1093750000.0,
+      "active_round_clock_hz": 1250000000.0,
+      "reference_fraction": 0.125,
+      "recovery_fraction": 0.0,
+      "key_bps": 9513.056874943179,
+      "denominator": "one quantum emission round shared by Alice and Bob; not one successful pair",
+      "decoy": {
+        "q_11_lower": 0.6685548416138695,
+        "e_11_x_upper": 0.11361238728739644,
+        "e_11_x_upper_raw": 0.11361238728739644,
+        "e_11_x_privacy_worst_case": 0.11361238728739644,
+        "Y_Z_11_lower_raw": 0.02895171394299374,
+        "Y_X_11_lower_raw": 0.028567436307918487,
+        "YE_X_11_upper": 0.0032456146376232658,
+        "notes": [],
+        "method": "Zhang C4-C7 asymptotic analytical bounds; Zeng Supplement Note3/Eq70; no finite-key inference"
+      },
+      "published_bps": 6300,
+      "ratio_model_published": 1.5100090277687586,
+      "relative_difference_percent": 51.000902776875854,
+      "normalization": {
+        "N_quantum_rounds": 1000000000000.0,
+        "N_potential_pairs": 500000000000.0,
+        "Z_setting_exposures": [
+          [
+            34359738368.0,
+            40667971584.0,
+            24830279679.999996
+          ],
+          [
+            40667971584.0,
+            48134356992.0,
+            29388963839.999996
+          ],
+          [
+            24830279679.999996,
+            29388963839.999996,
+            17943756800.0
+          ]
+        ],
+        "X_setting_exposures": [
+          [
+            34359738368.0,
+            12033589248.0,
+            4485939200.0
+          ],
+          [
+            12033589248.0,
+            526805780.06250006,
+            196385189.0625
+          ],
+          [
+            4485939200.0,
+            196385189.0625,
+            73209414.0625
+          ]
+        ],
+        "assumed_vacuum_error_entries": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "source_setting_rule": "Zeng Supplement Eq53/56/69; Zhang Appendix C; explicit nonzero X phase-sifting factor1/8"
+      },
+      "source_inputs": {
+        "protocol": {
+          "mu": 0.234,
+          "nu": 0.02,
+          "click_probability": 0.0005347050088472987,
+          "max_pairing_gap": 200000,
+          "z_pair_fraction": 0.09966628162860389,
+          "e_z": 4.1131830895634356e-05,
+          "f_ec": 1.06
+        },
+        "timing": {
+          "active_round_clock_hz": 1250000000.0,
+          "reference_fraction": 0.125,
+          "recovery_fraction": 0
+        },
+        "decoy": {
+          "Q_Z": [
+            [
+              0.0,
+              5.409662479614661e-09,
+              5.847698933369406e-08
+            ],
+            [
+              5.016232481097231e-09,
+              1.1608194955068488e-05,
+              0.00013883289734926567
+            ],
+            [
+              6.270569724005622e-08,
+              0.0001238073591096705,
+              0.0014849749858402005
+            ]
+          ],
+          "Q_X": [
+            [
+              0.0,
+              2.4854429865944516e-05,
+              0.002847612379588203
+            ],
+            [
+              2.1976153128539956e-05,
+              9.54222635788774e-05,
+              0.003740893106588574
+            ],
+            [
+              0.0031226805303112446,
+              0.003318162653256987,
+              0.011795900992497443
+            ]
+          ],
+          "QE_X": [
+            [
+              0.0,
+              1.2427214932972258e-05,
+              0.0014238061897941016
+            ],
+            [
+              1.0988076564269978e-05,
+              2.7290892666922367e-05,
+              0.0016184723579070186
+            ],
+            [
+              0.0015613402651556223,
+              0.0014583075300493042,
+              0.0032756169827458793
+            ]
+          ],
+          "error_mode": "observed"
+        },
+        "limitations": [
+          "L_min=25 and frame gaps absent from Zeng Eq4/IID gap law",
+          "single-click p not tabulated; source Eq73/74 approximation evaluated with hardware values",
+          "vacuum X-error counts absent; random vacuum model e0=1/2 from Zeng Supplement Eq85 used and flagged",
+          "sigma4000 used across lengths as in source simulation, not inferred field noise",
+          "OBSERVED_GAIN_CONDITIONING: signal Z counts and decoy detection gains are taken from each tested length; this is not a hardware-only rate forecast."
+        ],
+        "intervals": {
+          "mode": "iid_zeng"
+        },
+        "phase": {
+          "mode": "published_drift",
+          "sigma_L_rad_s": 4000,
+          "linewidth_hz": 100,
+          "phase_slices": 32,
+          "intrinsic_x_error": 0.0
+        }
+      },
+      "limitations": [
+        "Published mode-pairing drift parameters were obtained on laboratory fiber spools; they are not transferable to field routes. For Zhou's four empirical drift values, alpha=0.5 is rejected within the conditional residual-based 95% log-regression interval [0.743,1.592], not by a test using published measurement uncertainties. The data do not identify spatial correlation or a universal spool-to-field coefficient. Sources: Zhang2025 PDF p5; Zhu2023 Fig2/p3 and Appendix B2/p8; Zhou async PDF p3-4,26-27; executed fit: results/mp_spatial_analysis/details.json.",
+        "L_min=25 and frame gaps absent from Zeng Eq4/IID gap law",
+        "single-click p not tabulated; source Eq73/74 approximation evaluated with hardware values",
+        "vacuum X-error counts absent; random vacuum model e0=1/2 from Zeng Supplement Eq85 used and flagged",
+        "sigma4000 used across lengths as in source simulation, not inferred field noise",
+        "OBSERVED_GAIN_CONDITIONING: signal Z counts and decoy detection gains are taken from each tested length; this is not a hardware-only rate forecast."
+      ]
+    },
+    {
+      "scope": "Count-conditioned asymptotic analytical-decoy check; not a phase prediction",
+      "family": "zhang",
+      "length_km": 403,
+      "r_p": 3.894629188256983e-06,
+      "r_s": 0.0883591796203868,
+      "signed_bits_per_quantum_round": 8.320393879389576e-08,
+      "bits_per_quantum_round": 8.320393879389576e-08,
+      "bits_per_potential_pair": 1.6640787758779152e-07,
+      "status": "positive_asymptotic_bound",
+      "effective_quantum_rounds_hz": 1093750000.0,
+      "active_round_clock_hz": 1250000000.0,
+      "reference_fraction": 0.125,
+      "recovery_fraction": 0.0,
+      "key_bps": 91.00430805582349,
+      "denominator": "one quantum emission round shared by Alice and Bob; not one successful pair",
+      "decoy": {
+        "q_11_lower": 0.6098262925120761,
+        "e_11_x_upper": 0.14072547508698116,
+        "e_11_x_upper_raw": 0.14072547508698116,
+        "e_11_x_privacy_worst_case": 0.14072547508698116,
+        "Y_Z_11_lower_raw": 0.0002459439562753091,
+        "Y_X_11_lower_raw": 0.00022007507266996973,
+        "YE_X_11_upper": 3.097016915628339e-05,
+        "notes": [],
+        "method": "Zhang C4-C7 asymptotic analytical bounds; Zeng Supplement Note3/Eq70; no finite-key inference"
+      },
+      "published_bps": 47.8,
+      "ratio_model_published": 1.9038558170674371,
+      "relative_difference_percent": 90.38558170674371,
+      "normalization": {
+        "N_quantum_rounds": 100000000000000.0,
+        "N_potential_pairs": 50000000000000.0,
+        "Z_setting_exposures": [
+          [
+            2566834188799.998,
+            3505130719999.998,
+            2146218502399.999
+          ],
+          [
+            3505130719999.998,
+            4786417999999.998,
+            2930760559999.999
+          ],
+          [
+            2146218502399.999,
+            2930760559999.999,
+            1794527235199.9998
+          ]
+        ],
+        "X_setting_exposures": [
+          [
+            2566834188799.998,
+            1196604499999.9995,
+            448631808799.99994
+          ],
+          [
+            1196604499999.9995,
+            69729003906.25002,
+            26142847656.250004
+          ],
+          [
+            448631808799.99994,
+            26142847656.250004,
+            9801495006.250002
+          ]
+        ],
+        "assumed_vacuum_error_entries": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ],
+        "source_setting_rule": "Zeng Supplement Eq53/56/69; Zhang Appendix C; explicit nonzero X phase-sifting factor1/8"
+      },
+      "source_inputs": {
+        "protocol": {
+          "mu": 0.292,
+          "nu": 0.018,
+          "click_probability": 8.632144385934544e-06,
+          "max_pairing_gap": 200000,
+          "z_pair_fraction": 0.0883591796203868,
+          "e_z": 0.000860410993361041,
+          "f_ec": 1.06
+        },
+        "timing": {
+          "active_round_clock_hz": 1250000000.0,
+          "reference_fraction": 0.125,
+          "recovery_fraction": 0
+        },
+        "decoy": {
+          "Q_Z": [
+            [
+              7.402114278710987e-12,
+              1.1083752106112613e-09,
+              1.6830998316157287e-08
+            ],
+            [
+              1.0838397490636247e-09,
+              8.203587735128862e-08,
+              1.2508183200063266e-06
+            ],
+            [
+              1.6147470521405947e-08,
+              1.2538195887281905e-06,
+              1.917642893626227e-05
+            ]
+          ],
+          "Q_X": [
+            [
+              0.0,
+              1.676142785690678e-07,
+              3.950601730048349e-05
+            ],
+            [
+              1.5882440689467578e-07,
+              6.412396204614682e-07,
+              4.332007036460886e-05
+            ],
+            [
+              3.7678991253907726e-05,
+              4.436444779276836e-05,
+              0.0001533310988825358
+            ]
+          ],
+          "QE_X": [
+            [
+              0.0,
+              8.38071392845339e-08,
+              1.9753008650241746e-05
+            ],
+            [
+              7.941220344733789e-08,
+              1.947969889009488e-07,
+              1.9768886955069118e-05
+            ],
+            [
+              1.8839495626953863e-05,
+              2.0332023771439635e-05,
+              4.5015887853705034e-05
+            ]
+          ],
+          "error_mode": "observed"
+        },
+        "limitations": [
+          "L_min=25 and frame gaps absent from Zeng Eq4/IID gap law",
+          "single-click p not tabulated; source Eq73/74 approximation evaluated with hardware values",
+          "vacuum X-error counts absent; random vacuum model e0=1/2 from Zeng Supplement Eq85 used and flagged",
+          "sigma4000 used across lengths as in source simulation, not inferred field noise",
+          "OBSERVED_GAIN_CONDITIONING: signal Z counts and decoy detection gains are taken from each tested length; this is not a hardware-only rate forecast."
+        ],
+        "intervals": {
+          "mode": "iid_zeng"
+        },
+        "phase": {
+          "mode": "published_drift",
+          "sigma_L_rad_s": 4000,
+          "linewidth_hz": 100,
+          "phase_slices": 32,
+          "intrinsic_x_error": 0.0
+        }
+      },
+      "limitations": [
+        "Published mode-pairing drift parameters were obtained on laboratory fiber spools; they are not transferable to field routes. For Zhou's four empirical drift values, alpha=0.5 is rejected within the conditional residual-based 95% log-regression interval [0.743,1.592], not by a test using published measurement uncertainties. The data do not identify spatial correlation or a universal spool-to-field coefficient. Sources: Zhang2025 PDF p5; Zhu2023 Fig2/p3 and Appendix B2/p8; Zhou async PDF p3-4,26-27; executed fit: results/mp_spatial_analysis/details.json.",
+        "L_min=25 and frame gaps absent from Zeng Eq4/IID gap law",
+        "single-click p not tabulated; source Eq73/74 approximation evaluated with hardware values",
+        "vacuum X-error counts absent; random vacuum model e0=1/2 from Zeng Supplement Eq85 used and flagged",
+        "sigma4000 used across lengths as in source simulation, not inferred field noise",
+        "OBSERVED_GAIN_CONDITIONING: signal Z counts and decoy detection gains are taken from each tested length; this is not a hardware-only rate forecast."
+      ]
+    },
+    {
+      "scope": "Count-conditioned asymptotic analytical-decoy check; not a phase prediction",
+      "family": "zhu",
+      "length_km": 101,
+      "r_p": 0.003107932755914665,
+      "r_s": 0.13161558968365766,
+      "signed_bits_per_quantum_round": 4.869488082823832e-05,
+      "bits_per_quantum_round": 4.869488082823832e-05,
+      "bits_per_potential_pair": 9.738976165647664e-05,
+      "status": "positive_asymptotic_bound",
+      "effective_quantum_rounds_hz": 444830000.0,
+      "active_round_clock_hz": 625000000.0,
+      "reference_fraction": 0.257552,
+      "recovery_fraction": 0.03072,
+      "key_bps": 21660.943838825253,
+      "denominator": "one quantum emission round shared by Alice and Bob; not one successful pair",
+      "decoy": {
+        "q_11_lower": 0.5197956088035389,
+        "e_11_x_upper": 0.22122309705858242,
+        "e_11_x_upper_raw": 0.22122309705858242,
+        "e_11_x_privacy_worst_case": 0.22122309705858242,
+        "Y_Z_11_lower_raw": 0.11855250276163584,
+        "Y_X_11_lower_raw": 0.09759269442063706,
+        "YE_X_11_upper": 0.021589758110025167,
+        "notes": [],
+        "method": "Zhang C4-C7 asymptotic analytical bounds; Zeng Supplement Note3/Eq70; no finite-key inference"
+      },
+      "published_bps": 17200,
+      "ratio_model_published": 1.2593571999317008,
+      "relative_difference_percent": 25.935719993170082,
+      "normalization": {
+        "N_quantum_rounds": 507000000000.0,
+        "N_potential_pairs": 253500000000.0,
+        "Z_setting_exposures": [
+          [
+            32853600000.00002,
+            19712160000.000008,
+            24092640000.000015
+          ],
+          [
+            19712160000.000008,
+            11827296000.000002,
+            14455584000.000006
+          ],
+          [
+            24092640000.000015,
+            14455584000.000006,
+            17667936000.000008
+          ]
+        ],
+        "X_setting_exposures": [
+          [
+            32853600000.00002,
+            2956824000.0000005,
+            4416984000.000001
+          ],
+          [
+            2956824000.0000005,
+            33264269.999999996,
+            49691069.99999999
+          ],
+          [
+            4416984000.000001,
+            49691069.99999999,
+            74229870.0
+          ]
+        ],
+        "assumed_vacuum_error_entries": [
+          [
+            0,
+            0
+          ]
+        ],
+        "source_setting_rule": "Zeng Supplement Eq53/56/69; Zhang Appendix C; explicit nonzero X phase-sifting factor1/8"
+      },
+      "source_inputs": {
+        "protocol": {
+          "mu": 0.309,
+          "nu": 0.032,
+          "click_probability": 0.00635,
+          "max_pairing_gap": 500,
+          "z_pair_fraction": 0.13161558968365766,
+          "e_z": 0.0003097455702304178,
+          "f_ec": 1.1
+        },
+        "timing": {
+          "active_round_clock_hz": 625000000.0,
+          "reference_fraction": 0.257552,
+          "recovery_fraction": 0.03072
+        },
+        "decoy": {
+          "Q_Z": [
+            [
+              1.2023035527309025e-08,
+              3.8676634118229544e-07,
+              3.7063601166165247e-06
+            ],
+            [
+              3.954919197084438e-07,
+              0.00012550197441579206,
+              0.0012309421743182422
+            ],
+            [
+              3.6436023615510772e-06,
+              0.0011955635275613904,
+              0.011738188773153803
+            ]
+          ],
+          "Q_X": [
+            [
+              1.2023035527309025e-08,
+              0.00024649454955722757,
+              0.023768778424372826
+            ],
+            [
+              0.0002563165748113516,
+              0.0010102130604399257,
+              0.028672214142299618
+            ],
+            [
+              0.02329245634577802,
+              0.028130064416000706,
+              0.09175763072197217
+            ]
+          ],
+          "QE_X": [
+            [
+              6.011517763654512e-09,
+              0.00012567809243972585,
+              0.012127091019573535
+            ],
+            [
+              0.00013097127187820443,
+              0.00031853998299075857,
+              0.012539758149703761
+            ],
+            [
+              0.011900476660092042,
+              0.012308408734205162,
+              0.028476501440727296
+            ]
+          ],
+          "error_mode": "observed"
+        },
+        "limitations": [
+          "No published sigma_L/residual tracking; no modeb forecast by user decision",
+          "Table VII304km header says303; use304 from Table I/VI and retain typographical discrepancy",
+          "X00 absent; zero-basis counts Z00 reused under source basis0 rule, error e0=1/2 flagged",
+          "Minimum gap63/frame gaps not modelled by Zeng Eq4; observed pair normalization retained for count checks",
+          "OBSERVED_GAIN_CONDITIONING: signal Z counts and decoy detection gains are taken from each tested length; this is not a hardware-only rate forecast."
+        ],
+        "intervals": {
+          "mode": "iid_zeng"
+        }
+      },
+      "limitations": [
+        "Published mode-pairing drift parameters were obtained on laboratory fiber spools; they are not transferable to field routes. For Zhou's four empirical drift values, alpha=0.5 is rejected within the conditional residual-based 95% log-regression interval [0.743,1.592], not by a test using published measurement uncertainties. The data do not identify spatial correlation or a universal spool-to-field coefficient. Sources: Zhang2025 PDF p5; Zhu2023 Fig2/p3 and Appendix B2/p8; Zhou async PDF p3-4,26-27; executed fit: results/mp_spatial_analysis/details.json.",
+        "No published sigma_L/residual tracking; no modeb forecast by user decision",
+        "Table VII304km header says303; use304 from Table I/VI and retain typographical discrepancy",
+        "X00 absent; zero-basis counts Z00 reused under source basis0 rule, error e0=1/2 flagged",
+        "Minimum gap63/frame gaps not modelled by Zeng Eq4; observed pair normalization retained for count checks",
+        "OBSERVED_GAIN_CONDITIONING: signal Z counts and decoy detection gains are taken from each tested length; this is not a hardware-only rate forecast."
+      ],
+      "finite_component_arithmetic_replay": {
+        "key_bps": 17294.288903700522,
+        "ratio_published": 1.0054819130058443,
+        "label": "Uses published finite single-photon count and phase-error bound; not an asymptotic prediction"
+      },
+      "pairing_ratio_eq4_over_measured": 1.2633872991523027
+    },
+    {
+      "scope": "Count-conditioned asymptotic analytical-decoy check; not a phase prediction",
+      "family": "zhu",
+      "length_km": 202,
+      "r_p": 0.00045624723250428005,
+      "r_s": 0.11353696944288237,
+      "signed_bits_per_quantum_round": 3.5289350295763086e-06,
+      "bits_per_quantum_round": 3.5289350295763086e-06,
+      "bits_per_potential_pair": 7.057870059152617e-06,
+      "status": "positive_asymptotic_bound",
+      "effective_quantum_rounds_hz": 444830000.0,
+      "active_round_clock_hz": 625000000.0,
+      "reference_fraction": 0.257552,
+      "recovery_fraction": 0.03072,
+      "key_bps": 1569.7761692064294,
+      "denominator": "one quantum emission round shared by Alice and Bob; not one successful pair",
+      "decoy": {
+        "q_11_lower": 0.4830585723333717,
+        "e_11_x_upper": 0.27823144255277843,
+        "e_11_x_upper_raw": 0.27823144255277843,
+        "e_11_x_privacy_worst_case": 0.27823144255277843,
+        "Y_Z_11_lower_raw": 0.013779611772169324,
+        "Y_X_11_lower_raw": 0.0099874229816125,
+        "YE_X_11_upper": 0.0027788151035588174,
+        "notes": [],
+        "method": "Zhang C4-C7 asymptotic analytical bounds; Zeng Supplement Note3/Eq70; no finite-key inference"
+      },
+      "published_bps": 2080,
+      "ratio_model_published": 0.7547000813492449,
+      "relative_difference_percent": -24.529991865075505,
+      "normalization": {
+        "N_quantum_rounds": 2100000000000.0,
+        "N_potential_pairs": 1050000000000.0,
+        "Z_setting_exposures": [
+          [
+            65625000000.0,
+            65625000000.0,
+            65625000000.0
+          ],
+          [
+            65625000000.0,
+            65625000000.0,
+            65625000000.0
+          ],
+          [
+            65625000000.0,
+            65625000000.0,
+            65625000000.0
+          ]
+        ],
+        "X_setting_exposures": [
+          [
+            65625000000.0,
+            16406250000.0,
+            16406250000.0
+          ],
+          [
+            16406250000.0,
+            512695312.5,
+            512695312.5
+          ],
+          [
+            16406250000.0,
+            512695312.5,
+            512695312.5
+          ]
+        ],
+        "assumed_vacuum_error_entries": [
+          [
+            0,
+            0
+          ]
+        ],
+        "source_setting_rule": "Zeng Supplement Eq53/56/69; Zhang Appendix C; explicit nonzero X phase-sifting factor1/8"
+      },
+      "source_inputs": {
+        "protocol": {
+          "mu": 0.338,
+          "nu": 0.035,
+          "click_probability": 0.00113,
+          "max_pairing_gap": 1000,
+          "z_pair_fraction": 0.11353696944288237,
+          "e_z": 0.0001889100185178701,
+          "f_ec": 1.1
+        },
+        "timing": {
+          "active_round_clock_hz": 625000000.0,
+          "reference_fraction": 0.257552,
+          "recovery_fraction": 0.03072
+        },
+        "decoy": {
+          "Q_Z": [
+            [
+              1.5238095238095237e-11,
+              3.1832380952380955e-08,
+              2.988495238095238e-07
+            ],
+            [
+              3.3066666666666665e-08,
+              1.7544655238095237e-05,
+              0.00016964629333333334
+            ],
+            [
+              3.2367238095238097e-07,
+              0.00017154489904761905,
+              0.0016576296990476191
+            ]
+          ],
+          "Q_X": [
+            [
+              1.5238095238095237e-11,
+              3.292659809523809e-05,
+              0.0030740781714285715
+            ],
+            [
+              3.783442285714286e-05,
+              0.00014091215238095237,
+              0.0037860322742857143
+            ],
+            [
+              0.003611835062857143,
+              0.004319973180952381,
+              0.013263043047619048
+            ]
+          ],
+          "QE_X": [
+            [
+              7.619047619047619e-12,
+              1.6451718095238094e-05,
+              0.0015362452114285714
+            ],
+            [
+              1.8920350476190477e-05,
+              4.4818041904761904e-05,
+              0.001641583177142857
+            ],
+            [
+              0.0018064983161904763,
+              0.0019063213104761904,
+              0.004153570255238095
+            ]
+          ],
+          "error_mode": "observed"
+        },
+        "limitations": [
+          "No published sigma_L/residual tracking; no modeb forecast by user decision",
+          "Table VII304km header says303; use304 from Table I/VI and retain typographical discrepancy",
+          "X00 absent; zero-basis counts Z00 reused under source basis0 rule, error e0=1/2 flagged",
+          "Minimum gap63/frame gaps not modelled by Zeng Eq4; observed pair normalization retained for count checks",
+          "OBSERVED_GAIN_CONDITIONING: signal Z counts and decoy detection gains are taken from each tested length; this is not a hardware-only rate forecast."
+        ],
+        "intervals": {
+          "mode": "iid_zeng"
+        }
+      },
+      "limitations": [
+        "Published mode-pairing drift parameters were obtained on laboratory fiber spools; they are not transferable to field routes. For Zhou's four empirical drift values, alpha=0.5 is rejected within the conditional residual-based 95% log-regression interval [0.743,1.592], not by a test using published measurement uncertainties. The data do not identify spatial correlation or a universal spool-to-field coefficient. Sources: Zhang2025 PDF p5; Zhu2023 Fig2/p3 and Appendix B2/p8; Zhou async PDF p3-4,26-27; executed fit: results/mp_spatial_analysis/details.json.",
+        "No published sigma_L/residual tracking; no modeb forecast by user decision",
+        "Table VII304km header says303; use304 from Table I/VI and retain typographical discrepancy",
+        "X00 absent; zero-basis counts Z00 reused under source basis0 rule, error e0=1/2 flagged",
+        "Minimum gap63/frame gaps not modelled by Zeng Eq4; observed pair normalization retained for count checks",
+        "OBSERVED_GAIN_CONDITIONING: signal Z counts and decoy detection gains are taken from each tested length; this is not a hardware-only rate forecast."
+      ],
+      "finite_component_arithmetic_replay": {
+        "key_bps": 1826.7969065771883,
+        "ratio_published": 0.8782677435467252,
+        "label": "Uses published finite single-photon count and phase-error bound; not an asymptotic prediction"
+      },
+      "pairing_ratio_eq4_over_measured": 1.0635133624808393
+    },
+    {
+      "scope": "Count-conditioned asymptotic analytical-decoy check; not a phase prediction",
+      "family": "zhu",
+      "length_km": 304,
+      "r_p": 4.525124315723086e-05,
+      "r_s": 0.05117112522124791,
+      "signed_bits_per_quantum_round": -1.2243295218819455e-08,
+      "bits_per_quantum_round": 0.0,
+      "bits_per_potential_pair": 0.0,
+      "status": "no_positive_bound",
+      "effective_quantum_rounds_hz": 444830000.0,
+      "active_round_clock_hz": 625000000.0,
+      "reference_fraction": 0.257552,
+      "recovery_fraction": 0.03072,
+      "key_bps": 0.0,
+      "denominator": "one quantum emission round shared by Alice and Bob; not one successful pair",
+      "decoy": {
+        "q_11_lower": 0.3169001796308556,
+        "e_11_x_upper": 1.0,
+        "e_11_x_upper_raw": null,
+        "e_11_x_privacy_worst_case": 0.5,
+        "Y_Z_11_lower_raw": 0.0005880302866033713,
+        "Y_X_11_lower_raw": -1.568684833688255e-05,
+        "YE_X_11_upper": 0.00016843027718313716,
+        "notes": [
+          "VACUOUS_ANALYTIC_DECOY_BOUND: C4/C5 does not establish a positive one-photon yield"
+        ],
+        "method": "Zhang C4-C7 asymptotic analytical bounds; Zeng Supplement Note3/Eq70; no finite-key inference"
+      },
+      "published_bps": 19.2,
+      "ratio_model_published": 0.0,
+      "relative_difference_percent": -100.0,
+      "normalization": {
+        "N_quantum_rounds": 6330000000000.0,
+        "N_potential_pairs": 3165000000000.0,
+        "Z_setting_exposures": [
+          [
+            81024000000.00003,
+            162048000000.00006,
+            81024000000.00003
+          ],
+          [
+            162048000000.00006,
+            324096000000.0001,
+            162048000000.00006
+          ],
+          [
+            81024000000.00003,
+            162048000000.00006,
+            81024000000.00003
+          ]
+        ],
+        "X_setting_exposures": [
+          [
+            81024000000.00003,
+            81024000000.00003,
+            20256000000.000008
+          ],
+          [
+            81024000000.00003,
+            10128000000.000004,
+            2532000000.000001
+          ],
+          [
+            20256000000.000008,
+            2532000000.000001,
+            633000000.0000002
+          ]
+        ],
+        "assumed_vacuum_error_entries": [
+          [
+            0,
+            0
+          ]
+        ],
+        "source_setting_rule": "Zeng Supplement Eq53/56/69; Zhang Appendix C; explicit nonzero X phase-sifting factor1/8"
+      },
+      "source_inputs": {
+        "protocol": {
+          "mu": 0.531,
+          "nu": 0.053,
+          "click_probability": 0.000189,
+          "max_pairing_gap": 2000,
+          "z_pair_fraction": 0.05117112522124791,
+          "e_z": 0.00037482578856004947,
+          "f_ec": 1.1
+        },
+        "timing": {
+          "active_round_clock_hz": 625000000.0,
+          "reference_fraction": 0.257552,
+          "recovery_fraction": 0.03072
+        },
+        "decoy": {
+          "Q_Z": [
+            [
+              3.7026066350710884e-11,
+              6.97324249605055e-09,
+              7.00286334913112e-08
+            ],
+            [
+              7.300306082148496e-09,
+              1.8185815313981037e-06,
+              1.7838911927330166e-05
+            ],
+            [
+              6.777004344391783e-08,
+              1.8215720033570295e-05,
+              0.00018090289296998413
+            ]
+          ],
+          "Q_X": [
+            [
+              3.7026066350710884e-11,
+              3.851352685624011e-06,
+              0.0003804079778830962
+            ],
+            [
+              3.519895339652447e-06,
+              1.4578593996840437e-05,
+              0.00045553949447077393
+            ],
+            [
+              0.000353489879541864,
+              0.0004295983412322273,
+              0.001454194312796208
+            ]
+          ],
+          "QE_X": [
+            [
+              1.8513033175355442e-11,
+              1.917691054502369e-06,
+              0.00018961769352290672
+            ],
+            [
+              1.7549738349131116e-06,
+              4.834221958925748e-06,
+              0.00020356200631911525
+            ],
+            [
+              0.00017640348538704574,
+              0.0001895991311216429,
+              0.0004789447077409161
+            ]
+          ],
+          "error_mode": "observed"
+        },
+        "limitations": [
+          "No published sigma_L/residual tracking; no modeb forecast by user decision",
+          "Table VII304km header says303; use304 from Table I/VI and retain typographical discrepancy",
+          "X00 absent; zero-basis counts Z00 reused under source basis0 rule, error e0=1/2 flagged",
+          "Minimum gap63/frame gaps not modelled by Zeng Eq4; observed pair normalization retained for count checks",
+          "OBSERVED_GAIN_CONDITIONING: signal Z counts and decoy detection gains are taken from each tested length; this is not a hardware-only rate forecast."
+        ],
+        "intervals": {
+          "mode": "iid_zeng"
+        }
+      },
+      "limitations": [
+        "Published mode-pairing drift parameters were obtained on laboratory fiber spools; they are not transferable to field routes. For Zhou's four empirical drift values, alpha=0.5 is rejected within the conditional residual-based 95% log-regression interval [0.743,1.592], not by a test using published measurement uncertainties. The data do not identify spatial correlation or a universal spool-to-field coefficient. Sources: Zhang2025 PDF p5; Zhu2023 Fig2/p3 and Appendix B2/p8; Zhou async PDF p3-4,26-27; executed fit: results/mp_spatial_analysis/details.json.",
+        "No published sigma_L/residual tracking; no modeb forecast by user decision",
+        "Table VII304km header says303; use304 from Table I/VI and retain typographical discrepancy",
+        "X00 absent; zero-basis counts Z00 reused under source basis0 rule, error e0=1/2 flagged",
+        "Minimum gap63/frame gaps not modelled by Zeng Eq4; observed pair normalization retained for count checks",
+        "OBSERVED_GAIN_CONDITIONING: signal Z counts and decoy detection gains are taken from each tested length; this is not a hardware-only rate forecast.",
+        "VACUOUS_ANALYTIC_DECOY_BOUND: C4/C5 does not establish a positive one-photon yield"
+      ],
+      "finite_component_arithmetic_replay": {
+        "key_bps": 19.30024808875391,
+        "ratio_published": 1.0052212546225996,
+        "label": "Uses published finite single-photon count and phase-error bound; not an asymptotic prediction"
+      },
+      "pairing_ratio_eq4_over_measured": 1.0237837818378024
+    },
+    {
+      "scope": "Count-conditioned asymptotic analytical-decoy check; not a phase prediction",
+      "family": "zhu",
+      "length_km": 407,
+      "r_p": 4.344772599313508e-06,
+      "r_s": 0.04837634465458393,
+      "signed_bits_per_quantum_round": -3.6716002909773357e-09,
+      "bits_per_quantum_round": 0.0,
+      "bits_per_potential_pair": 0.0,
+      "status": "no_positive_bound",
+      "effective_quantum_rounds_hz": 444830000.0,
+      "active_round_clock_hz": 625000000.0,
+      "reference_fraction": 0.257552,
+      "recovery_fraction": 0.03072,
+      "key_bps": 0.0,
+      "denominator": "one quantum emission round shared by Alice and Bob; not one successful pair",
+      "decoy": {
+        "q_11_lower": 0.38870802454432557,
+        "e_11_x_upper": 0.5559579689110535,
+        "e_11_x_upper_raw": 0.5559579689110535,
+        "e_11_x_privacy_worst_case": 0.5,
+        "Y_Z_11_lower_raw": 7.635597354680335e-05,
+        "Y_X_11_lower_raw": 4.005330510955058e-05,
+        "YE_X_11_upper": 2.226795415688046e-05,
+        "notes": [
+          "NO_SINGLE_PHOTON_PRIVACY_BOUND: upper error interval contains 1/2; privacy contribution is zero"
+        ],
+        "method": "Zhang C4-C7 asymptotic analytical bounds; Zeng Supplement Note3/Eq70; no finite-key inference"
+      },
+      "published_bps": 0.769,
+      "ratio_model_published": 0.0,
+      "relative_difference_percent": -100.0,
+      "normalization": {
+        "N_quantum_rounds": 76600000000000.0,
+        "N_potential_pairs": 38300000000000.0,
+        "Z_setting_exposures": [
+          [
+            643292928000.0001,
+            1465278336000.0002,
+            821985408000.0002
+          ],
+          [
+            1465278336000.0002,
+            3337578432000.0,
+            1872300096000.0005
+          ],
+          [
+            821985408000.0002,
+            1872300096000.0005,
+            1050314688000.0002
+          ]
+        ],
+        "X_setting_exposures": [
+          [
+            643292928000.0001,
+            834394608000.0,
+            262578672000.00003
+          ],
+          [
+            834394608000.0,
+            135283307874.99997,
+            42572795875.0
+          ],
+          [
+            262578672000.00003,
+            42572795875.0,
+            13397387875.000002
+          ]
+        ],
+        "assumed_vacuum_error_entries": [
+          [
+            0,
+            0
+          ]
+        ],
+        "source_setting_rule": "Zeng Supplement Eq53/56/69; Zhang Appendix C; explicit nonzero X phase-sifting factor1/8"
+      },
+      "source_inputs": {
+        "protocol": {
+          "mu": 0.429,
+          "nu": 0.038,
+          "click_probability": 5e-05,
+          "max_pairing_gap": 2000,
+          "z_pair_fraction": 0.04837634465458393,
+          "e_z": 0.001462412277778706,
+          "f_ec": 1.1
+        },
+        "timing": {
+          "active_round_clock_hz": 625000000.0,
+          "reference_fraction": 0.257552,
+          "recovery_fraction": 0.03072
+        },
+        "decoy": {
+          "Q_Z": [
+            [
+              1.2280564041891658e-10,
+              2.207771670760578e-09,
+              2.2678018147981522e-08
+            ],
+            [
+              2.1074494340985053e-09,
+              1.2041964202146425e-07,
+              1.3853083731295174e-06
+            ],
+            [
+              2.2603807584866512e-08,
+              1.3327521615423768e-06,
+              1.532884494899113e-05
+            ]
+          ],
+          "Q_X": [
+            [
+              1.2280564041891658e-10,
+              2.3386416706086864e-07,
+              3.127321780346272e-05
+            ],
+            [
+              2.5602634287397025e-07,
+              9.577973959634747e-07,
+              3.7024089388632384e-05
+            ],
+            [
+              3.1396388507898306e-05,
+              3.677851002779601e-05,
+              0.00012376658908966608
+            ]
+          ],
+          "QE_X": [
+            [
+              6.140282020945829e-11,
+              1.1561316321449671e-07,
+              1.5425197976475405e-05
+            ],
+            [
+              1.259404111585534e-07,
+              3.3430584090823857e-07,
+              1.679133318137988e-05
+            ],
+            [
+              1.5475727594509273e-05,
+              1.6707829151941975e-05,
+              4.225540122312835e-05
+            ]
+          ],
+          "error_mode": "observed"
+        },
+        "limitations": [
+          "No published sigma_L/residual tracking; no modeb forecast by user decision",
+          "Table VII304km header says303; use304 from Table I/VI and retain typographical discrepancy",
+          "X00 absent; zero-basis counts Z00 reused under source basis0 rule, error e0=1/2 flagged",
+          "Minimum gap63/frame gaps not modelled by Zeng Eq4; observed pair normalization retained for count checks",
+          "OBSERVED_GAIN_CONDITIONING: signal Z counts and decoy detection gains are taken from each tested length; this is not a hardware-only rate forecast."
+        ],
+        "intervals": {
+          "mode": "iid_zeng"
+        }
+      },
+      "limitations": [
+        "Published mode-pairing drift parameters were obtained on laboratory fiber spools; they are not transferable to field routes. For Zhou's four empirical drift values, alpha=0.5 is rejected within the conditional residual-based 95% log-regression interval [0.743,1.592], not by a test using published measurement uncertainties. The data do not identify spatial correlation or a universal spool-to-field coefficient. Sources: Zhang2025 PDF p5; Zhu2023 Fig2/p3 and Appendix B2/p8; Zhou async PDF p3-4,26-27; executed fit: results/mp_spatial_analysis/details.json.",
+        "No published sigma_L/residual tracking; no modeb forecast by user decision",
+        "Table VII304km header says303; use304 from Table I/VI and retain typographical discrepancy",
+        "X00 absent; zero-basis counts Z00 reused under source basis0 rule, error e0=1/2 flagged",
+        "Minimum gap63/frame gaps not modelled by Zeng Eq4; observed pair normalization retained for count checks",
+        "OBSERVED_GAIN_CONDITIONING: signal Z counts and decoy detection gains are taken from each tested length; this is not a hardware-only rate forecast.",
+        "NO_SINGLE_PHOTON_PRIVACY_BOUND: upper error interval contains 1/2; privacy contribution is zero"
+      ],
+      "finite_component_arithmetic_replay": {
+        "key_bps": 0.7727373497975625,
+        "ratio_published": 1.0048600127406533,
+        "label": "Uses published finite single-photon count and phase-error bound; not an asymptotic prediction"
+      },
+      "pairing_ratio_eq4_over_measured": 1.0320124938986954
+    }
+  ],
+  "zhang_published_drift": {
+    "unfitted": [
+      {
+        "length_km": 101,
+        "unfitted_intrinsic_error": 0.0,
+        "key_bps": 181461.36301499605,
+        "published_bps": 97500,
+        "ratio_model_published": 1.8611421847691902,
+        "raw_x_error_predicted": 0.25162513832894184,
+        "observed_weak_raw_x_error": 0.27426793354447965,
+        "decoy": {
+          "q_11_lower": 0.591827524364713,
+          "e_11_x_upper": 0.053526564387037956,
+          "e_11_x_upper_raw": 0.053526564387037956,
+          "e_11_x_privacy_worst_case": 0.053526564387037956,
+          "Y_Z_11_lower_raw": 0.2096465881226153,
+          "Y_X_11_lower_raw": 0.21825795262435102,
+          "YE_X_11_upper": 0.011682598354130404,
+          "notes": [],
+          "method": "Zhang C4-C7 asymptotic analytical bounds; Zeng Supplement Note3/Eq70; no finite-key inference"
+        },
+        "phase": {
+          "raw_x_error": 0.25162513832894184,
+          "phase_mode": "published_drift",
+          "phase_slices": 32,
+          "intrinsic_x_error": 0.0,
+          "distribution": "Zeng IID geometric gaps; active uniform quantum rounds; reference-frame gaps and L_min>1 absent",
+          "discrete_interval_count": 200000,
+          "variance_rad2_min": 1.0053198891487339e-06,
+          "variance_rad2_max": 0.6106619298297469,
+          "phase_metadata": {
+            "model": "Published Gaussian drift + equal Lorentzian lasers; perfect tracking idealization",
+            "sigma_L_rad_s": 4000.0,
+            "linewidth_each_hz": 100.0
+          }
+        }
+      },
+      {
+        "length_km": 202,
+        "unfitted_intrinsic_error": 0.0,
+        "key_bps": 15072.603823973348,
+        "published_bps": 6300,
+        "ratio_model_published": 2.3924767974560868,
+        "raw_x_error_predicted": 0.25184544390011837,
+        "observed_weak_raw_x_error": 0.28600131293640213,
+        "decoy": {
+          "q_11_lower": 0.6685548416138695,
+          "e_11_x_upper": 0.036367923573216096,
+          "e_11_x_upper_raw": 0.036367923573216096,
+          "e_11_x_privacy_worst_case": 0.036367923573216096,
+          "Y_Z_11_lower_raw": 0.02895171394299374,
+          "Y_X_11_lower_raw": 0.028567436307918487,
+          "YE_X_11_upper": 0.0010389383403290981,
+          "notes": [],
+          "method": "Zhang C4-C7 asymptotic analytical bounds; Zeng Supplement Note3/Eq70; no finite-key inference"
+        },
+        "phase": {
+          "raw_x_error": 0.25184544390011837,
+          "phase_mode": "published_drift",
+          "phase_slices": 32,
+          "intrinsic_x_error": 0.0,
+          "distribution": "Zeng IID geometric gaps; active uniform quantum rounds; reference-frame gaps and L_min>1 absent",
+          "discrete_interval_count": 200000,
+          "variance_rad2_min": 1.0053198891487339e-06,
+          "variance_rad2_max": 0.6106619298297469,
+          "phase_metadata": {
+            "model": "Published Gaussian drift + equal Lorentzian lasers; perfect tracking idealization",
+            "sigma_L_rad_s": 4000.0,
+            "linewidth_each_hz": 100.0
+          }
+        }
+      },
+      {
+        "length_km": 403,
+        "unfitted_intrinsic_error": 0.0,
+        "key_bps": 152.01856543592797,
+        "published_bps": 47.8,
+        "ratio_model_published": 3.180304716232803,
+        "raw_x_error_predicted": 0.26963117814654053,
+        "observed_weak_raw_x_error": 0.30378189788204774,
+        "decoy": {
+          "q_11_lower": 0.6098262925120761,
+          "e_11_x_upper": 0.058214150968631695,
+          "e_11_x_upper_raw": 0.058214150968631695,
+          "e_11_x_privacy_worst_case": 0.058214150968631695,
+          "Y_Z_11_lower_raw": 0.0002459439562753091,
+          "Y_X_11_lower_raw": 0.00022007507266996973,
+          "YE_X_11_upper": 1.2811483504842209e-05,
+          "notes": [],
+          "method": "Zhang C4-C7 asymptotic analytical bounds; Zeng Supplement Note3/Eq70; no finite-key inference"
+        },
+        "phase": {
+          "raw_x_error": 0.26963117814654053,
+          "phase_mode": "published_drift",
+          "phase_slices": 32,
+          "intrinsic_x_error": 0.0,
+          "distribution": "Zeng IID geometric gaps; active uniform quantum rounds; reference-frame gaps and L_min>1 absent",
+          "discrete_interval_count": 200000,
+          "variance_rad2_min": 1.0053198891487339e-06,
+          "variance_rad2_max": 0.6106619298297469,
+          "phase_metadata": {
+            "model": "Published Gaussian drift + equal Lorentzian lasers; perfect tracking idealization",
+            "sigma_L_rad_s": 4000.0,
+            "linewidth_each_hz": 100.0
+          }
+        }
+      }
+    ],
+    "single_parameter_checks": [
+      {
+        "training_length_km": 101,
+        "intrinsic_x_error_fitted": 0.09282728117451068,
+        "status": "CALIBRATED",
+        "predictions": [
+          {
+            "length_km": 101,
+            "is_training": true,
+            "key_bps": 97499.99999999984,
+            "published_bps": 97500,
+            "ratio_model_published": 0.9999999999999983,
+            "within_factor1_5": true,
+            "raw_x_error_predicted": 0.29773706457098087,
+            "decoy": {
+              "q_11_lower": 0.591827524364713,
+              "e_11_x_upper": 0.1557564707341232,
+              "e_11_x_upper_raw": 0.1557564707341232,
+              "e_11_x_privacy_worst_case": 0.1557564707341232,
+              "Y_Z_11_lower_raw": 0.2096465881226153,
+              "Y_X_11_lower_raw": 0.21825795262435102,
+              "YE_X_11_upper": 0.033995088410424375,
+              "notes": [],
+              "method": "Zhang C4-C7 asymptotic analytical bounds; Zeng Supplement Note3/Eq70; no finite-key inference"
+            }
+          },
+          {
+            "length_km": 202,
+            "is_training": false,
+            "key_bps": 8052.041421442166,
+            "published_bps": 6300,
+            "ratio_model_published": 1.278101812927328,
+            "within_factor1_5": true,
+            "raw_x_error_predicted": 0.29791646940775757,
+            "decoy": {
+              "q_11_lower": 0.6685548416138695,
+              "e_11_x_upper": 0.1405588505942638,
+              "e_11_x_upper_raw": 0.1405588505942638,
+              "e_11_x_privacy_worst_case": 0.1405588505942638,
+              "Y_Z_11_lower_raw": 0.02895171394299374,
+              "Y_X_11_lower_raw": 0.028567436307918487,
+              "YE_X_11_upper": 0.004015406011865862,
+              "notes": [],
+              "method": "Zhang C4-C7 asymptotic analytical bounds; Zeng Supplement Note3/Eq70; no finite-key inference"
+            }
+          },
+          {
+            "length_km": 403,
+            "is_training": false,
+            "key_bps": 79.09974457780497,
+            "published_bps": 47.8,
+            "ratio_model_published": 1.654806371920606,
+            "within_factor1_5": false,
+            "raw_x_error_predicted": 0.3124002009466042,
+            "decoy": {
+              "q_11_lower": 0.6098262925120761,
+              "e_11_x_upper": 0.16154809912000948,
+              "e_11_x_upper_raw": 0.16154809912000948,
+              "e_11_x_privacy_worst_case": 0.16154809912000948,
+              "Y_Z_11_lower_raw": 0.0002459439562753091,
+              "Y_X_11_lower_raw": 0.00022007507266996973,
+              "YE_X_11_upper": 3.555270965353156e-05,
+              "notes": [],
+              "method": "Zhang C4-C7 asymptotic analytical bounds; Zeng Supplement Note3/Eq70; no finite-key inference"
+            }
+          }
+        ],
+        "scope": "Conditional phase-to-decoy prediction given detection gains at each length; e_d absorbs tracking, frame/min-gap, finite-key/estimator differences; not independent hardware-only validation"
+      },
+      {
+        "training_length_km": 202,
+        "intrinsic_x_error_fitted": 0.12616003868127018,
+        "status": "CALIBRATED",
+        "predictions": [
+          {
+            "length_km": 101,
+            "is_training": false,
+            "key_bps": 76035.43855365315,
+            "published_bps": 97500,
+            "ratio_model_published": 0.77985065183234,
+            "within_factor1_5": true,
+            "raw_x_error_predicted": 0.31429510264069344,
+            "decoy": {
+              "q_11_lower": 0.591827524364713,
+              "e_11_x_upper": 0.19246555706188048,
+              "e_11_x_upper_raw": 0.19246555706188048,
+              "e_11_x_privacy_worst_case": 0.19246555706188048,
+              "Y_Z_11_lower_raw": 0.2096465881226153,
+              "Y_X_11_lower_raw": 0.21825795262435102,
+              "YE_X_11_upper": 0.04200713843503124,
+              "notes": [],
+              "method": "Zhang C4-C7 asymptotic analytical bounds; Zeng Supplement Note3/Eq70; no finite-key inference"
+            }
+          },
+          {
+            "length_km": 202,
+            "is_training": true,
+            "key_bps": 6299.999999999999,
+            "published_bps": 6300,
+            "ratio_model_published": 0.9999999999999999,
+            "within_factor1_5": true,
+            "raw_x_error_predicted": 0.31445982069310735,
+            "decoy": {
+              "q_11_lower": 0.6685548416138695,
+              "e_11_x_upper": 0.17797210735299684,
+              "e_11_x_upper_raw": 0.17797210735299684,
+              "e_11_x_privacy_worst_case": 0.17797210735299684,
+              "Y_Z_11_lower_raw": 0.02895171394299374,
+              "Y_X_11_lower_raw": 0.028567436307918487,
+              "YE_X_11_upper": 0.005084206841392769,
+              "notes": [],
+              "method": "Zhang C4-C7 asymptotic analytical bounds; Zeng Supplement Note3/Eq70; no finite-key inference"
+            }
+          },
+          {
+            "length_km": 403,
+            "is_training": false,
+            "key_bps": 60.45562579612923,
+            "published_bps": 47.8,
+            "ratio_model_published": 1.2647620459441262,
+            "within_factor1_5": true,
+            "raw_x_error_predicted": 0.3277578570985227,
+            "decoy": {
+              "q_11_lower": 0.6098262925120761,
+              "e_11_x_upper": 0.19865362879151433,
+              "e_11_x_upper_raw": 0.19865362879151433,
+              "e_11_x_privacy_worst_case": 0.19865362879151433,
+              "Y_Z_11_lower_raw": 0.0002459439562753091,
+              "Y_X_11_lower_raw": 0.00022007507266996973,
+              "YE_X_11_upper": 4.371871179244571e-05,
+              "notes": [],
+              "method": "Zhang C4-C7 asymptotic analytical bounds; Zeng Supplement Note3/Eq70; no finite-key inference"
+            }
+          }
+        ],
+        "scope": "Conditional phase-to-decoy prediction given detection gains at each length; e_d absorbs tracking, frame/min-gap, finite-key/estimator differences; not independent hardware-only validation"
+      }
+    ],
+    "no_hidden_ideal_defaults": "Intrinsic error0 explicitly marks unfitted optimistic comparison; only source EqD2 e_d is calibrated"
+  },
+  "zhu_forecast": "NOT_RUN by user instruction; sigma_L/tracking absent",
+  "runtime_s": 0.28697216600266984,
+  "unchanged_pre_existing_files": 57,
+  "verification": {
+    "tests": {
+      "new_mp_tests": {
+        "discovered": 13,
+        "executed": 13,
+        "skipped": 0,
+        "passed": true
+      },
+      "quick": {
+        "discovered": 121,
+        "executed": 115,
+        "skipped": 6,
+        "passed": true
+      },
+      "full_units": {
+        "discovered": 121,
+        "executed": 121,
+        "skipped": 0,
+        "passed": true
+      }
+    },
+    "execution": [
+      {
+        "name": "quick",
+        "command": [
+          "/usr/bin/python",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests"
+        ],
+        "environment": {},
+        "exit_code": 0,
+        "seconds": 5.970072096999502,
+        "context": "TF reference T5 scan running concurrently; runtime is not an isolated benchmark"
+      },
+      {
+        "name": "full_units",
+        "command": [
+          "/usr/bin/python",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests"
+        ],
+        "environment": {
+          "TFQKD_FULL_TESTS": "1"
+        },
+        "exit_code": 0,
+        "seconds": 15.370081592001952,
+        "context": "TF reference T5 scan running concurrently; runtime is not an isolated benchmark"
+      },
+      {
+        "name": "full_T1_T7_Figure3",
+        "command": [
+          "validate_stage3_a.full",
+          "OUT=results/mp_key/tf_reference"
+        ],
+        "exit_code": 0,
+        "seconds": 741.6062707890014
+      },
+      {
+        "name": "new_mp_tests",
+        "command": [
+          "/usr/bin/python",
+          "-m",
+          "unittest",
+          "tests.test_mp_key",
+          "-v"
+        ],
+        "exit_code": 0,
+        "seconds": 0.4116191409993917,
+        "context": "Final execution after TF reference scan, no concurrent task calculations"
+      },
+      {
+        "name": "mp_cli",
+        "command": [
+          "/usr/bin/python",
+          "-m",
+          "tfqkd.mp_key",
+          "examples/mode_pairing/key_zhang202_given_gains.toml",
+          "--output",
+          "results/mp_key/example_zhang202"
+        ],
+        "exit_code": 0,
+        "seconds": 0.39980231699883007,
+        "context": "Final execution after TF reference scan, no concurrent task calculations"
+      },
+      {
+        "name": "source_comparison",
+        "command": [
+          "/usr/bin/python",
+          "-m",
+          "scripts.validate.validate_mp_key"
+        ],
+        "exit_code": 0,
+        "seconds": 0.6721257719982532,
+        "context": "Final execution after TF reference scan, no concurrent task calculations"
+      }
+    ],
+    "tf_regression": {
+      "rows": [
+        {
+          "scenario": "1",
+          "reference_tau_s": 0.0007215008266196752,
+          "reference_variances_rad2": [
+            0.0002538726083392722,
+            0.00041735687544377137,
+            0.1019595230815382,
+            40.02871819006617,
+            2152.0973901482716,
+            0.040000000000000015
+          ],
+          "times_s": [
+            1e-05,
+            0.0001,
+            0.001,
+            0.01,
+            0.1,
+            0.0007215008266196752
+          ],
+          "reference_keys_bps": [
+            33163.7588735179,
+            57716.80780251328
+          ],
+          "rows": [
+            {
+              "points": 4097,
+              "variance_max_relative": 4.011582808116643e-05,
+              "tau_relative": 1.3949584578343277e-05,
+              "key_max_relative": 8.10320036936929e-06,
+              "tau_q_s": 0.0007214907619828709,
+              "variance_rad2": 0.04,
+              "key_bps": [
+                33163.49014093475,
+                57716.34011165497
+              ],
+              "status": "threshold"
+            }
+          ]
+        },
+        {
+          "scenario": "2",
+          "reference_tau_s": 0.1,
+          "reference_variances_rad2": [
+            0.0012539439414960983,
+            0.001875251821390045,
+            0.001993551484566065,
+            0.0022014753457141,
+            0.004096292605541473,
+            0.004096292605541473
+          ],
+          "times_s": [
+            1e-05,
+            0.0001,
+            0.001,
+            0.01,
+            0.1,
+            0.1
+          ],
+          "reference_keys_bps": [
+            88382.65621482844,
+            153042.49244446805
+          ],
+          "rows": [
+            {
+              "points": 4097,
+              "variance_max_relative": 7.801781721106238e-06,
+              "tau_relative": 0.0,
+              "key_max_relative": 1.1032913704855929e-07,
+              "tau_q_s": 0.1,
+              "variance_rad2": 0.004096324563922248,
+              "key_bps": [
+                88382.64646364625,
+                153042.4767847431
+              ],
+              "status": "capped"
+            }
+          ]
+        },
+        {
+          "scenario": "3",
+          "reference_tau_s": 4.826420399480876e-05,
+          "reference_variances_rad2": [
+            0.0058507891761334484,
+            0.1178031120577053,
+            0.3288397737784395,
+            0.49468870605356424,
+            0.6567085259366103,
+            0.04
+          ],
+          "times_s": [
+            1e-05,
+            0.0001,
+            0.001,
+            0.01,
+            0.1,
+            4.826420399480876e-05
+          ],
+          "reference_keys_bps": [
+            3440.3769512897748,
+            5965.914464177066
+          ],
+          "rows": [
+            {
+              "points": 4097,
+              "variance_max_relative": 2.5787967776302878e-05,
+              "tau_relative": 1.2155640275790525e-05,
+              "key_max_relative": 1.1595976503353533e-05,
+              "tau_q_s": 4.8263617312506805e-05,
+              "variance_rad2": 0.04000000000000001,
+              "key_bps": [
+                3440.3370567594848,
+                5965.845283573119
+              ],
+              "status": "threshold"
+            }
+          ]
+        },
+        {
+          "scenario": "4",
+          "reference_tau_s": 0.0007055827876353868,
+          "reference_variances_rad2": [
+            0.0018232643060416792,
+            0.0024523567851648044,
+            0.10524272222909405,
+            40.52703299675844,
+            2178.7827274149095,
+            0.04000000000000001
+          ],
+          "times_s": [
+            1e-05,
+            0.0001,
+            0.001,
+            0.01,
+            0.1,
+            0.0007055827876353868
+          ],
+          "reference_keys_bps": [
+            30911.979066649186,
+            53604.074681678096
+          ],
+          "rows": [
+            {
+              "points": 4097,
+              "variance_max_relative": 5.1002731348726016e-05,
+              "tau_relative": 1.4839666608756907e-05,
+              "key_max_relative": 8.700696218499893e-06,
+              "tau_q_s": 0.0007055723170220534,
+              "variance_rad2": 0.040000000000000015,
+              "key_bps": [
+                30911.710110909822,
+                53603.60828890822
+              ],
+              "status": "threshold"
+            }
+          ]
+        },
+        {
+          "scenario": "5",
+          "reference_tau_s": 0.1,
+          "reference_variances_rad2": [
+            0.002823336523417352,
+            0.003908844054683624,
+            0.00401675530003146,
+            0.004216450485438573,
+            0.006124380915706147,
+            0.006124380915706147
+          ],
+          "times_s": [
+            1e-05,
+            0.0001,
+            0.001,
+            0.01,
+            0.1,
+            0.1
+          ],
+          "reference_keys_bps": [
+            82880.90112869204,
+            143123.93157613772
+          ],
+          "rows": [
+            {
+              "points": 4097,
+              "variance_max_relative": 3.4566310849415416e-05,
+              "tau_relative": 0.0,
+              "key_max_relative": 4.538324654967951e-07,
+              "tau_q_s": 0.1,
+              "variance_rad2": 0.006124512840132188,
+              "key_bps": [
+                82880.86351464834,
+                143123.87091359877
+              ],
+              "status": "capped"
+            }
+          ]
+        },
+        {
+          "scenario": "6",
+          "reference_tau_s": 0.001142905737633146,
+          "reference_variances_rad2": [
+            0.0018022972486650415,
+            0.002356782618160918,
+            0.028062922504454173,
+            10.133546852786353,
+            544.6981634564679,
+            0.040000000000000015
+          ],
+          "times_s": [
+            1e-05,
+            0.0001,
+            0.001,
+            0.01,
+            0.1,
+            0.001142905737633146
+          ],
+          "reference_keys_bps": [
+            39852.81311830898,
+            69108.26272438868
+          ],
+          "rows": [
+            {
+              "points": 4097,
+              "variance_max_relative": 3.7201210841608656e-05,
+              "tau_relative": 1.3889037174918961e-05,
+              "key_max_relative": 6.4814517115596715e-06,
+              "tau_q_s": 0.0011428898637728686,
+              "variance_rad2": 0.04000000000000001,
+              "key_bps": [
+                39852.554814225194,
+                69107.81480252097
+              ],
+              "status": "threshold"
+            }
+          ]
+        },
+        {
+          "scenario": "7",
+          "reference_tau_s": 0.1,
+          "reference_variances_rad2": [
+            0.002802315316549332,
+            0.003899475878575508,
+            0.003998968100087538,
+            0.004091966607422753,
+            0.0052626229878340244,
+            0.0052626229878340244
+          ],
+          "times_s": [
+            1e-05,
+            0.0001,
+            0.001,
+            0.01,
+            0.1,
+            0.1
+          ],
+          "reference_keys_bps": [
+            83127.15692728345,
+            143520.73410547446
+          ],
+          "rows": [
+            {
+              "points": 4097,
+              "variance_max_relative": 7.197486714183299e-06,
+              "tau_relative": 0.0,
+              "key_max_relative": 1.3050240754708398e-07,
+              "tau_q_s": 0.1,
+              "variance_rad2": 0.005262660865493061,
+              "key_bps": [
+                83127.14607898933,
+                143520.71664116686
+              ],
+              "status": "capped"
+            }
+          ]
+        }
+      ],
+      "maximum": {
+        "variance_max_relative": 5.1002731348726016e-05,
+        "tau_relative": 1.4839666608756907e-05,
+        "key_max_relative": 1.1595976503353533e-05
+      },
+      "passed": true,
+      "fast_points": 4097,
+      "reference_points": 65537,
+      "seconds": 0.055347533998428844,
+      "tolerances": {
+        "variance": 0.0001,
+        "tau": 0.0001,
+        "key": 0.001
+      }
+    },
+    "T1_T7_Figure3": {
+      "grid_mode": "reference",
+      "reference_points": 65537,
+      "checks": [
+        {
+          "name": "T1_T4",
+          "command": [
+            "/usr/bin/python",
+            "scripts/run/run_stage1.py",
+            "--config",
+            "results/mp_key/tf_reference/full/config_reference.toml",
+            "--output-dir",
+            "results/mp_key/tf_reference/full"
+          ],
+          "exit_code": 0,
+          "seconds": 19.68425620599737
+        },
+        {
+          "name": "Figure3",
+          "command": [
+            "/usr/bin/python",
+            "scripts/run/run_keyrates.py",
+            "--config",
+            "results/mp_key/tf_reference/full/config_reference.toml",
+            "--outdir",
+            "results/mp_key/tf_reference/full"
+          ],
+          "exit_code": 0,
+          "seconds": 5.65975734499807
+        },
+        {
+          "name": "author_keyrates",
+          "command": [
+            "/usr/bin/python",
+            "scripts/validate/validate_keyrates.py"
+          ],
+          "exit_code": 0,
+          "seconds": 0.48264979400119046
+        },
+        {
+          "name": "T6_T7",
+          "command": [
+            "/usr/bin/python",
+            "scripts/run/run_stage2_checks.py",
+            "--config",
+            "results/mp_key/tf_reference/full/config_reference.toml",
+            "--output-dir",
+            "results/mp_key/tf_reference/full"
+          ],
+          "exit_code": 0,
+          "seconds": 1.4744713550026063
+        },
+        {
+          "name": "T5",
+          "command": [
+            "/usr/bin/python",
+            "scripts/run/run_classical.py",
+            "--config",
+            "results/mp_key/tf_reference/full/config_reference.toml",
+            "--output-dir",
+            "results/mp_key/tf_reference/full"
+          ],
+          "exit_code": 0,
+          "seconds": 714.290573112994
+        },
+        {
+          "name": "former_acceptance_assertions",
+          "exit_code": 0,
+          "T4": "accepted discrepancy; unchanged validation limit"
+        }
+      ],
+      "passed": true,
+      "versions": {
+        "python": "3.14.7",
+        "numpy": "2.5.3",
+        "scipy": "1.18.1"
+      }
+    },
+    "unchanged_pre_existing_files": 57
+  },
+  "source_input_file": "sources/data/mode_pairing/key_comparison_inputs.json",
+  "decisions": [
+    "Observed finite counts treated as asymptotic expectation proxies, without statistical security intervals.",
+    "Missing vacuum X errors use explicit random e0=1/2 from Zeng Supplement85; missing Zhu X00 reuses basis0 counts.",
+    "Literal source-table anomaly retained; no guessed typo correction.",
+    "Zeng IID active-round gap law omits experimental minimum gaps/frame gaps; no tracking response invented.",
+    "One source D2 error calibrated per training length; observed gains at held-out lengths remain inputs.",
+    "Factor1.5 comparison gate transferred from the prior user-requested TF held-out check, not a physical coefficient."
+  ]
+}

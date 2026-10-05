@@ -1,0 +1,160 @@
+{
+  "grid": {
+    "positive_floor_hz": 1e-08,
+    "upper_hz": 100000000.0,
+    "points": 65537,
+    "interval_batch": 32
+  },
+  "numerical_validation": {
+    "relative_tolerance": 2e-06,
+    "fast_points": 16385,
+    "refined_points": 131073,
+    "reference_phase_extent": 200.0,
+    "quadrature_epsabs": 1e-12,
+    "quadrature_limit": 4096,
+    "analytic_intervals_s": [
+      1e-08,
+      3e-08,
+      1e-07,
+      3e-07,
+      1e-06,
+      3e-06,
+      1e-05,
+      3e-05,
+      0.0001
+    ],
+    "white_check_intervals_s": [
+      1e-06,
+      1e-05,
+      0.0001,
+      0.001
+    ],
+    "white_linewidth_hz": 100,
+    "white_source": "Eq. 3, zhang2025",
+    "curve_relative_grid_tolerance": 0.0001
+  },
+  "fiber_model": {
+    "l": 44.0,
+    "fc1_hz": 100.0,
+    "source": "Table III and Eq. 6, bertaina2024; deliberately transferred from another line; no fitting"
+  },
+  "zhou": {
+    "lengths_km": [
+      201.86,
+      306.31,
+      413.73,
+      508.16
+    ],
+    "arm_lengths_km": [
+      [
+        100.93,
+        100.93
+      ],
+      [
+        153.45,
+        152.86
+      ],
+      [
+        206.87,
+        206.86
+      ],
+      [
+        254.38,
+        253.78
+      ]
+    ],
+    "sigma_published_rad_s": [
+      2100,
+      3400,
+      5300,
+      5900
+    ],
+    "visibility_v2": 0.46,
+    "lorentzian_white_frequency_linewidth_per_laser_hz": 1.0,
+    "source": "Main setup, Eq. 2, Fig. 3 and Table S1, zhou2023_async",
+    "laser_model_assumption": "Explicit Lorentzian white-frequency simplification, Di Domenico white case and Zhang Eq. 3; short-term linewidth alone does not establish a complete laser PSD",
+    "missing_inputs": [
+      "colored laser PSD",
+      "full residual beat statistics; Fig. 3 labels the tested offsets, not a tracking-error PSD"
+    ]
+  },
+  "zhang": {
+    "length_km": 403.0,
+    "arm_lengths_km": [
+      201.5,
+      201.5
+    ],
+    "sigma_published_rad_s": 4000.0,
+    "phase_slices": 32,
+    "lorentzian_white_frequency_linewidth_per_laser_hz": 100.0,
+    "source": "Eq. 3, Appendix B/B10, IIIA and Table I, zhang2025",
+    "laser_model_assumption": "Explicit equal independent Lorentzian white-frequency lasers as in Appendix B",
+    "geometry_assumption": "Symmetrical 403-km channel in III B: 201.5-km arms; for identical l/fc1 only their sum affects the variance",
+    "missing_inputs": [
+      "residual frequency estimator statistics; Eq. 3 omits them",
+      "measured differential fiber PSD for this apparatus"
+    ]
+  },
+  "zhu": {
+    "clock_hz": 625000000.0,
+    "linewidth_per_laser_hz": 2000.0,
+    "source": "Main experimental setup and Appendix B3/Table IV/Fig. 6, zhu2023",
+    "prediction_status": "NOT_CALCULATED; linewidth alone does not characterize the residual of MLE frequency tracking",
+    "missing_inputs": [
+      "residual of frequency estimate during strong/QKD frames",
+      "within-bin distribution of pair intervals in Fig. 6(a)",
+      "a fully specified residual phase-to-X-error/selection model for these strong-reference bins"
+    ],
+    "table_iv_202km": {
+      "gap_bins": [
+        [
+          63,
+          500
+        ],
+        [
+          500,
+          1000
+        ],
+        [
+          1000,
+          1500
+        ],
+        [
+          1500,
+          2000
+        ]
+      ],
+      "strong_pairs": [
+        27817087,
+        26194467,
+        19972305,
+        13845880
+      ],
+      "strong_error_pairs": [
+        7716898,
+        7409449,
+        5871640,
+        4283679
+      ],
+      "qkd_pairs": [
+        261923,
+        146520,
+        67458,
+        30799
+      ],
+      "qkd_error_pairs": [
+        79234,
+        45185,
+        21410,
+        10150
+      ]
+    }
+  },
+  "conventions": {
+    "fiber_geometry": "Independent one-pass arms; sum L_A+L_B; no round-trip K",
+    "low_cutoff": "User approved 1/T_track for divergent components only; convergent terms start at zero",
+    "tracking_model": "None",
+    "gaussian_conversion": "X error uses Gaussian increment characteristic function assumed by cited source equations",
+    "numerical_choices": "All grid points, cutoffs, tolerances and quadrature settings are numerical decisions, not apparatus parameters"
+  }
+}

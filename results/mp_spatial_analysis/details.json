@@ -1,0 +1,276 @@
+{
+  "scope": "Source and statistical analysis only; no tfqkd code or model change",
+  "inputs": {
+    "lengths_km": [
+      201.86,
+      306.31,
+      413.73,
+      508.16
+    ],
+    "empirical_sigma_rad_s": [
+      2100.0,
+      3400.0,
+      5300.0,
+      5900.0
+    ],
+    "source": "Zhou async main text Fig.3 discussion, PDF p.4; exact lengths Table S1, PDF p.27; authors say empirical drift rates used in simulation, no sigma error bars"
+  },
+  "fit": {
+    "method": "Unweighted OLS in log coordinates, centered to profile out unknown proportionality normalization; only alpha is a reported physical scaling parameter. No Bertaina l/fc1 or protocol parameters fitted.",
+    "alpha": 1.1675484906055529,
+    "standard_error_conditional": 0.09872295214812433,
+    "dof": 2,
+    "ci95_conditional": [
+      0.7427779110565003,
+      1.5923190701546055
+    ],
+    "log_residuals": [
+      -0.009485673299358233,
+      -0.014542479609109052,
+      0.07840523853629186,
+      -0.05437708562782939
+    ],
+    "sse_log": 0.009405710582432626,
+    "normalization_anchor_length_km": 337.66203494994585,
+    "normalization_anchor_sigma_rad_s": 3865.5075268197065,
+    "r_squared": 0.9859022351935767,
+    "independent_scipy_match": true,
+    "hypotheses": [
+      {
+        "alpha": 0.5,
+        "t_statistic": 6.761836797626962,
+        "dof": 2,
+        "p_two_sided_conditional": 0.02117877435807,
+        "claim": "Conditional OLS diagnostic only; experimental sigma uncertainties absent"
+      },
+      {
+        "alpha": 1.0,
+        "t_statistic": 1.6971584313459591,
+        "dof": 2,
+        "p_two_sided_conditional": 0.23175976892322808,
+        "claim": "Conditional OLS diagnostic only; experimental sigma uncertainties absent"
+      }
+    ],
+    "leave_one_out": [
+      {
+        "omitted_length_km": 201.86,
+        "alpha": 1.1173508599454818
+      },
+      {
+        "omitted_length_km": 306.31,
+        "alpha": 1.1635271397565652
+      },
+      {
+        "omitted_length_km": 413.73,
+        "alpha": 1.117865412365933
+      },
+      {
+        "omitted_length_km": 508.16,
+        "alpha": 1.2816361406896033
+      }
+    ],
+    "alpha_with_rounded_main_text_lengths": 1.163049756200835,
+    "rounding_change": -0.004498734404717819,
+    "uncertainty_scope": "Residual-based standard error under equal independent log-error assumptions; not measurement uncertainty or an established significance of spatial correlation"
+  },
+  "correlation_hypothesis": {
+    "equation": "Cov(delta_phi_i,delta_phi_j)=v(delta_t)*[(1-c)*delta_ij+c]",
+    "D_one_arm": "v(delta_t)*N*[1+c*(N-1)]",
+    "D_two_independent_arms": "v(delta_t)*[(1-c)*(N_A+N_B)+c*(N_A**2+N_B**2)]",
+    "D_equal_arms_relative_to_Eq6": "D_independent*[1+c*(L/(2*ell)-1)]",
+    "local_alpha": "1/2 + c*N/(2*(1-c+c*N))",
+    "local_inverse_c": "(2*alpha-1)/[(2*alpha-1)+N*(2-2*alpha)]",
+    "finite_interval_alpha": "1/2 + log((1+c*(N2-1))/(1+c*(N1-1)))/(2*log(N2/N1))",
+    "finite_inverse_c": "(k-1)/[(N2-1)-k*(N1-1)], k=(N2/N1)**(2*alpha-1)",
+    "allowed_c": [
+      0,
+      1
+    ],
+    "allowed_alpha": [
+      0.5,
+      1.0
+    ],
+    "central_alpha_compatible_c": null,
+    "ci95_overlap_allowed_alpha": [
+      0.7427779110565003,
+      1.0
+    ],
+    "c1_consistent_under_conditional_CI": true,
+    "c0_consistent_under_conditional_CI": false,
+    "identifiability": "No unique c: section scale ell and spatial cross spectra are unreported. Constant c refers to equal sections with fixed same variance/spectral shape and no cross-arm covariance. This is a hypothesis, not Williams A4.",
+    "source_check": "Williams Appendix A A4 explicitly assumes spatially uncorrelated noise; A3/A8 permit a general covariance calculation, but no constant-c interpolation is supplied."
+  },
+  "sources": [
+    {
+      "id": "zhou_async",
+      "file": "sources/papers/zhou2023_async_mdi.pdf",
+      "url": "https://arxiv.org/pdf/2212.14190v4",
+      "classification": "Laboratory spools; not a documented field or mixed route",
+      "quotes": [
+        {
+          "quote": "ultra-low-loss fiber spools (G654.C ULL)",
+          "pdf_page": 3
+        },
+        {
+          "quote": "air-conditioned temperature-stabilized laboratory",
+          "pdf_page": 26
+        },
+        {
+          "quote": "50.4 km and 25.2 km each in length",
+          "pdf_page": 27
+        }
+      ],
+      "description": "413-km case additionally includes 5-km conventional fiber on each side; source does not identify it as deployed field fiber. Spool positioning by room/rack/cabinet and shared thermal environment not specified."
+    },
+    {
+      "id": "zhang",
+      "file": "sources/papers/zhang2025_mode_pairing_prx.pdf",
+      "url": "https://journals.aps.org/prx/pdf/10.1103/PhysRevX.15.021037",
+      "classification": "Spool experiment, interpreted as laboratory; no field or mixed route described",
+      "quotes": [
+        {
+          "quote": "403-km standard fiber spools with symmetrical channels",
+          "pdf_page": 5,
+          "printed_page": "021037-5"
+        }
+      ],
+      "description": "Sentence lists 101,202,403 km. Lab-room placement, separate sites and spool layout not specified."
+    },
+    {
+      "id": "zhu",
+      "file": "sources/papers/zhu2023_mode_pairing.pdf",
+      "url": "https://arxiv.org/pdf/2208.05649v2",
+      "classification": "Laboratory spools inferred from Fig.2 and Appendix B comparison with lab spools; no field route described",
+      "quotes": [
+        {
+          "quote": "Fiber Spool",
+          "pdf_page": 3,
+          "location": "Figure 2 labels on both arm links"
+        },
+        {
+          "quote": "drift of deployed commercial fiber could be smaller than lab fiber spools",
+          "pdf_page": 8,
+          "location": "Appendix B, item 2"
+        }
+      ],
+      "description": "101,202,304-km standard fiber and407-km ULL. Fig.2 places one spool symbol in each user-to-Charlie path; drawing does not determine physical room or building."
+    },
+    {
+      "id": "williams",
+      "file": "sources/papers/williams2008.pdf",
+      "url": "https://doi.org/10.1364/JOSAB.25.001284",
+      "quotes": [
+        {
+          "quote": "Assuming that the noise is uncorrelated with position",
+          "pdf_page": 9,
+          "printed_page": "1292",
+          "location": "Appendix A immediately before A4"
+        }
+      ]
+    },
+    {
+      "id": "bertaina",
+      "file": "sources/papers/bertaina2024.pdf",
+      "url": "https://arxiv.org/pdf/2310.08621",
+      "quotes": [
+        {
+          "quote": "In general, field noise levels exceed those of spooled fibers with equal length",
+          "pdf_page": 13,
+          "location": "Appendix F"
+        }
+      ],
+      "description": "Eq.6 discussion PDF p.5 assumes homogeneous spatially uncorrelated buried-line noise; Appendix F identifies l44 with intercity114km route running parallel a highway."
+    }
+  ],
+  "conclusion": "Data favor faster growth than fixed-coefficient independent-section sqrt(L) within conditional regression assumptions, and are compatible with fully correlated alpha1 within its95%interval. They do not establish spatial correlation, its extent, or a numeric c. Central alpha>1 cannot be reproduced by the proposed fixed-section constant-c interpolation. No universal spool-to-field conversion of l follows.",
+  "engineering_decisions": [
+    "Unweighted log-OLS with normalization analytically eliminated; homoscedastic independent log residuals assumed for conditional SE/CI.",
+    "Hypothetical equicorrelated same-strength sections, constant c, section length ell and independent arms; not sourced model or implemented physics."
+  ],
+  "validation_limits": [
+    "Four empirical author-model drift parameters without reported uncertainty/covariance; p-values/SE conditional.",
+    "Geometry of spool placement and cross-arm covariance not published.",
+    "Changing spool sets/fiber type, length-dependent environmental strength and empirical drift extraction can confound alpha; no unique cause established."
+  ],
+  "checks": {
+    "slope_and_SE_match_scipy_tolerance": 1e-14,
+    "covariance_sum_identity": [
+      {
+        "N": 1,
+        "c": 0.0,
+        "covariance_sum": 1.0,
+        "expanded": 1.0
+      },
+      {
+        "N": 1,
+        "c": 0.25,
+        "covariance_sum": 1.0,
+        "expanded": 1.0
+      },
+      {
+        "N": 1,
+        "c": 1.0,
+        "covariance_sum": 1.0,
+        "expanded": 1.0
+      },
+      {
+        "N": 2,
+        "c": 0.0,
+        "covariance_sum": 2.0,
+        "expanded": 2.0
+      },
+      {
+        "N": 2,
+        "c": 0.25,
+        "covariance_sum": 2.5,
+        "expanded": 2.5
+      },
+      {
+        "N": 2,
+        "c": 1.0,
+        "covariance_sum": 4.0,
+        "expanded": 4.0
+      },
+      {
+        "N": 5,
+        "c": 0.0,
+        "covariance_sum": 5.0,
+        "expanded": 5.0
+      },
+      {
+        "N": 5,
+        "c": 0.25,
+        "covariance_sum": 10.0,
+        "expanded": 10.0
+      },
+      {
+        "N": 5,
+        "c": 1.0,
+        "covariance_sum": 25.0,
+        "expanded": 25.0
+      },
+      {
+        "N": 10,
+        "c": 0.0,
+        "covariance_sum": 10.0,
+        "expanded": 10.0
+      },
+      {
+        "N": 10,
+        "c": 0.25,
+        "covariance_sum": 32.5,
+        "expanded": 32.5
+      },
+      {
+        "N": 10,
+        "c": 1.0,
+        "covariance_sum": 100.0,
+        "expanded": 100.0
+      }
+    ],
+    "code_config_test_files_unchanged": 57,
+    "unit_tests": "Not rerun; no code changes",
+    "correlation_model_implemented": false,
+    "changed_code_files": []
+  }
+}

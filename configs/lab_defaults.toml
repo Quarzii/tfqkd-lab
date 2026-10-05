@@ -1,0 +1,110 @@
+# Numerical/model choices only. No apparatus or protocol parameters are inherited.
+# Physical reference inputs are in examples/bertaina2024_table3.toml.
+[laser]
+model = "free"
+[scheme]
+lasers = "common"
+compensation = "none"
+[protocol]
+name = "SNS-AOPP"
+[loop]
+safety_fraction = 0.5 # User-authorized engineering safety factor; not a physical apparatus value.
+[requirements]
+loss_fraction = 0.10 # New user-requested target reduction from optimistic key rate.
+root_rtol = 1e-6 # Numerical inverse-search accuracy.
+max_bracket_doublings = 80 # Numerical search limit; exhaustion is reported, never a physical limit.
+[reach]
+enabled = false # Optional source-model length forecast; no scan in a normal user report.
+points = 5 # Coarse numerical root brackets; refine actual crossings without changing the Fourier grid.
+workers = 4 # Four independent thresholds; gain/frequency arrays remain vectorized within each worker.
+geometry = "fixed_imbalance" # Same engineering scan convention as the existing Part C working-length comparison; reported explicitly.
+[numerics]
+gain_samples = 25
+gain_refinements = 2
+gain_xatol_fraction = 1e-5
+gain_rate_rtol = 1e-3
+workers = 1 # Local reports reuse exact transfer arrays; multiple independent workers remain an explicit option.
+[grid]
+mode = "fast"
+fast_points = 4097
+reference_points = 65537
+f_min_hz = 0.001
+f_max_hz = 1000000.0
+points = 65537
+refined_points = 131073
+author_points = 10000
+author_curve_points = 1000
+relative_tolerance = 0.0001
+
+[performance]
+workers = 2
+cache_entries = 8
+batch_memory_mb = 64.0
+fast_peak_core_points = 513
+fast_peak_tail_points = 129
+fast_peak_branches = 24
+regression_variance_rtol = 0.0001
+regression_time_rtol = 0.0001
+regression_key_rtol = 0.001
+grid_candidates = [257, 513, 1025, 2049, 4097, 8193, 16385, 32769, 65537]
+pole_iterations = 80
+pole_step_limit = 2.0
+pole_residual_rtol = 1e-09
+stability_iterations = 60
+
+[validation]
+reference_rtol = 1e-12
+
+[classical]
+g_min_per_s = 0.01
+quadrature_rtol = 0.0001
+
+[classical_actuator]
+resonance_branches = 24
+resonance_points = 2001
+resonance_widths = 30.0
+resonance_tail_points = 257
+resonance_tail_fraction = 0.25
+max_refinement_levels = 5
+root_xtol_km = 1e-07
+root_rtol = 1e-10
+root_crossing_fraction = 0.001
+quadrature_frequency_multiple = 10.0
+quadrature_frequency_points = 100
+
+[fit]
+color_difference = 0.15
+blue_green_difference = 0.025
+black_threshold = 0.32
+gray_difference = 0.1
+pixel_step = 8
+border_pixels = 4
+reference_exclusion_pixels = 4
+log_parameter_search_margin = 80
+max_nfev = 5000
+cutoff_start_shifts = [-4, 0, 4, 12]
+cutoff_profile_multipliers = [0.01, 0.1, 1, 10, 100, 10000]
+
+maximum_rms_log10_residual = 0.5 # dex; engineering fit acceptance gate explicitly approved by user
+maximum_rms_phase_deg = 5.0 # degrees; user-approved engineering default, NOT a value from a source
+
+[sensitivity]
+# Factor-two what-if directions are engineering analysis choices; NOT source-provided apparatus defaults.
+[sensitivity.directions]
+"physics.r3" = 0.5
+"physics.r2" = 0.5
+"physics.C4" = 0.5
+"physics.C3" = 0.5
+"physics.C2" = 0.5
+"physics.l" = 0.5
+"physics.s0" = 0.5
+"keyrate.detector_dark_count_rate_hz" = 0.5
+"keyrate.detector_error" = 0.5
+"keyrate.attenuation_db_per_km" = 0.5
+"keyrate.detector_efficiency" = "halve_shortfall" # User rule: eta -> 1-(1-eta)/2, no clamping
+"keyrate.clockrate_hz" = 2.0
+"actuator.omega_a_rad_s" = 2.0
+"line.imbalance_km" = 0.5
+
+[comparison]
+working_total_lengths_km = [50.0,100.0,150.0,200.0,250.0] # User-requested C2 comparison coordinates; NOT equipment defaults

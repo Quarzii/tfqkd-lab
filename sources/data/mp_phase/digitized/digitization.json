@@ -1,0 +1,1016 @@
+{
+  "method": "Poppler pdftocairo SVG; original vector trace vertices or marker centers; stdlib XML/numpy",
+  "conversions": [
+    {
+      "command": [
+        "pdftocairo",
+        "-f",
+        "4",
+        "-l",
+        "4",
+        "-svg",
+        "sources/papers/zhou2023_async_mdi.pdf",
+        "sources/data/mp_phase/digitized/zhou_fig3.svg"
+      ],
+      "returncode": -6,
+      "stderr": "Fontconfig error: \"<local-path-omitted>\", line 2: XML or text declaration not at start of entity\npdftocairo: ../cairo/src/cairo-hash.c:217: _cairo_hash_table_destroy: Assertion `hash_table->live_entries == 0' failed.\n",
+      "xml_parse_success": true,
+      "svg": "sources/data/mp_phase/digitized/zhou_fig3.svg",
+      "sha256": "f0050e368743657da83bdd576f207868be306bf308c6596b4426938cc032d4c0",
+      "pdf_sha256": "7178437a4fc9a581325d533258f827861b48609f2ad650884ebaede63206f17f"
+    },
+    {
+      "command": [
+        "pdftocairo",
+        "-f",
+        "3",
+        "-l",
+        "3",
+        "-svg",
+        "sources/papers/zhang2025_mode_pairing_prx.pdf",
+        "sources/data/mp_phase/digitized/zhang_fig1.svg"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "xml_parse_success": true,
+      "svg": "sources/data/mp_phase/digitized/zhang_fig1.svg",
+      "sha256": "418e734935b571a7ca35f7522c743ef76c2bfcb48d2e400942edb0c7017da701",
+      "pdf_sha256": "96e34d29b79df7e2ad654d3a40680e0a941eae44f1b397d03f9d5d216f07f071"
+    },
+    {
+      "command": [
+        "pdftocairo",
+        "-f",
+        "12",
+        "-l",
+        "12",
+        "-svg",
+        "sources/papers/zhu2023_mode_pairing.pdf",
+        "sources/data/mp_phase/digitized/zhu_fig6.svg"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "xml_parse_success": true,
+      "svg": "sources/data/mp_phase/digitized/zhu_fig6.svg",
+      "sha256": "6385198e3796ca3b26745247861cb6237a8c2c361e43907fe04de997cef56c07",
+      "pdf_sha256": "e877338795832de15cfe00bb7a5ebe2bdc20a3b492db39a6dca9f90992ceb8b5"
+    }
+  ],
+  "curves": [
+    {
+      "id": "zhou_3a_0",
+      "source_id": "zhou_fig3",
+      "source": "Fig. 3(a), zhou2023_async",
+      "selector": "trace",
+      "color_attribute": "stroke",
+      "color": "rgb(0%, 100%, 0%)",
+      "minimum_vertices": 1000,
+      "stride": 15,
+      "x_pt": [
+        71.8944798,
+        293.1048114
+      ],
+      "x_values": [
+        0,
+        0.0015
+      ],
+      "x_scale": "linear",
+      "x_column": "delta_t_s",
+      "y_pt": [
+        132.7344177,
+        59.5627201
+      ],
+      "y_values": [
+        0.25,
+        0.75
+      ],
+      "region_pt": [
+        71,
+        294,
+        59,
+        134
+      ],
+      "length_km": 201.86,
+      "published_sigma_rad_s": 2100,
+      "residual_frequency_hz": 10,
+      "curve_identity": "Experimental connected trace; simulation symbols appear in brackets in Exp.[Sim.] legend",
+      "csv": "sources/data/mp_phase/digitized/zhou_3a_0.csv",
+      "point_count": 101,
+      "svg_path_indices": [
+        105
+      ],
+      "csv_sha256": "fbd46cee7974de0680917cde321d5b5b347803ff9f5828a110a88ac6be80ed3c"
+    },
+    {
+      "id": "zhou_3a_1",
+      "source_id": "zhou_fig3",
+      "source": "Fig. 3(a), zhou2023_async",
+      "selector": "trace",
+      "color_attribute": "stroke",
+      "color": "rgb(0%, 0%, 0%)",
+      "minimum_vertices": 1000,
+      "stride": 15,
+      "x_pt": [
+        71.8944798,
+        293.1048114
+      ],
+      "x_values": [
+        0,
+        0.0015
+      ],
+      "x_scale": "linear",
+      "x_column": "delta_t_s",
+      "y_pt": [
+        132.7344177,
+        59.5627201
+      ],
+      "y_values": [
+        0.25,
+        0.75
+      ],
+      "region_pt": [
+        71,
+        294,
+        59,
+        134
+      ],
+      "length_km": 201.86,
+      "published_sigma_rad_s": 2100,
+      "residual_frequency_hz": 1000,
+      "curve_identity": "Experimental connected trace; simulation symbols appear in brackets in Exp.[Sim.] legend",
+      "csv": "sources/data/mp_phase/digitized/zhou_3a_1.csv",
+      "point_count": 101,
+      "svg_path_indices": [
+        106
+      ],
+      "csv_sha256": "5970057f40d177e9262416b1a36edfcf805080e37e3237b5f7409ca84f7acc67"
+    },
+    {
+      "id": "zhou_3a_2",
+      "source_id": "zhou_fig3",
+      "source": "Fig. 3(a), zhou2023_async",
+      "selector": "trace",
+      "color_attribute": "stroke",
+      "color": "rgb(0%, 0%, 100%)",
+      "minimum_vertices": 1000,
+      "stride": 15,
+      "x_pt": [
+        71.8944798,
+        293.1048114
+      ],
+      "x_values": [
+        0,
+        0.0015
+      ],
+      "x_scale": "linear",
+      "x_column": "delta_t_s",
+      "y_pt": [
+        132.7344177,
+        59.5627201
+      ],
+      "y_values": [
+        0.25,
+        0.75
+      ],
+      "region_pt": [
+        71,
+        294,
+        59,
+        134
+      ],
+      "length_km": 201.86,
+      "published_sigma_rad_s": 2100,
+      "residual_frequency_hz": 2000,
+      "curve_identity": "Experimental connected trace; simulation symbols appear in brackets in Exp.[Sim.] legend",
+      "csv": "sources/data/mp_phase/digitized/zhou_3a_2.csv",
+      "point_count": 101,
+      "svg_path_indices": [
+        107
+      ],
+      "csv_sha256": "3d0478bb42a81747e27d03f6ace47e9988b2870fe2bc4374a29b29c7f947975e"
+    },
+    {
+      "id": "zhou_3a_3",
+      "source_id": "zhou_fig3",
+      "source": "Fig. 3(a), zhou2023_async",
+      "selector": "trace",
+      "color_attribute": "stroke",
+      "color": "rgb(100%, 0%, 0%)",
+      "minimum_vertices": 1000,
+      "stride": 15,
+      "x_pt": [
+        71.8944798,
+        293.1048114
+      ],
+      "x_values": [
+        0,
+        0.0015
+      ],
+      "x_scale": "linear",
+      "x_column": "delta_t_s",
+      "y_pt": [
+        132.7344177,
+        59.5627201
+      ],
+      "y_values": [
+        0.25,
+        0.75
+      ],
+      "region_pt": [
+        71,
+        294,
+        59,
+        134
+      ],
+      "length_km": 201.86,
+      "published_sigma_rad_s": 2100,
+      "residual_frequency_hz": 5000,
+      "curve_identity": "Experimental connected trace; simulation symbols appear in brackets in Exp.[Sim.] legend",
+      "csv": "sources/data/mp_phase/digitized/zhou_3a_3.csv",
+      "point_count": 101,
+      "svg_path_indices": [
+        108
+      ],
+      "csv_sha256": "823726d8bc6e30bffb56bd42fddef00beb94757adb9838b5a00f847023d31a56"
+    },
+    {
+      "id": "zhou_3b_0",
+      "source_id": "zhou_fig3",
+      "source": "Fig. 3(b), zhou2023_async",
+      "selector": "trace",
+      "color_attribute": "stroke",
+      "color": "rgb(0%, 100%, 0%)",
+      "minimum_vertices": 1000,
+      "stride": 15,
+      "x_pt": [
+        72.2538588,
+        293.1985594
+      ],
+      "x_values": [
+        0,
+        0.0015
+      ],
+      "x_scale": "linear",
+      "x_column": "delta_t_s",
+      "y_pt": [
+        223.0703511,
+        155.0588274
+      ],
+      "y_values": [
+        0.25,
+        0.5
+      ],
+      "region_pt": [
+        71,
+        294,
+        149,
+        224
+      ],
+      "length_km": 201.86,
+      "published_sigma_rad_s": 2100,
+      "residual_frequency_hz": 10,
+      "curve_identity": "Experimental connected trace; simulation symbols appear in brackets in Exp.[Sim.] legend",
+      "csv": "sources/data/mp_phase/digitized/zhou_3b_0.csv",
+      "point_count": 101,
+      "svg_path_indices": [
+        453
+      ],
+      "csv_sha256": "ba805785e1231e5694b552eef25ec5da97070398cc3e7bc20339846bdfa9b4fa"
+    },
+    {
+      "id": "zhou_3b_1",
+      "source_id": "zhou_fig3",
+      "source": "Fig. 3(b), zhou2023_async",
+      "selector": "trace",
+      "color_attribute": "stroke",
+      "color": "rgb(0%, 0%, 0%)",
+      "minimum_vertices": 1000,
+      "stride": 15,
+      "x_pt": [
+        72.2538588,
+        293.1985594
+      ],
+      "x_values": [
+        0,
+        0.0015
+      ],
+      "x_scale": "linear",
+      "x_column": "delta_t_s",
+      "y_pt": [
+        223.0703511,
+        155.0588274
+      ],
+      "y_values": [
+        0.25,
+        0.5
+      ],
+      "region_pt": [
+        71,
+        294,
+        149,
+        224
+      ],
+      "length_km": 306.31,
+      "published_sigma_rad_s": 3400,
+      "residual_frequency_hz": 10,
+      "curve_identity": "Experimental connected trace; simulation symbols appear in brackets in Exp.[Sim.] legend",
+      "csv": "sources/data/mp_phase/digitized/zhou_3b_1.csv",
+      "point_count": 101,
+      "svg_path_indices": [
+        454
+      ],
+      "csv_sha256": "8b023bd7cc815fa68e7acb720a39c41fcaea07b85d9c49392b8f32955c931444"
+    },
+    {
+      "id": "zhou_3b_2",
+      "source_id": "zhou_fig3",
+      "source": "Fig. 3(b), zhou2023_async",
+      "selector": "trace",
+      "color_attribute": "stroke",
+      "color": "rgb(0%, 0%, 100%)",
+      "minimum_vertices": 1000,
+      "stride": 15,
+      "x_pt": [
+        72.2538588,
+        293.1985594
+      ],
+      "x_values": [
+        0,
+        0.0015
+      ],
+      "x_scale": "linear",
+      "x_column": "delta_t_s",
+      "y_pt": [
+        223.0703511,
+        155.0588274
+      ],
+      "y_values": [
+        0.25,
+        0.5
+      ],
+      "region_pt": [
+        71,
+        294,
+        149,
+        224
+      ],
+      "length_km": 413.73,
+      "published_sigma_rad_s": 5300,
+      "residual_frequency_hz": 10,
+      "curve_identity": "Experimental connected trace; simulation symbols appear in brackets in Exp.[Sim.] legend",
+      "csv": "sources/data/mp_phase/digitized/zhou_3b_2.csv",
+      "point_count": 101,
+      "svg_path_indices": [
+        455
+      ],
+      "csv_sha256": "0fbb646c699274dea0dfcadd4a2f36ee58ce31205135881b82e7863e0769ef96"
+    },
+    {
+      "id": "zhou_3b_3",
+      "source_id": "zhou_fig3",
+      "source": "Fig. 3(b), zhou2023_async",
+      "selector": "trace",
+      "color_attribute": "stroke",
+      "color": "rgb(100%, 0%, 0%)",
+      "minimum_vertices": 1000,
+      "stride": 15,
+      "x_pt": [
+        72.2538588,
+        293.1985594
+      ],
+      "x_values": [
+        0,
+        0.0015
+      ],
+      "x_scale": "linear",
+      "x_column": "delta_t_s",
+      "y_pt": [
+        223.0703511,
+        155.0588274
+      ],
+      "y_values": [
+        0.25,
+        0.5
+      ],
+      "region_pt": [
+        71,
+        294,
+        149,
+        224
+      ],
+      "length_km": 508.16,
+      "published_sigma_rad_s": 5900,
+      "residual_frequency_hz": 10,
+      "curve_identity": "Experimental connected trace; simulation symbols appear in brackets in Exp.[Sim.] legend",
+      "csv": "sources/data/mp_phase/digitized/zhou_3b_3.csv",
+      "point_count": 101,
+      "svg_path_indices": [
+        456
+      ],
+      "csv_sha256": "5be896411b7c7caca9d4199bd4bc903cfb7d969442727100c0c9142fba8ce7df"
+    },
+    {
+      "id": "zhang_1b_left",
+      "source_id": "zhang_fig1",
+      "source": "Fig. 1(b), zhang2025",
+      "selector": "marker",
+      "color_attribute": "fill",
+      "color": "rgb(21.960449%, 56.863403%, 94.117737%)",
+      "maximum_marker_size_pt": 3,
+      "region_pt": [
+        82.5,
+        137.5,
+        188,
+        237
+      ],
+      "x_pt": [
+        87.8359375,
+        119.8828125
+      ],
+      "x_values": [
+        3e-08,
+        1e-07
+      ],
+      "x_scale": "log10",
+      "x_column": "delta_t_s",
+      "y_pt": [
+        232.3828125,
+        193.15625
+      ],
+      "y_values": [
+        0.25,
+        0.5
+      ],
+      "length_km": 403,
+      "published_sigma_rad_s": 4000,
+      "curve_identity": "Blue experimental markers after frequency tracking; broken x-axis calibrated separately",
+      "csv": "sources/data/mp_phase/digitized/zhang_1b_left.csv",
+      "point_count": 9,
+      "svg_path_indices": [
+        3358,
+        3360,
+        3362,
+        3364,
+        3366,
+        3368,
+        3370,
+        3372,
+        3374
+      ],
+      "csv_sha256": "95d1613d6082c4759c346fbc4cf99d4ba56386a33537ea9f601401b888136cf5"
+    },
+    {
+      "id": "zhang_1b_right",
+      "source_id": "zhang_fig1",
+      "source": "Fig. 1(b), zhang2025",
+      "selector": "marker",
+      "color_attribute": "fill",
+      "color": "rgb(21.960449%, 56.863403%, 94.117737%)",
+      "maximum_marker_size_pt": 3,
+      "region_pt": [
+        141.9,
+        289,
+        188,
+        237
+      ],
+      "x_pt": [
+        147.79296875,
+        270.36328125
+      ],
+      "x_values": [
+        1e-05,
+        0.001
+      ],
+      "x_scale": "log10",
+      "x_column": "delta_t_s",
+      "y_pt": [
+        232.3828125,
+        193.15625
+      ],
+      "y_values": [
+        0.25,
+        0.5
+      ],
+      "length_km": 403,
+      "published_sigma_rad_s": 4000,
+      "curve_identity": "Blue experimental markers after frequency tracking; broken x-axis calibrated separately",
+      "csv": "sources/data/mp_phase/digitized/zhang_1b_right.csv",
+      "point_count": 240,
+      "svg_path_indices": [
+        3378,
+        3380,
+        3382,
+        3384,
+        3386,
+        3388,
+        3390,
+        3392,
+        3394,
+        3396,
+        3398,
+        3400,
+        3402,
+        3404,
+        3406,
+        3408,
+        3410,
+        3412,
+        3414,
+        3416,
+        3418,
+        3420,
+        3422,
+        3424,
+        3426,
+        3428,
+        3430,
+        3432,
+        3434,
+        3436,
+        3438,
+        3440,
+        3442,
+        3444,
+        3446,
+        3448,
+        3450,
+        3452,
+        3454,
+        3456,
+        3458,
+        3460,
+        3462,
+        3464,
+        3466,
+        3468,
+        3470,
+        3472,
+        3474,
+        3476,
+        3478,
+        3480,
+        3482,
+        3484,
+        3486,
+        3488,
+        3490,
+        3492,
+        3494,
+        3496,
+        3498,
+        3500,
+        3502,
+        3504,
+        3506,
+        3508,
+        3510,
+        3512,
+        3514,
+        3516,
+        3518,
+        3520,
+        3522,
+        3524,
+        3526,
+        3528,
+        3530,
+        3532,
+        3534,
+        3536,
+        3538,
+        3540,
+        3542,
+        3544,
+        3546,
+        3548,
+        3550,
+        3552,
+        3554,
+        3556,
+        3558,
+        3560,
+        3562,
+        3564,
+        3566,
+        3568,
+        3570,
+        3572,
+        3574,
+        3576,
+        3578,
+        3580,
+        3582,
+        3584,
+        3586,
+        3588,
+        3590,
+        3592,
+        3594,
+        3596,
+        3598,
+        3600,
+        3602,
+        3604,
+        3606,
+        3608,
+        3610,
+        3612,
+        3614,
+        3616,
+        3618,
+        3620,
+        3622,
+        3624,
+        3626,
+        3628,
+        3630,
+        3632,
+        3634,
+        3636,
+        3638,
+        3640,
+        3642,
+        3644,
+        3646,
+        3648,
+        3650,
+        3652,
+        3654,
+        3656,
+        3658,
+        3660,
+        3662,
+        3664,
+        3666,
+        3668,
+        3670,
+        3672,
+        3674,
+        3676,
+        3678,
+        3680,
+        3682,
+        3684,
+        3686,
+        3688,
+        3690,
+        3692,
+        3694,
+        3696,
+        3698,
+        3700,
+        3702,
+        3704,
+        3706,
+        3708,
+        3710,
+        3712,
+        3714,
+        3716,
+        3718,
+        3720,
+        3722,
+        3724,
+        3726,
+        3728,
+        3730,
+        3732,
+        3734,
+        3736,
+        3738,
+        3740,
+        3742,
+        3744,
+        3746,
+        3748,
+        3750,
+        3752,
+        3754,
+        3756,
+        3758,
+        3760,
+        3762,
+        3764,
+        3766,
+        3768,
+        3770,
+        3772,
+        3774,
+        3776,
+        3778,
+        3780,
+        3782,
+        3784,
+        3786,
+        3788,
+        3790,
+        3792,
+        3794,
+        3796,
+        3798,
+        3800,
+        3802,
+        3804,
+        3806,
+        3808,
+        3810,
+        3812,
+        3814,
+        3816,
+        3818,
+        3820,
+        3822,
+        3824,
+        3826,
+        3828,
+        3830,
+        3832,
+        3834,
+        3836,
+        3838,
+        3840,
+        3842,
+        3844,
+        3846,
+        3848,
+        3850,
+        3852,
+        3854,
+        3856
+      ],
+      "csv_sha256": "a8d148040c1188d989bdc938ceb8c0473a0a148706b9d5ba3db7f6a32082431c"
+    },
+    {
+      "id": "zhu_6a_bin_0",
+      "source_id": "zhu_fig6",
+      "source": "Fig. 6(a), Appendix B3, zhu2023",
+      "selector": "marker",
+      "color_attribute": "fill",
+      "color": "rgb(63.499451%, 0%, 34.899902%)",
+      "maximum_marker_size_pt": 5,
+      "region_pt": [
+        245,
+        380,
+        70,
+        180
+      ],
+      "categorical_lengths_km": [
+        101,
+        202,
+        304,
+        407
+      ],
+      "y_pt": [
+        182.93749951,
+        74.54296826
+      ],
+      "y_values": [
+        0.25,
+        0.4
+      ],
+      "x_column": "length_km",
+      "pulse_gap_bin": [
+        63,
+        500
+      ],
+      "clock_hz": 625000000.0,
+      "curve_identity": "Strong-reference bin-averaged X-error; no midpoint substituted for an observed interval",
+      "csv": "sources/data/mp_phase/digitized/zhu_6a_bin_0.csv",
+      "point_count": 4,
+      "svg_path_indices": [
+        278,
+        280,
+        282,
+        284
+      ],
+      "csv_sha256": "bffe60e22fd457537e2ce11dcf44bbf08858f929055bc62adb2357f4a8b81db1"
+    },
+    {
+      "id": "zhu_6a_bin_1",
+      "source_id": "zhu_fig6",
+      "source": "Fig. 6(a), Appendix B3, zhu2023",
+      "selector": "marker",
+      "color_attribute": "fill",
+      "color": "rgb(79.598999%, 1.998901%, 1.998901%)",
+      "maximum_marker_size_pt": 5,
+      "region_pt": [
+        245,
+        380,
+        70,
+        180
+      ],
+      "categorical_lengths_km": [
+        101,
+        202,
+        304,
+        407
+      ],
+      "y_pt": [
+        182.93749951,
+        74.54296826
+      ],
+      "y_values": [
+        0.25,
+        0.4
+      ],
+      "x_column": "length_km",
+      "pulse_gap_bin": [
+        500,
+        1000
+      ],
+      "clock_hz": 625000000.0,
+      "curve_identity": "Strong-reference bin-averaged X-error; no midpoint substituted for an observed interval",
+      "csv": "sources/data/mp_phase/digitized/zhu_6a_bin_1.csv",
+      "point_count": 4,
+      "svg_path_indices": [
+        287,
+        289,
+        291,
+        293
+      ],
+      "csv_sha256": "304e77f801ad414ff197d940bd4e26f8a47296b7ef4bb73517684b8384d999e5"
+    },
+    {
+      "id": "zhu_6a_bin_2",
+      "source_id": "zhu_fig6",
+      "source": "Fig. 6(a), Appendix B3, zhu2023",
+      "selector": "marker",
+      "color_attribute": "fill",
+      "color": "rgb(68.598938%, 33.299255%, 4.699707%)",
+      "maximum_marker_size_pt": 5,
+      "region_pt": [
+        245,
+        380,
+        70,
+        180
+      ],
+      "categorical_lengths_km": [
+        101,
+        202,
+        304,
+        407
+      ],
+      "y_pt": [
+        182.93749951,
+        74.54296826
+      ],
+      "y_values": [
+        0.25,
+        0.4
+      ],
+      "x_column": "length_km",
+      "pulse_gap_bin": [
+        1000,
+        1500
+      ],
+      "clock_hz": 625000000.0,
+      "curve_identity": "Strong-reference bin-averaged X-error; no midpoint substituted for an observed interval",
+      "csv": "sources/data/mp_phase/digitized/zhu_6a_bin_2.csv",
+      "point_count": 4,
+      "svg_path_indices": [
+        296,
+        297,
+        298,
+        299
+      ],
+      "csv_sha256": "640ec82b72c3256b14361aecc3ea3d364ae2232d2b530e6989f0b35c1e53e0b7"
+    },
+    {
+      "id": "zhu_6a_bin_3",
+      "source_id": "zhu_fig6",
+      "source": "Fig. 6(a), Appendix B3, zhu2023",
+      "selector": "marker",
+      "color_attribute": "fill",
+      "color": "rgb(65.098572%, 47.799683%, 7.499695%)",
+      "maximum_marker_size_pt": 5,
+      "region_pt": [
+        245,
+        380,
+        70,
+        180
+      ],
+      "categorical_lengths_km": [
+        101,
+        202,
+        304,
+        407
+      ],
+      "y_pt": [
+        182.93749951,
+        74.54296826
+      ],
+      "y_values": [
+        0.25,
+        0.4
+      ],
+      "x_column": "length_km",
+      "pulse_gap_bin": [
+        1500,
+        2000
+      ],
+      "clock_hz": 625000000.0,
+      "curve_identity": "Strong-reference bin-averaged X-error; no midpoint substituted for an observed interval",
+      "csv": "sources/data/mp_phase/digitized/zhu_6a_bin_3.csv",
+      "point_count": 4,
+      "svg_path_indices": [
+        301,
+        302,
+        303,
+        304
+      ],
+      "csv_sha256": "5082a92ac23052cabe63c024178180dc8086912ed143de243a6eefc9edfa81ae"
+    },
+    {
+      "id": "zhu_6a_bin_4",
+      "source_id": "zhu_fig6",
+      "source": "Fig. 6(a), Appendix B3, zhu2023",
+      "selector": "marker",
+      "color_attribute": "fill",
+      "color": "rgb(65.499878%, 62.399292%, 7.798767%)",
+      "maximum_marker_size_pt": 5,
+      "region_pt": [
+        245,
+        380,
+        70,
+        180
+      ],
+      "categorical_lengths_km": [
+        101,
+        202,
+        304,
+        407
+      ],
+      "y_pt": [
+        182.93749951,
+        74.54296826
+      ],
+      "y_values": [
+        0.25,
+        0.4
+      ],
+      "x_column": "length_km",
+      "pulse_gap_bin": [
+        2000,
+        2500
+      ],
+      "clock_hz": 625000000.0,
+      "curve_identity": "Strong-reference bin-averaged X-error; no midpoint substituted for an observed interval",
+      "csv": "sources/data/mp_phase/digitized/zhu_6a_bin_4.csv",
+      "point_count": 4,
+      "svg_path_indices": [
+        306,
+        307,
+        308,
+        309
+      ],
+      "csv_sha256": "90163f9ff49ea63ea87406c34bff38961446227f4a0fe0fe102503bc03f529de"
+    },
+    {
+      "id": "zhu_6a_bin_5",
+      "source_id": "zhu_fig6",
+      "source": "Fig. 6(a), Appendix B3, zhu2023",
+      "selector": "marker",
+      "color_attribute": "fill",
+      "color": "rgb(42.399597%, 65.499878%, 7.798767%)",
+      "maximum_marker_size_pt": 5,
+      "region_pt": [
+        245,
+        380,
+        70,
+        180
+      ],
+      "categorical_lengths_km": [
+        101,
+        202,
+        304,
+        407
+      ],
+      "y_pt": [
+        182.93749951,
+        74.54296826
+      ],
+      "y_values": [
+        0.25,
+        0.4
+      ],
+      "x_column": "length_km",
+      "pulse_gap_bin": [
+        2500,
+        3000
+      ],
+      "clock_hz": 625000000.0,
+      "curve_identity": "Strong-reference bin-averaged X-error; no midpoint substituted for an observed interval",
+      "csv": "sources/data/mp_phase/digitized/zhu_6a_bin_5.csv",
+      "point_count": 4,
+      "svg_path_indices": [
+        311,
+        312,
+        313,
+        314
+      ],
+      "csv_sha256": "232bac9781fc8d9f36ee3bf4f197aa2d31bafbb04dc009812f0d7f5f90a84a39"
+    }
+  ],
+  "fitting_performed": false,
+  "limitations": "Published graphic coordinates only; no raw timestamps, statistical covariance or inferred within-bin distribution"
+}

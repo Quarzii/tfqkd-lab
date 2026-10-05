@@ -1,0 +1,8 @@
+{
+  "file": "li2013_newfocus6700.csv",
+  "quantity": "phase",
+  "frequency_unit": "Hz",
+  "psd_unit": "rad^2/Hz",
+  "sidedness": "one-sided",
+  "pass": "single"
+}

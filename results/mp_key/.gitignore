@@ -1,0 +1,6 @@
+*
+!/tf_reference/
+!/details.json
+!/details.md
+!/tf_reference/full_suite.json
+!.gitignore

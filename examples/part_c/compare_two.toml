@@ -1,0 +1,6 @@
+# Explicit installations; working coordinates from user C2, total physical length in km.
+[comparison]
+configurations = ["cavity_classical.toml", "cavity_dual.toml"]
+labels = ["Classical round-trip", "Dual-band"]
+working_total_lengths_km = [50.0,100.0,150.0,200.0,250.0] # km; user-requested comparison coordinates
+workers = 2 # numerical scheduling

@@ -1,0 +1,8 @@
+{
+  "file": "snigirev2023_dfb.csv",
+  "quantity": "phase",
+  "frequency_unit": "Hz",
+  "psd_unit": "rad^2/Hz",
+  "sidedness": "one-sided",
+  "pass": "single"
+}

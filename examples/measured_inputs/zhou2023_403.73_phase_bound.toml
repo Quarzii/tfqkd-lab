@@ -1,0 +1,34 @@
+# Conditional phase-bracket example; no Bertaina apparatus coefficients.
+# phase: rad and seconds; line: km and COMPLETE dB; detector: fractions and Hz; quantum clock: Hz.
+# Zhou Tables S1–S5; Methods fEC; Fig3e–g channel-reference phase; 200-pulse1GHz block; Bertaina AppendixD total SNS intensity conversion
+# Explicit phase bracket, not a measured quantum-channel RMS at this length/window. User-adopted nondecreasing residual RMS with length; effective quantum clock already accounts for reference slots, no additional downtime. Additional assumption: channel-reference lambda_c RMS is close to quantum lambda_q RMS.
+# Ideal edet and unreported fEC are explicitly flagged by the measured-phase resolver.
+
+[phase]
+mode = "measured"
+sigma_phi_rad = 0.099
+tau_s = 2e-07
+tau_ps_s = 0.0
+description = "Explicit phase bracket, not a measured quantum-channel RMS at this length/window. User-adopted nondecreasing residual RMS with length; effective quantum clock already accounts for reference slots, no additional downtime. Additional assumption: channel-reference lambda_c RMS is close to quantum lambda_q RMS."
+source = "Zhou Tables S1–S5; Methods fEC; Fig3e–g channel-reference phase; 200-pulse1GHz block; Bertaina AppendixD total SNS intensity conversion"
+
+[line]
+arm_a_km = 201.87
+arm_b_km = 201.86
+loss_a_db = 38.47
+loss_b_db = 38.42
+
+[detector]
+channels = [{ name = "D0", efficiency = 0.6, dark_count_rate_hz = 2.0, background_count_rate_hz = 2.0 }, { name = "D1", efficiency = 0.65, dark_count_rate_hz = 2.0, background_count_rate_hz = 2.0 }]
+
+[keyrate]
+clockrate_hz = 500000000.0
+f_error = 1.1
+decoy_big = 0.986
+decoy_medium = 0.21
+decoy_mini = 0.0004
+pz_sns = 0.735
+eps_sns_aopp = 0.269
+
+[protocol]
+name = "SNS-AOPP"

@@ -1,0 +1,48 @@
+# Zhang2025, 202 km; conditional calculation GIVEN published detection gains.
+# This is not a hardware-only rate prediction. Mu/nu are per-user per pulse.
+# TableI/III and AppendixE (p5,13-14) give inputs/counts; Eq3 gives phase model.
+# Normalization of all 3x3 matrices: Zeng supplement Eq53/56/69;
+# vacuum/weak/signal ordering; X nonzero settings include phase sifting1/8.
+# See sources/data/mode_pairing/key_comparison_inputs.json for original counts,
+# missing vacuum-error flags and the exposure matrices in results/mp_key/details.json.
+
+limitations = ["L_min=25 and frame gaps absent from Zeng Eq4/IID gap law", "single-click p not tabulated; source Eq73/74 approximation evaluated with hardware values", "vacuum X-error counts absent; random vacuum model e0=1/2 from Zeng Supplement Eq85 used and flagged", "sigma4000 used across lengths as in source simulation, not inferred field noise", "OBSERVED_GAIN_CONDITIONING: signal Z counts and decoy detection gains are taken from each tested length; this is not a hardware-only rate forecast.", "Unfitted e_d=0 is an explicit ideal comparison, not a measured apparatus misalignment. Gains remain conditioned on published counters."]
+
+# Dimensionless probabilities/errors and per-user pulse intensities; max_pairing_gap in round intervals.
+# click_probability: source Eq73/74 evaluation. r_s from observed signal counts, not fitted.
+# e_z/f_ec: TableI/III and AppendixE, zhang2025.
+[protocol]
+mu = 0.234
+nu = 0.02
+click_probability = 0.0005347050088472987
+max_pairing_gap = 200000
+z_pair_fraction = 0.09966628162860389
+e_z = 4.1131830895634356e-05
+f_ec = 1.06
+
+# Hz; explicit fractions of active clock slots. Main setup / AppendixE, zhang2025.
+[timing]
+active_round_clock_hz = 1250000000.0
+reference_fraction = 0.125
+recovery_fraction = 0
+
+# sigma_L in rad/s; linewidth of EACH independent laser in Hz; source Eq3, zhang2025.
+# intrinsic_x_error=0 is the explicitly ideal unfitted comparison, not a source measurement.
+[phase]
+mode = "published_drift"
+sigma_L_rad_s = 4000
+linewidth_hz = 100
+phase_slices = 32
+intrinsic_x_error = 0.0
+
+# Zeng2022 Eq15/16 IID adjacent-click gaps; omits published L_min and frame gaps.
+[intervals]
+mode = "iid_zeng"
+
+# Dimensionless gains/error gains on a COMMON N_rounds/2 setting normalization.
+# Zhang C4-C7 bounds; weak equal X error replaced by B10/D2, other gains retained.
+[decoy]
+Q_Z = [[0.0, 5.409662479614661e-09, 5.847698933369406e-08], [5.016232481097231e-09, 1.1608194955068488e-05, 0.00013883289734926567], [6.270569724005622e-08, 0.0001238073591096705, 0.0014849749858402005]]
+Q_X = [[0.0, 2.4854429865944516e-05, 0.002847612379588203], [2.1976153128539956e-05, 9.54222635788774e-05, 0.003740893106588574], [0.0031226805303112446, 0.003318162653256987, 0.011795900992497443]]
+QE_X = [[0.0, 1.2427214932972258e-05, 0.0014238061897941016], [1.0988076564269978e-05, 2.7290892666922367e-05, 0.0016184723579070186], [0.0015613402651556223, 0.0014583075300493042, 0.0032756169827458793]]
+error_mode = "phase_weak_equal"

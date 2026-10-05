@@ -1,0 +1,109 @@
+{
+  "rows": [
+    {
+      "arm_km": 30,
+      "pole_hz": 1000,
+      "rates_bps": {
+        "R_free": 1345228.3090193209,
+        "R_perfect": 2356679.402309001,
+        "R_classical": 1345228.3090193209,
+        "R_dual": 2342235.783183876
+      },
+      "classical_gain_fraction": 0.0,
+      "dual_realized_ceiling_fraction": 0.9857199035910397,
+      "g_per_s": 0.0
+    },
+    {
+      "arm_km": 30,
+      "pole_hz": 100000,
+      "rates_bps": {
+        "R_free": 1345228.3090193209,
+        "R_perfect": 2356679.402309001,
+        "R_classical": 1345228.3090193209,
+        "R_dual": 2342235.783183876
+      },
+      "classical_gain_fraction": 0.0,
+      "dual_realized_ceiling_fraction": 0.9857199035910397,
+      "g_per_s": 0.0
+    },
+    {
+      "arm_km": 50,
+      "pole_hz": 1000,
+      "rates_bps": {
+        "R_free": 481696.9007366672,
+        "R_perfect": 906906.8733963633,
+        "R_classical": 481696.9007366672,
+        "R_dual": 900946.3132272433
+      },
+      "classical_gain_fraction": 0.0,
+      "dual_realized_ceiling_fraction": 0.9859820781440363,
+      "g_per_s": 0.0
+    },
+    {
+      "arm_km": 50,
+      "pole_hz": 100000,
+      "rates_bps": {
+        "R_free": 481696.9007366672,
+        "R_perfect": 906906.8733963633,
+        "R_classical": 481696.9007366672,
+        "R_dual": 900946.3132272433
+      },
+      "classical_gain_fraction": 0.0,
+      "dual_realized_ceiling_fraction": 0.9859820781440363,
+      "g_per_s": 0.0
+    },
+    {
+      "arm_km": 70,
+      "pole_hz": 1000,
+      "rates_bps": {
+        "R_free": 179688.69558620793,
+        "R_perfect": 355981.7382444568,
+        "R_classical": 182126.50099429055,
+        "R_dual": 353500.9461754317
+      },
+      "classical_gain_fraction": 0.013566826784120245,
+      "dual_realized_ceiling_fraction": 0.9859280205751839,
+      "g_per_s": 1722.8661820516768
+    },
+    {
+      "arm_km": 70,
+      "pole_hz": 100000,
+      "rates_bps": {
+        "R_free": 179688.69558620793,
+        "R_perfect": 355981.7382444568,
+        "R_classical": 179897.14494627755,
+        "R_dual": 353500.9461754317
+      },
+      "classical_gain_fraction": 0.0011600582851891694,
+      "dual_realized_ceiling_fraction": 0.9859280205751839,
+      "g_per_s": 393.0323981596197
+    },
+    {
+      "arm_km": 100,
+      "pole_hz": 1000,
+      "rates_bps": {
+        "R_free": 42308.09608169709,
+        "R_perfect": 88738.75229807719,
+        "R_classical": 42308.09608169709,
+        "R_dual": 88070.52154701012
+      },
+      "classical_gain_fraction": 0.0,
+      "dual_realized_ceiling_fraction": 0.9856079839157793,
+      "g_per_s": 0.0
+    },
+    {
+      "arm_km": 100,
+      "pole_hz": 100000,
+      "rates_bps": {
+        "R_free": 42308.09608169709,
+        "R_perfect": 88738.75229807719,
+        "R_classical": 42308.09608169709,
+        "R_dual": 88070.52154701012
+      },
+      "classical_gain_fraction": 0.0,
+      "dual_realized_ceiling_fraction": 0.9856079839157793,
+      "g_per_s": 0.0
+    }
+  ],
+  "scope": "Explicit Bertaina cavity/independent/equal-arm coefficients, poles 1/100 kHz; model comparison, no universal crossover claim"
+}

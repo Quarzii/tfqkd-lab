@@ -1,0 +1,32 @@
+# Conditional phase-bracket example; no Bertaina apparatus coefficients.
+# phase: rad and seconds; line: km and COMPLETE dB; detector: fractions and Hz; quantum clock: Hz.
+# Pittaluga Tables I–III; NoteVI asymptotic normalization; pattern25040 at1GHz; numerical CAL truncation from QKD.ipynb Cell23
+# Explicit phase bracket, not a measured quantum-channel RMS at this length/window. User-adopted nondecreasing residual RMS with length; effective quantum clock already accounts for reference slots, no additional downtime.
+# Ideal edet and unreported fEC are explicitly flagged by the measured-phase resolver.
+
+[phase]
+mode = "measured"
+sigma_phi_rad = 0.104
+tau_s = 2.504e-05
+tau_ps_s = 0.0
+description = "Explicit phase bracket, not a measured quantum-channel RMS at this length/window. User-adopted nondecreasing residual RMS with length; effective quantum clock already accounts for reference slots, no additional downtime."
+source = "Pittaluga Tables I–III; NoteVI asymptotic normalization; pattern25040 at1GHz; numerical CAL truncation from QKD.ipynb Cell23"
+
+[line]
+arm_a_km = 184.351
+arm_b_km = 184.351
+loss_a_db = 34.21625623318439
+loss_b_db = 34.33392836595395
+
+[detector]
+channels = [{ name = "D0", efficiency = 0.73, dark_count_rate_hz = 14.0 }, { name = "D1", efficiency = 0.77, dark_count_rate_hz = 14.0 }]
+
+[keyrate]
+clockrate_hz = 500000000.0
+pz_cal = 0.999
+u_cal = 0.015
+nmin_cal = 0
+nmax_cal = 20
+
+[protocol]
+name = "CAL"

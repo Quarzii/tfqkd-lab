@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "omega_jobs": 2,
+  "workers": 2,
+  "fields": [
+    "tau_q_s",
+    "operating_status",
+    "variance_rad2",
+    "sigma_phi_rad",
+    "duty",
+    "loss_db",
+    "sns_raw_bps",
+    "cal_raw_bps",
+    "sns_bps",
+    "cal_bps",
+    "cap_variance_rad2",
+    "resolved_poles",
+    "grid_points",
+    "refinement_level",
+    "convergence_error",
+    "time_relative_change",
+    "operating_variance_relative_change",
+    "cap_relative_change",
+    "g_per_s",
+    "stable"
+  ]
+}

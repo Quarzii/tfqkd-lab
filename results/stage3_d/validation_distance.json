@@ -1,0 +1,54 @@
+{
+  "rows": [
+    {
+      "anchor_km": 403.73,
+      "detector": "D0",
+      "held_out_km": 518.16,
+      "predicted_to_measured": 0.8938389124998926,
+      "equivalent_length_km": 514.0631680385541,
+      "shift_km": -4.096831961445901,
+      "absolute_shift_km": 4.096831961445901,
+      "verified_rate_bps": 14.379999999963118,
+      "relative_root_error": 2.5648372314890366e-12
+    },
+    {
+      "anchor_km": 403.73,
+      "detector": "D1",
+      "held_out_km": 518.16,
+      "predicted_to_measured": 0.8901953148744671,
+      "equivalent_length_km": 513.9328791271191,
+      "shift_km": -4.227120872880846,
+      "absolute_shift_km": 4.227120872880846,
+      "verified_rate_bps": 14.379999997033536,
+      "relative_root_error": 2.0629098429481019e-10
+    },
+    {
+      "anchor_km": 518.16,
+      "detector": "D0",
+      "held_out_km": 403.73,
+      "predicted_to_measured": 1.0760469950620097,
+      "equivalent_length_km": 407.7141739523563,
+      "shift_km": 3.9841739523562865,
+      "absolute_shift_km": 3.9841739523562865,
+      "verified_rate_bps": 146.70000000534583,
+      "relative_root_error": 3.644062829266659e-11
+    },
+    {
+      "anchor_km": 518.16,
+      "detector": "D1",
+      "held_out_km": 403.73,
+      "predicted_to_measured": 1.0785736787076992,
+      "equivalent_length_km": 407.8413546499799,
+      "shift_km": 4.111354649979887,
+      "absolute_shift_km": 4.111354649979887,
+      "verified_rate_bps": 146.7000000043517,
+      "relative_root_error": 2.966404899495956e-11
+    }
+  ],
+  "range_absolute_km": [
+    3.9841739523562865,
+    4.227120872880846
+  ],
+  "assumption": "Linear interpolation of published Table S5 arm losses and geometry between two points; fixed approved sigma=.05 and calibrated e_d. Protocol/loss diagnostic, not spectral reach validation.",
+  "phase_forecast_validated": false
+}

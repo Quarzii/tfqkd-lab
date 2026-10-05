@@ -1,0 +1,1177 @@
+{
+  "scope": "Mode-pairing phase only; no key implementation",
+  "analytic": {
+    "status": "PASS",
+    "performed_before_experimental_comparison": true,
+    "relative_tolerance": 2e-06,
+    "fiber_rows": [
+      {
+        "interval_s": 1e-08,
+        "fc_times_interval": 1e-06,
+        "grid_rad2": 3.5063984876954147e-09,
+        "independent_reference_rad2": 3.506398350824181e-09,
+        "relative_grid_error": 3.903470746635662e-08,
+        "reference_tail_bound_in_ratio": 4.221715985097407e-15,
+        "leading_rad2": 3.5064098861508604e-09,
+        "cubic_corrected_rad2": 3.506398350524712e-09,
+        "leading_relative_overestimate": 3.2897935502429476e-06,
+        "corrected_relative_error": -8.540634865994434e-11,
+        "observed_first_correction_coefficient": 3.2897827276778813
+      },
+      {
+        "interval_s": 3e-08,
+        "fc_times_interval": 2.9999999999999997e-06,
+        "grid_rad2": 3.155737914041802e-08,
+        "independent_reference_rad2": 3.1557377535665145e-08,
+        "relative_grid_error": 5.08519084618797e-08,
+        "reference_tail_bound_in_ratio": 1.2665147955292221e-14,
+        "leading_rad2": 3.1557688975357734e-08,
+        "cubic_corrected_rad2": 3.155737751345173e-08,
+        "leading_relative_overestimate": 9.868997898676568e-06,
+        "corrected_relative_error": -7.039054894519836e-10,
+        "observed_first_correction_coefficient": 3.2896335008617923
+      },
+      {
+        "interval_s": 1e-07,
+        "fc_times_interval": 9.999999999999999e-06,
+        "grid_rad2": 3.5062947386171235e-07,
+        "independent_reference_rad2": 3.5062945545324076e-07,
+        "relative_grid_error": 5.250121271060948e-08,
+        "reference_tail_bound_in_ratio": 4.2217159850974074e-14,
+        "leading_rad2": 3.5064098861508595e-07,
+        "cubic_corrected_rad2": 3.5062945298893784e-07,
+        "leading_relative_overestimate": 3.289273523887637e-05,
+        "corrected_relative_error": -7.0282255570930374e-09,
+        "observed_first_correction_coefficient": 3.2891653342415066
+      },
+      {
+        "interval_s": 3e-07,
+        "fc_times_interval": 2.9999999999999997e-05,
+        "grid_rad2": 3.1554577808450435e-06,
+        "independent_reference_rad2": 3.1554576147072957e-06,
+        "relative_grid_error": 5.2650920512320454e-08,
+        "reference_tail_bound_in_ratio": 1.2665147955292221e-13,
+        "leading_rad2": 3.155768897535774e-06,
+        "cubic_corrected_rad2": 3.1554574356297745e-06,
+        "leading_relative_overestimate": 9.864902859968439e-05,
+        "corrected_relative_error": -5.6751680133082516e-08,
+        "observed_first_correction_coefficient": 3.287976597624957
+      },
+      {
+        "interval_s": 1e-06,
+        "fc_times_interval": 9.999999999999999e-05,
+        "grid_rad2": 3.505258441262582e-05,
+        "independent_reference_rad2": 3.505258256647069e-05,
+        "relative_grid_error": 5.266816271998209e-08,
+        "reference_tail_bound_in_ratio": 4.221715985097407e-13,
+        "leading_rad2": 3.50640988615086e-05,
+        "cubic_corrected_rad2": 3.5052563235360474e-05,
+        "leading_relative_overestimate": 0.0003285434109190355,
+        "corrected_relative_error": -5.514889005464596e-07,
+        "observed_first_correction_coefficient": 3.284355055976907
+      },
+      {
+        "interval_s": 3e-06,
+        "fc_times_interval": 0.00030000000000000003,
+        "grid_rad2": 0.00031526680507790297,
+        "independent_reference_rad2": 0.0003152667884727723,
+        "relative_grid_error": 5.267009184350968e-08,
+        "reference_tail_bound_in_ratio": 1.2665147955292224e-12,
+        "leading_rad2": 0.00031557688975357743,
+        "cubic_corrected_rad2": 0.000315265427847578,
+        "leading_relative_overestimate": 0.000983615439822616,
+        "corrected_relative_error": -4.315789813635895e-06,
+        "observed_first_correction_coefficient": 3.275496304004551
+      },
+      {
+        "interval_s": 1e-05,
+        "fc_times_interval": 0.001,
+        "grid_rad2": 0.0034950146928224533,
+        "independent_reference_rad2": 0.0034950145087341423,
+        "relative_grid_error": 5.267168723399607e-08,
+        "reference_tail_bound_in_ratio": 4.221715985097408e-12,
+        "leading_rad2": 0.0035064098861508604,
+        "cubic_corrected_rad2": 0.0034948742600027344,
+        "leading_relative_overestimate": 0.003260466412440044,
+        "corrected_relative_error": -4.012822580778952e-05,
+        "observed_first_correction_coefficient": 3.2498703194187017
+      },
+      {
+        "interval_s": 3e-05,
+        "fc_times_interval": 0.003,
+        "grid_rad2": 0.031255546659634835,
+        "independent_reference_rad2": 0.031255545013217284,
+        "relative_grid_error": 5.2676014883346056e-08,
+        "reference_tail_bound_in_ratio": 1.2665147955292223e-11,
+        "leading_rad2": 0.03155768897535774,
+        "cubic_corrected_rad2": 0.03124622706935834,
+        "leading_relative_overestimate": 0.009666891491179719,
+        "corrected_relative_error": -0.0002981213047158482,
+        "observed_first_correction_coefficient": 3.1914458034447333
+      },
+      {
+        "interval_s": 0.0001,
+        "fc_times_interval": 0.01,
+        "grid_rad2": 0.33998251701079957,
+        "independent_reference_rad2": 0.3399824990966466,
+        "relative_grid_error": 5.269139746744145e-08,
+        "reference_tail_bound_in_ratio": 4.2217159850974074e-11,
+        "leading_rad2": 0.350640988615086,
+        "cubic_corrected_rad2": 0.3391053624669601,
+        "leading_relative_overestimate": 0.03135011227566031,
+        "corrected_relative_error": -0.0025799464149391937,
+        "observed_first_correction_coefficient": 3.0397157960730503
+      }
+    ],
+    "first_cubic_coefficient_pi2_over3": 3.289868133696453,
+    "white": {
+      "times_s": [
+        1e-06,
+        1e-05,
+        0.0001,
+        0.001
+      ],
+      "grid_rad2": [
+        0.0006276819472304179,
+        0.006282549018323952,
+        0.06283129135682963,
+        0.6283186616865958
+      ],
+      "closed_finite_rad2": [
+        0.0006276819141706464,
+        0.006282548687439471,
+        0.06283121645202382,
+        0.6283178940981863
+      ],
+      "infinite_rad2": [
+        0.0006283185307179586,
+        0.006283185307179587,
+        0.06283185307179587,
+        0.6283185307179586
+      ],
+      "max_relative_error": 1.22165613403169e-06,
+      "relative_upper_band_deficit": [
+        0.0010132067035883985,
+        0.00010132117850936151,
+        1.0132118359207354e-05,
+        1.013211836431438e-06
+      ]
+    },
+    "grid_convergence": [
+      {
+        "points": 16385,
+        "fiber_max_relative_error_vs_quad": 8.427359139417945e-07,
+        "white_max_relative_error_vs_closed_finite_band": 2.790616431380677e-06
+      },
+      {
+        "points": 65537,
+        "fiber_max_relative_error_vs_quad": 5.269139746744145e-08,
+        "white_max_relative_error_vs_closed_finite_band": 1.22165613403169e-06
+      },
+      {
+        "points": 131073,
+        "fiber_max_relative_error_vs_quad": 1.3189175751548987e-08,
+        "white_max_relative_error_vs_closed_finite_band": 1.618909750700226e-07
+      }
+    ]
+  },
+  "drift_comparison": {
+    "rows": [
+      {
+        "source": "zhou2023_async",
+        "total_length_km": 201.86,
+        "published_rad_s": 2100,
+        "predicted_rad_s": 5921.494647596044,
+        "ratio_predicted_published": 2.8197593559981162,
+        "relative_difference_percent": 181.97593559981163,
+        "published_over_sqrt_length": 147.80671341943085
+      },
+      {
+        "source": "zhou2023_async",
+        "total_length_km": 306.31,
+        "published_rad_s": 3400,
+        "predicted_rad_s": 7294.353297182635,
+        "ratio_predicted_published": 2.145398028583128,
+        "relative_difference_percent": 114.5398028583128,
+        "published_over_sqrt_length": 194.26668501183602
+      },
+      {
+        "source": "zhou2023_async",
+        "total_length_km": 413.73,
+        "published_rad_s": 5300,
+        "predicted_rad_s": 8477.439775544473,
+        "ratio_predicted_published": 1.599516938781976,
+        "relative_difference_percent": 59.95169387819761,
+        "published_over_sqrt_length": 260.565770163802
+      },
+      {
+        "source": "zhou2023_async",
+        "total_length_km": 508.16,
+        "published_rad_s": 5900,
+        "predicted_rad_s": 9395.208983053713,
+        "ratio_predicted_published": 1.5924083022124937,
+        "relative_difference_percent": 59.240830221249375,
+        "published_over_sqrt_length": 261.7289563642056
+      },
+      {
+        "source": "zhang2025",
+        "total_length_km": 403.0,
+        "published_rad_s": 4000.0,
+        "predicted_rad_s": 8366.787322266928,
+        "ratio_predicted_published": 2.091696830566732,
+        "relative_difference_percent": 109.16968305667321
+      }
+    ],
+    "predicted_length_exponent": 0.5,
+    "published_endpoint_exponent": 1.1189237678975545,
+    "noise_coefficients_fitted": false,
+    "interpretation": "Different line coefficients; order-of-magnitude comparison, not apparatus calibration"
+  },
+  "curve_comparisons": [
+    {
+      "curve": "zhou_3a_0",
+      "points": 101,
+      "csv": "results/mp_phase/zhou_3a_0_comparison.csv",
+      "total_length_km": 201.86,
+      "paper_model_against_digitized": {
+        "rms_probability": 0.002330797183016532,
+        "mean_probability": 0.0013285388805265028,
+        "maximum_absolute_probability": 0.005374015357174189,
+        "statistical_significance": "NOT_ESTABLISHED; raw covariance/confidence metadata absent"
+      },
+      "unfitted_transferred_psd_against_digitized": {
+        "rms_probability": 0.07578353615257064,
+        "mean_probability": 0.058228323077537905,
+        "maximum_absolute_probability": 0.1440853952148674,
+        "statistical_significance": "NOT_ESTABLISHED; raw covariance/confidence metadata absent"
+      },
+      "max_relative_grid_change": 5.501239641603206e-08,
+      "cut_components": [],
+      "laser_model_assumption": "Explicit Lorentzian white-frequency simplification, Di Domenico white case and Zhang Eq. 3; short-term linewidth alone does not establish a complete laser PSD",
+      "missing_inputs": [
+        "colored laser PSD",
+        "full residual beat statistics; Fig. 3 labels the tested offsets, not a tracking-error PSD"
+      ],
+      "validation_type": "Conditional Gaussian/Lorentzian source-model comparison; not apparatus-specific PSD validation"
+    },
+    {
+      "curve": "zhou_3a_1",
+      "points": 101,
+      "csv": "results/mp_phase/zhou_3a_1_comparison.csv",
+      "total_length_km": 201.86,
+      "paper_model_against_digitized": {
+        "rms_probability": 0.005263284272345554,
+        "mean_probability": 0.0010279589372991563,
+        "maximum_absolute_probability": 0.013123082121065499,
+        "statistical_significance": "NOT_ESTABLISHED; raw covariance/confidence metadata absent"
+      },
+      "unfitted_transferred_psd_against_digitized": {
+        "rms_probability": 0.05512564437817661,
+        "mean_probability": -0.015722229669268395,
+        "maximum_absolute_probability": 0.13433041546284774,
+        "statistical_significance": "NOT_ESTABLISHED; raw covariance/confidence metadata absent"
+      },
+      "max_relative_grid_change": 5.501239286331838e-08,
+      "cut_components": [],
+      "laser_model_assumption": "Explicit Lorentzian white-frequency simplification, Di Domenico white case and Zhang Eq. 3; short-term linewidth alone does not establish a complete laser PSD",
+      "missing_inputs": [
+        "colored laser PSD",
+        "full residual beat statistics; Fig. 3 labels the tested offsets, not a tracking-error PSD"
+      ],
+      "validation_type": "Conditional Gaussian/Lorentzian source-model comparison; not apparatus-specific PSD validation"
+    },
+    {
+      "curve": "zhou_3a_2",
+      "points": 101,
+      "csv": "results/mp_phase/zhou_3a_2_comparison.csv",
+      "total_length_km": 201.86,
+      "paper_model_against_digitized": {
+        "rms_probability": 0.0025782596655350063,
+        "mean_probability": 0.00014197434530236166,
+        "maximum_absolute_probability": 0.006413320756924079,
+        "statistical_significance": "NOT_ESTABLISHED; raw covariance/confidence metadata absent"
+      },
+      "unfitted_transferred_psd_against_digitized": {
+        "rms_probability": 0.0514675477050237,
+        "mean_probability": -0.0029343263647697475,
+        "maximum_absolute_probability": 0.12281052668439651,
+        "statistical_significance": "NOT_ESTABLISHED; raw covariance/confidence metadata absent"
+      },
+      "max_relative_grid_change": 5.501238509175721e-08,
+      "cut_components": [],
+      "laser_model_assumption": "Explicit Lorentzian white-frequency simplification, Di Domenico white case and Zhang Eq. 3; short-term linewidth alone does not establish a complete laser PSD",
+      "missing_inputs": [
+        "colored laser PSD",
+        "full residual beat statistics; Fig. 3 labels the tested offsets, not a tracking-error PSD"
+      ],
+      "validation_type": "Conditional Gaussian/Lorentzian source-model comparison; not apparatus-specific PSD validation"
+    },
+    {
+      "curve": "zhou_3a_3",
+      "points": 101,
+      "csv": "results/mp_phase/zhou_3a_3_comparison.csv",
+      "total_length_km": 201.86,
+      "paper_model_against_digitized": {
+        "rms_probability": 0.003064317695440662,
+        "mean_probability": 0.00020022873819300428,
+        "maximum_absolute_probability": 0.007365423903543167,
+        "statistical_significance": "NOT_ESTABLISHED; raw covariance/confidence metadata absent"
+      },
+      "unfitted_transferred_psd_against_digitized": {
+        "rms_probability": 0.05082263869779157,
+        "mean_probability": 0.0002733542486898741,
+        "maximum_absolute_probability": 0.13538215449632413,
+        "statistical_significance": "NOT_ESTABLISHED; raw covariance/confidence metadata absent"
+      },
+      "max_relative_grid_change": 5.5012335797854917e-08,
+      "cut_components": [],
+      "laser_model_assumption": "Explicit Lorentzian white-frequency simplification, Di Domenico white case and Zhang Eq. 3; short-term linewidth alone does not establish a complete laser PSD",
+      "missing_inputs": [
+        "colored laser PSD",
+        "full residual beat statistics; Fig. 3 labels the tested offsets, not a tracking-error PSD"
+      ],
+      "validation_type": "Conditional Gaussian/Lorentzian source-model comparison; not apparatus-specific PSD validation"
+    },
+    {
+      "curve": "zhou_3b_0",
+      "points": 101,
+      "csv": "results/mp_phase/zhou_3b_0_comparison.csv",
+      "total_length_km": 201.86,
+      "paper_model_against_digitized": {
+        "rms_probability": 0.002368255372428063,
+        "mean_probability": 0.0012000930175078929,
+        "maximum_absolute_probability": 0.005364156934198394,
+        "statistical_significance": "NOT_ESTABLISHED; raw covariance/confidence metadata absent"
+      },
+      "unfitted_transferred_psd_against_digitized": {
+        "rms_probability": 0.07563518790373203,
+        "mean_probability": 0.05817208188710712,
+        "maximum_absolute_probability": 0.14363564462293815,
+        "statistical_significance": "NOT_ESTABLISHED; raw covariance/confidence metadata absent"
+      },
+      "max_relative_grid_change": 5.011498060980557e-08,
+      "cut_components": [],
+      "laser_model_assumption": "Explicit Lorentzian white-frequency simplification, Di Domenico white case and Zhang Eq. 3; short-term linewidth alone does not establish a complete laser PSD",
+      "missing_inputs": [
+        "colored laser PSD",
+        "full residual beat statistics; Fig. 3 labels the tested offsets, not a tracking-error PSD"
+      ],
+      "validation_type": "Conditional Gaussian/Lorentzian source-model comparison; not apparatus-specific PSD validation"
+    },
+    {
+      "curve": "zhou_3b_1",
+      "points": 101,
+      "csv": "results/mp_phase/zhou_3b_1_comparison.csv",
+      "total_length_km": 306.31,
+      "paper_model_against_digitized": {
+        "rms_probability": 0.0010888863228633366,
+        "mean_probability": -3.8808201122336245e-05,
+        "maximum_absolute_probability": 0.003135296633568374,
+        "statistical_significance": "NOT_ESTABLISHED; raw covariance/confidence metadata absent"
+      },
+      "unfitted_transferred_psd_against_digitized": {
+        "rms_probability": 0.047571526659192294,
+        "mean_probability": 0.028900929756045465,
+        "maximum_absolute_probability": 0.11255988221069857,
+        "statistical_significance": "NOT_ESTABLISHED; raw covariance/confidence metadata absent"
+      },
+      "max_relative_grid_change": 4.651483953566071e-08,
+      "cut_components": [],
+      "laser_model_assumption": "Explicit Lorentzian white-frequency simplification, Di Domenico white case and Zhang Eq. 3; short-term linewidth alone does not establish a complete laser PSD",
+      "missing_inputs": [
+        "colored laser PSD",
+        "full residual beat statistics; Fig. 3 labels the tested offsets, not a tracking-error PSD"
+      ],
+      "validation_type": "Conditional Gaussian/Lorentzian source-model comparison; not apparatus-specific PSD validation"
+    },
+    {
+      "curve": "zhou_3b_2",
+      "points": 101,
+      "csv": "results/mp_phase/zhou_3b_2_comparison.csv",
+      "total_length_km": 413.73,
+      "paper_model_against_digitized": {
+        "rms_probability": 0.0017262603197484936,
+        "mean_probability": 0.0002057761812617011,
+        "maximum_absolute_probability": 0.005306916571992004,
+        "statistical_significance": "NOT_ESTABLISHED; raw covariance/confidence metadata absent"
+      },
+      "unfitted_transferred_psd_against_digitized": {
+        "rms_probability": 0.025911322937992053,
+        "mean_probability": 0.013021376108192682,
+        "maximum_absolute_probability": 0.07380575787722599,
+        "statistical_significance": "NOT_ESTABLISHED; raw covariance/confidence metadata absent"
+      },
+      "max_relative_grid_change": 4.470109193910332e-08,
+      "cut_components": [],
+      "laser_model_assumption": "Explicit Lorentzian white-frequency simplification, Di Domenico white case and Zhang Eq. 3; short-term linewidth alone does not establish a complete laser PSD",
+      "missing_inputs": [
+        "colored laser PSD",
+        "full residual beat statistics; Fig. 3 labels the tested offsets, not a tracking-error PSD"
+      ],
+      "validation_type": "Conditional Gaussian/Lorentzian source-model comparison; not apparatus-specific PSD validation"
+    },
+    {
+      "curve": "zhou_3b_3",
+      "points": 101,
+      "csv": "results/mp_phase/zhou_3b_3_comparison.csv",
+      "total_length_km": 508.16,
+      "paper_model_against_digitized": {
+        "rms_probability": 0.0017006142920075937,
+        "mean_probability": 0.00024871097679467723,
+        "maximum_absolute_probability": 0.004356046538120106,
+        "statistical_significance": "NOT_ESTABLISHED; raw covariance/confidence metadata absent"
+      },
+      "unfitted_transferred_psd_against_digitized": {
+        "rms_probability": 0.0245418487083198,
+        "mean_probability": 0.011719415548543308,
+        "maximum_absolute_probability": 0.0721887055711834,
+        "statistical_significance": "NOT_ESTABLISHED; raw covariance/confidence metadata absent"
+      },
+      "max_relative_grid_change": 4.3738023425277106e-08,
+      "cut_components": [],
+      "laser_model_assumption": "Explicit Lorentzian white-frequency simplification, Di Domenico white case and Zhang Eq. 3; short-term linewidth alone does not establish a complete laser PSD",
+      "missing_inputs": [
+        "colored laser PSD",
+        "full residual beat statistics; Fig. 3 labels the tested offsets, not a tracking-error PSD"
+      ],
+      "validation_type": "Conditional Gaussian/Lorentzian source-model comparison; not apparatus-specific PSD validation"
+    },
+    {
+      "curve": "zhang_1b_left",
+      "points": 9,
+      "csv": "results/mp_phase/zhang_1b_left_comparison.csv",
+      "total_length_km": 403,
+      "paper_model_against_digitized": {
+        "rms_probability": 0.0027875514914087124,
+        "mean_probability": -0.0023523843008389253,
+        "maximum_absolute_probability": 0.005200152010028047,
+        "statistical_significance": "NOT_ESTABLISHED; raw covariance/confidence metadata absent"
+      },
+      "unfitted_transferred_psd_against_digitized": {
+        "rms_probability": 0.002787620283528553,
+        "mean_probability": -0.0023524537122472686,
+        "maximum_absolute_probability": 0.005200302586303496,
+        "statistical_significance": "NOT_ESTABLISHED; raw covariance/confidence metadata absent"
+      },
+      "max_relative_grid_change": 5.060790697619666e-08,
+      "cut_components": [],
+      "laser_model_assumption": "Explicit equal independent Lorentzian white-frequency lasers as in Appendix B",
+      "missing_inputs": [
+        "residual frequency estimator statistics; Eq. 3 omits them",
+        "measured differential fiber PSD for this apparatus"
+      ],
+      "validation_type": "Conditional Gaussian/Lorentzian source-model comparison; not apparatus-specific PSD validation"
+    },
+    {
+      "curve": "zhang_1b_right",
+      "points": 240,
+      "csv": "results/mp_phase/zhang_1b_right_comparison.csv",
+      "total_length_km": 403,
+      "paper_model_against_digitized": {
+        "rms_probability": 0.00977560734822343,
+        "mean_probability": 0.0016175354279279095,
+        "maximum_absolute_probability": 0.05584046843258195,
+        "statistical_significance": "NOT_ESTABLISHED; raw covariance/confidence metadata absent"
+      },
+      "unfitted_transferred_psd_against_digitized": {
+        "rms_probability": 0.04515832580592823,
+        "mean_probability": 0.029626706409485764,
+        "maximum_absolute_probability": 0.10135393758357114,
+        "statistical_significance": "NOT_ESTABLISHED; raw covariance/confidence metadata absent"
+      },
+      "max_relative_grid_change": 5.692424537295793e-07,
+      "cut_components": [],
+      "laser_model_assumption": "Explicit equal independent Lorentzian white-frequency lasers as in Appendix B",
+      "missing_inputs": [
+        "residual frequency estimator statistics; Eq. 3 omits them",
+        "measured differential fiber PSD for this apparatus"
+      ],
+      "validation_type": "Conditional Gaussian/Lorentzian source-model comparison; not apparatus-specific PSD validation"
+    }
+  ],
+  "blocked_curves": [
+    {
+      "curve": "zhu_6a_bin_0",
+      "csv": "sources/data/mp_phase/digitized/zhu_6a_bin_0.csv",
+      "points": 4,
+      "gap_bin": [
+        63,
+        500
+      ],
+      "status": "NO_PREDICTION",
+      "missing_inputs": [
+        "residual of frequency estimate during strong/QKD frames",
+        "within-bin distribution of pair intervals in Fig. 6(a)",
+        "a fully specified residual phase-to-X-error/selection model for these strong-reference bins"
+      ]
+    },
+    {
+      "curve": "zhu_6a_bin_1",
+      "csv": "sources/data/mp_phase/digitized/zhu_6a_bin_1.csv",
+      "points": 4,
+      "gap_bin": [
+        500,
+        1000
+      ],
+      "status": "NO_PREDICTION",
+      "missing_inputs": [
+        "residual of frequency estimate during strong/QKD frames",
+        "within-bin distribution of pair intervals in Fig. 6(a)",
+        "a fully specified residual phase-to-X-error/selection model for these strong-reference bins"
+      ]
+    },
+    {
+      "curve": "zhu_6a_bin_2",
+      "csv": "sources/data/mp_phase/digitized/zhu_6a_bin_2.csv",
+      "points": 4,
+      "gap_bin": [
+        1000,
+        1500
+      ],
+      "status": "NO_PREDICTION",
+      "missing_inputs": [
+        "residual of frequency estimate during strong/QKD frames",
+        "within-bin distribution of pair intervals in Fig. 6(a)",
+        "a fully specified residual phase-to-X-error/selection model for these strong-reference bins"
+      ]
+    },
+    {
+      "curve": "zhu_6a_bin_3",
+      "csv": "sources/data/mp_phase/digitized/zhu_6a_bin_3.csv",
+      "points": 4,
+      "gap_bin": [
+        1500,
+        2000
+      ],
+      "status": "NO_PREDICTION",
+      "missing_inputs": [
+        "residual of frequency estimate during strong/QKD frames",
+        "within-bin distribution of pair intervals in Fig. 6(a)",
+        "a fully specified residual phase-to-X-error/selection model for these strong-reference bins"
+      ]
+    },
+    {
+      "curve": "zhu_6a_bin_4",
+      "csv": "sources/data/mp_phase/digitized/zhu_6a_bin_4.csv",
+      "points": 4,
+      "gap_bin": [
+        2000,
+        2500
+      ],
+      "status": "NO_PREDICTION",
+      "missing_inputs": [
+        "residual of frequency estimate during strong/QKD frames",
+        "within-bin distribution of pair intervals in Fig. 6(a)",
+        "a fully specified residual phase-to-X-error/selection model for these strong-reference bins"
+      ]
+    },
+    {
+      "curve": "zhu_6a_bin_5",
+      "csv": "sources/data/mp_phase/digitized/zhu_6a_bin_5.csv",
+      "points": 4,
+      "gap_bin": [
+        2500,
+        3000
+      ],
+      "status": "NO_PREDICTION",
+      "missing_inputs": [
+        "residual of frequency estimate during strong/QKD frames",
+        "within-bin distribution of pair intervals in Fig. 6(a)",
+        "a fully specified residual phase-to-X-error/selection model for these strong-reference bins"
+      ]
+    }
+  ],
+  "discrete_observed_averages": {
+    "strong": {
+      "raw_x_error": 0.28784858395172963,
+      "pair_count": 87829739,
+      "error_pair_count": 25281666,
+      "source": "Table IV, zhu2023; no synthetic bin midpoint or within-bin distribution"
+    },
+    "qkd": {
+      "raw_x_error": 0.30783303730017764,
+      "pair_count": 506700,
+      "error_pair_count": 155979,
+      "source": "Table IV, zhu2023; no synthetic bin midpoint or within-bin distribution"
+    }
+  },
+  "tf_unchanged": {
+    "file_count": 40,
+    "changed": []
+  },
+  "runtime_s": 20.419351413002005,
+  "source_inputs": "sources/data/mp_phase/comparison_inputs.json",
+  "digitization": "sources/data/mp_phase/digitized/digitization.json",
+  "no_parameter_fitting": true,
+  "quick_tests": {
+    "command": "python -m unittest discover -s tests -v",
+    "exit_code": 0,
+    "runtime_s": 4.449574225000106,
+    "log": "results/mp_phase/quick_tests.log"
+  },
+  "full_tests": {
+    "command": "TFQKD_FULL_TESTS=1 python -m unittest discover -s tests -v",
+    "exit_code": 0,
+    "runtime_s": 9.130333327000699,
+    "log": "results/mp_phase/full_tests.log"
+  },
+  "tf_regression": {
+    "scope": "Unchanged Table I fast/reference regression, existing scenario_calibration function",
+    "fast_points": 4097,
+    "reference_points": 65537,
+    "max_relative_errors": {
+      "variance": 5.1002731348726016e-05,
+      "tau": 1.4839666608756907e-05,
+      "key": 1.1595976503353533e-05
+    },
+    "tolerances": {
+      "variance": 0.0001,
+      "tau": 0.0001,
+      "key": 0.001
+    },
+    "passed": true,
+    "scenarios": [
+      {
+        "scenario": "1",
+        "reference_tau_s": 0.0007215008266196752,
+        "reference_variances_rad2": [
+          0.0002538726083392722,
+          0.00041735687544377137,
+          0.1019595230815382,
+          40.02871819006617,
+          2152.0973901482716,
+          0.040000000000000015
+        ],
+        "times_s": [
+          1e-05,
+          0.0001,
+          0.001,
+          0.01,
+          0.1,
+          0.0007215008266196752
+        ],
+        "reference_keys_bps": [
+          33163.7588735179,
+          57716.80780251328
+        ],
+        "rows": [
+          {
+            "points": 4097,
+            "variance_max_relative": 4.011582808116643e-05,
+            "tau_relative": 1.3949584578343277e-05,
+            "key_max_relative": 8.10320036936929e-06,
+            "tau_q_s": 0.0007214907619828709,
+            "variance_rad2": 0.04,
+            "key_bps": [
+              33163.49014093475,
+              57716.34011165497
+            ],
+            "status": "threshold"
+          }
+        ]
+      },
+      {
+        "scenario": "2",
+        "reference_tau_s": 0.1,
+        "reference_variances_rad2": [
+          0.0012539439414960983,
+          0.001875251821390045,
+          0.001993551484566065,
+          0.0022014753457141,
+          0.004096292605541473,
+          0.004096292605541473
+        ],
+        "times_s": [
+          1e-05,
+          0.0001,
+          0.001,
+          0.01,
+          0.1,
+          0.1
+        ],
+        "reference_keys_bps": [
+          88382.65621482844,
+          153042.49244446805
+        ],
+        "rows": [
+          {
+            "points": 4097,
+            "variance_max_relative": 7.801781721106238e-06,
+            "tau_relative": 0.0,
+            "key_max_relative": 1.1032913704855929e-07,
+            "tau_q_s": 0.1,
+            "variance_rad2": 0.004096324563922248,
+            "key_bps": [
+              88382.64646364625,
+              153042.4767847431
+            ],
+            "status": "capped"
+          }
+        ]
+      },
+      {
+        "scenario": "3",
+        "reference_tau_s": 4.826420399480876e-05,
+        "reference_variances_rad2": [
+          0.0058507891761334484,
+          0.1178031120577053,
+          0.3288397737784395,
+          0.49468870605356424,
+          0.6567085259366103,
+          0.04
+        ],
+        "times_s": [
+          1e-05,
+          0.0001,
+          0.001,
+          0.01,
+          0.1,
+          4.826420399480876e-05
+        ],
+        "reference_keys_bps": [
+          3440.3769512897748,
+          5965.914464177066
+        ],
+        "rows": [
+          {
+            "points": 4097,
+            "variance_max_relative": 2.5787967776302878e-05,
+            "tau_relative": 1.2155640275790525e-05,
+            "key_max_relative": 1.1595976503353533e-05,
+            "tau_q_s": 4.8263617312506805e-05,
+            "variance_rad2": 0.04000000000000001,
+            "key_bps": [
+              3440.3370567594848,
+              5965.845283573119
+            ],
+            "status": "threshold"
+          }
+        ]
+      },
+      {
+        "scenario": "4",
+        "reference_tau_s": 0.0007055827876353868,
+        "reference_variances_rad2": [
+          0.0018232643060416792,
+          0.0024523567851648044,
+          0.10524272222909405,
+          40.52703299675844,
+          2178.7827274149095,
+          0.04000000000000001
+        ],
+        "times_s": [
+          1e-05,
+          0.0001,
+          0.001,
+          0.01,
+          0.1,
+          0.0007055827876353868
+        ],
+        "reference_keys_bps": [
+          30911.979066649186,
+          53604.074681678096
+        ],
+        "rows": [
+          {
+            "points": 4097,
+            "variance_max_relative": 5.1002731348726016e-05,
+            "tau_relative": 1.4839666608756907e-05,
+            "key_max_relative": 8.700696218499893e-06,
+            "tau_q_s": 0.0007055723170220534,
+            "variance_rad2": 0.040000000000000015,
+            "key_bps": [
+              30911.710110909822,
+              53603.60828890822
+            ],
+            "status": "threshold"
+          }
+        ]
+      },
+      {
+        "scenario": "5",
+        "reference_tau_s": 0.1,
+        "reference_variances_rad2": [
+          0.002823336523417352,
+          0.003908844054683624,
+          0.00401675530003146,
+          0.004216450485438573,
+          0.006124380915706147,
+          0.006124380915706147
+        ],
+        "times_s": [
+          1e-05,
+          0.0001,
+          0.001,
+          0.01,
+          0.1,
+          0.1
+        ],
+        "reference_keys_bps": [
+          82880.90112869204,
+          143123.93157613772
+        ],
+        "rows": [
+          {
+            "points": 4097,
+            "variance_max_relative": 3.4566310849415416e-05,
+            "tau_relative": 0.0,
+            "key_max_relative": 4.538324654967951e-07,
+            "tau_q_s": 0.1,
+            "variance_rad2": 0.006124512840132188,
+            "key_bps": [
+              82880.86351464834,
+              143123.87091359877
+            ],
+            "status": "capped"
+          }
+        ]
+      },
+      {
+        "scenario": "6",
+        "reference_tau_s": 0.001142905737633146,
+        "reference_variances_rad2": [
+          0.0018022972486650415,
+          0.002356782618160918,
+          0.028062922504454173,
+          10.133546852786353,
+          544.6981634564679,
+          0.040000000000000015
+        ],
+        "times_s": [
+          1e-05,
+          0.0001,
+          0.001,
+          0.01,
+          0.1,
+          0.001142905737633146
+        ],
+        "reference_keys_bps": [
+          39852.81311830898,
+          69108.26272438868
+        ],
+        "rows": [
+          {
+            "points": 4097,
+            "variance_max_relative": 3.7201210841608656e-05,
+            "tau_relative": 1.3889037174918961e-05,
+            "key_max_relative": 6.4814517115596715e-06,
+            "tau_q_s": 0.0011428898637728686,
+            "variance_rad2": 0.04000000000000001,
+            "key_bps": [
+              39852.554814225194,
+              69107.81480252097
+            ],
+            "status": "threshold"
+          }
+        ]
+      },
+      {
+        "scenario": "7",
+        "reference_tau_s": 0.1,
+        "reference_variances_rad2": [
+          0.002802315316549332,
+          0.003899475878575508,
+          0.003998968100087538,
+          0.004091966607422753,
+          0.0052626229878340244,
+          0.0052626229878340244
+        ],
+        "times_s": [
+          1e-05,
+          0.0001,
+          0.001,
+          0.01,
+          0.1,
+          0.1
+        ],
+        "reference_keys_bps": [
+          83127.15692728345,
+          143520.73410547446
+        ],
+        "rows": [
+          {
+            "points": 4097,
+            "variance_max_relative": 7.197486714183299e-06,
+            "tau_relative": 0.0,
+            "key_max_relative": 1.3050240754708398e-07,
+            "tau_q_s": 0.1,
+            "variance_rad2": 0.005262660865493061,
+            "key_bps": [
+              83127.14607898933,
+              143520.71664116686
+            ],
+            "status": "capped"
+          }
+        ]
+      }
+    ],
+    "runtime_s": 0.05506652199983364
+  },
+  "example_run": {
+    "command": "python -m tfqkd.mp_phase examples/mode_pairing/phase.toml --output results/mp_phase/example.json",
+    "exit_code": 0,
+    "runtime_s": 0.5158365440001944
+  },
+  "test_counts": {
+    "quick_executed": 102,
+    "quick_full_only_skipped": 6,
+    "full_executed": 108,
+    "new_mp_tests": 12
+  },
+  "tracking_example": {
+    "variance_rad2": [
+      0.010699142633732093,
+      0.25798567846192205,
+      10.25677440922875
+    ],
+    "components_rad2": {
+      "laser_A.r3": [
+        0.0009824495145241345,
+        0.07097427424137132,
+        4.370547691652932
+      ],
+      "laser_A.r2": [
+        0.004349595510135598,
+        0.05627105764317849,
+        0.587848254456043
+      ],
+      "laser_B.r3": [
+        0.0009824495145241345,
+        0.07097427424137132,
+        4.370547691652932
+      ],
+      "laser_B.r2": [
+        0.004349595510135598,
+        0.05627105764317849,
+        0.587848254456043
+      ],
+      "fiber_A": [
+        1.752629220631291e-05,
+        0.0017475073464112267,
+        0.16999125850539978
+      ],
+      "fiber_B": [
+        1.752629220631291e-05,
+        0.0017475073464112267,
+        0.16999125850539978
+      ]
+    },
+    "lower_bounds_hz": {
+      "laser_A.r3": 100.0,
+      "laser_A.r2": 0.0,
+      "laser_B.r3": 100.0,
+      "laser_B.r2": 0.0,
+      "fiber_A": 0.0,
+      "fiber_B": 0.0
+    },
+    "cut_components": [
+      "laser_A.r3",
+      "laser_B.r3"
+    ],
+    "upper_hz": 100000000.0,
+    "T_track_s": 0.01,
+    "tracking_band_sensitivity": {
+      "shorter_x10": {
+        "variance_rad2": [
+          0.010153728495520336,
+          0.20344808321044414,
+          4.840948025845911
+        ],
+        "components_rad2": {
+          "laser_A.r3": [
+            0.0007097424454182563,
+            0.043705476615632365,
+            1.6626344999615126
+          ],
+          "laser_A.r2": [
+            0.004349595510135598,
+            0.05627105764317849,
+            0.587848254456043
+          ],
+          "laser_B.r3": [
+            0.0007097424454182563,
+            0.043705476615632365,
+            1.6626344999615126
+          ],
+          "laser_B.r2": [
+            0.004349595510135598,
+            0.05627105764317849,
+            0.587848254456043
+          ],
+          "fiber_A": [
+            1.752629220631291e-05,
+            0.0017475073464112267,
+            0.16999125850539978
+          ],
+          "fiber_B": [
+            1.752629220631291e-05,
+            0.0017475073464112267,
+            0.16999125850539978
+          ]
+        },
+        "lower_bounds_hz": {
+          "laser_A.r3": 1000.0,
+          "laser_A.r2": 0.0,
+          "laser_B.r3": 1000.0,
+          "laser_B.r2": 0.0,
+          "fiber_A": 0.0,
+          "fiber_B": 0.0
+        },
+        "cut_components": [
+          "laser_A.r3",
+          "laser_B.r3"
+        ],
+        "upper_hz": 100000000.0,
+        "T_track_s": 0.001
+      },
+      "nominal": {
+        "variance_rad2": [
+          0.010699142633732093,
+          0.25798567846192205,
+          10.25677440922875
+        ],
+        "components_rad2": {
+          "laser_A.r3": [
+            0.0009824495145241345,
+            0.07097427424137132,
+            4.370547691652932
+          ],
+          "laser_A.r2": [
+            0.004349595510135598,
+            0.05627105764317849,
+            0.587848254456043
+          ],
+          "laser_B.r3": [
+            0.0009824495145241345,
+            0.07097427424137132,
+            4.370547691652932
+          ],
+          "laser_B.r2": [
+            0.004349595510135598,
+            0.05627105764317849,
+            0.587848254456043
+          ],
+          "fiber_A": [
+            1.752629220631291e-05,
+            0.0017475073464112267,
+            0.16999125850539978
+          ],
+          "fiber_B": [
+            1.752629220631291e-05,
+            0.0017475073464112267,
+            0.16999125850539978
+          ]
+        },
+        "lower_bounds_hz": {
+          "laser_A.r3": 100.0,
+          "laser_A.r2": 0.0,
+          "laser_B.r3": 100.0,
+          "laser_B.r2": 0.0,
+          "fiber_A": 0.0,
+          "fiber_B": 0.0
+        },
+        "cut_components": [
+          "laser_A.r3",
+          "laser_B.r3"
+        ],
+        "upper_hz": 100000000.0,
+        "T_track_s": 0.01
+      },
+      "longer_x10": {
+        "variance_rad2": [
+          0.011244557153826194,
+          0.31252709228309766,
+          15.71053393437654
+        ],
+        "components_rad2": {
+          "laser_A.r3": [
+            0.0012551567745711849,
+            0.09824498115195913,
+            7.097427454226827
+          ],
+          "laser_A.r2": [
+            0.004349595510135598,
+            0.05627105764317849,
+            0.587848254456043
+          ],
+          "laser_B.r3": [
+            0.0012551567745711849,
+            0.09824498115195913,
+            7.097427454226827
+          ],
+          "laser_B.r2": [
+            0.004349595510135598,
+            0.05627105764317849,
+            0.587848254456043
+          ],
+          "fiber_A": [
+            1.752629220631291e-05,
+            0.0017475073464112267,
+            0.16999125850539978
+          ],
+          "fiber_B": [
+            1.752629220631291e-05,
+            0.0017475073464112267,
+            0.16999125850539978
+          ]
+        },
+        "lower_bounds_hz": {
+          "laser_A.r3": 10.0,
+          "laser_A.r2": 0.0,
+          "laser_B.r3": 10.0,
+          "laser_B.r2": 0.0,
+          "fiber_A": 0.0,
+          "fiber_B": 0.0
+        },
+        "cut_components": [
+          "laser_A.r3",
+          "laser_B.r3"
+        ],
+        "upper_hz": 100000000.0,
+        "T_track_s": 0.1
+      }
+    },
+    "scope": "Phase increments only; no key-rate formula; independent one-pass components",
+    "low_cutoff_convention": "1/T_track only for divergent components; no frequency-tracking model"
+  },
+  "tracking_example_relative_change_percent": {
+    "shorter_x10": [
+      -5.09773686437438,
+      -21.139776276196475,
+      -52.802432492907656
+    ],
+    "longer_x10": [
+      5.097740433654252,
+      21.141256424133537,
+      53.17226749416126
+    ]
+  },
+  "decisions": [
+    "Approved band convention 1/T_track for divergent increment components only; not a tracking model.",
+    "Numerical log grid, explicit removable zero endpoint, finite upper bound, interval batching and tolerances are calculation choices, not apparatus coefficients.",
+    "Zhou linewidth is represented by the explicitly declared Lorentzian white-frequency approximation; short-term linewidth does not determine a complete PSD.",
+    "Zhang comparison uses the source simplified model without estimator-residual noise; its absence is conditional idealization, not a measured zero.",
+    "Vector digitization samples every fifteenth Zhou trace vertex and all selected Zhang/Zhu marker centers; RMS uses selected published coordinates, not event probabilities.",
+    "Zhu bin averages are not assigned artificial midpoint intervals; predictions remain blocked."
+  ],
+  "diagnostics_retained": [
+    {
+      "name": "initial_white_infinite_band_comparison",
+      "relative_discrepancy": 0.00010411,
+      "initial_tolerance": 0.0001,
+      "explanation": "The original assertion compared a finite upper-band integral with the infinite-band white-noise law. The reference was corrected to the exact finite-band Di Domenico Eq.4; no coefficient, PSD normalization or core result was changed."
+    },
+    {
+      "name": "cutoff_below_numerical_floor",
+      "explanation": "An explicitly requested cutoff below the usual positive grid floor must have logarithmic nodes down to that cutoff. New-module quadrature now covers the full band; a regression test compares different numerical floors."
+    }
+  ],
+  "source_links": {
+    "bertaina2024": "https://arxiv.org/abs/2310.08621",
+    "didomenico2010": "https://doi.org/10.1364/AO.49.004801",
+    "zeng2022": "https://doi.org/10.1038/s41467-022-31534-7",
+    "zhou2023_async": "https://arxiv.org/abs/2212.14190v4",
+    "zhang2025": "https://doi.org/10.1103/PhysRevX.15.021037",
+    "zhu2023": "https://arxiv.org/abs/2208.05649v2"
+  }
+}

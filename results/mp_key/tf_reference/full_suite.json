@@ -1,0 +1,78 @@
+{
+  "grid_mode": "reference",
+  "reference_points": 65537,
+  "checks": [
+    {
+      "name": "T1_T4",
+      "command": [
+        "/usr/bin/python",
+        "scripts/run/run_stage1.py",
+        "--config",
+        "results/mp_key/tf_reference/full/config_reference.toml",
+        "--output-dir",
+        "results/mp_key/tf_reference/full"
+      ],
+      "exit_code": 0,
+      "seconds": 19.68425620599737
+    },
+    {
+      "name": "Figure3",
+      "command": [
+        "/usr/bin/python",
+        "scripts/run/run_keyrates.py",
+        "--config",
+        "results/mp_key/tf_reference/full/config_reference.toml",
+        "--outdir",
+        "results/mp_key/tf_reference/full"
+      ],
+      "exit_code": 0,
+      "seconds": 5.65975734499807
+    },
+    {
+      "name": "author_keyrates",
+      "command": [
+        "/usr/bin/python",
+        "scripts/validate/validate_keyrates.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.48264979400119046
+    },
+    {
+      "name": "T6_T7",
+      "command": [
+        "/usr/bin/python",
+        "scripts/run/run_stage2_checks.py",
+        "--config",
+        "results/mp_key/tf_reference/full/config_reference.toml",
+        "--output-dir",
+        "results/mp_key/tf_reference/full"
+      ],
+      "exit_code": 0,
+      "seconds": 1.4744713550026063
+    },
+    {
+      "name": "T5",
+      "command": [
+        "/usr/bin/python",
+        "scripts/run/run_classical.py",
+        "--config",
+        "results/mp_key/tf_reference/full/config_reference.toml",
+        "--output-dir",
+        "results/mp_key/tf_reference/full"
+      ],
+      "exit_code": 0,
+      "seconds": 714.290573112994
+    },
+    {
+      "name": "former_acceptance_assertions",
+      "exit_code": 0,
+      "T4": "accepted discrepancy; unchanged validation limit"
+    }
+  ],
+  "passed": true,
+  "versions": {
+    "python": "3.14.7",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  }
+}

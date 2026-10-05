@@ -1,8 +1,7 @@
-# Part C: reports, sensitivity and installation comparisons
+# Reports, sensitivity and installation comparisons
 
-The validated physics and part A numerical core are unchanged. Existing four-rate
-ceilings and conditional inverse requirements are included directly, with no new
-key-rate or noise model.
+Reports summarize key rate, noise contributions, sensitivity, and conditional
+equipment requirements for the supplied installation.
 
 ## One installation
 
@@ -33,15 +32,12 @@ Classical phase-detection noise of the round-trip beat measurement is absent.
 optimistic and the comparison as biased in favor of classical compensation.
 No new detector coefficient or noise floor is inserted.
 
-`UNKNOWNS.md` now separates **Research-stage assumptions**, **Tool limitations**
-and **Validation limits**. Equal-arm research geometry, independent stabilized
-research lasers and the old actuator scans are not imposed on user inputs.
-Publication-specific T4/B6 RMS discrepancies stay in validation reports; they
-are not printed as the Tool limitations section of a user run.
+See [model limitations](UNKNOWNS.md) and [validation](VALIDATION.md)
+for assumptions and published-experiment comparisons.
 
 ## What “improved by two” means
 
-These transformations were explicitly accepted by the user as engineering
+These transformations are engineering
 what-if choices, not publication-derived equipment upgrades:
 
 | Quantity | Applied change |
@@ -55,7 +51,7 @@ what-if choices, not publication-derived equipment upgrades:
 | Classical actuator omega_a | Double the pole frequency; the existing stability/g search is recalculated |
 
 Cutoffs, wavelengths, n, protocol settings and operation thresholds/times have
-no approved improvement direction and are not ranked. Inactive terms are not
+no defined improvement direction and are not ranked. Inactive terms are not
 ranked. A supplied explicit zero has no factor-two change. **Unmeasured amplitudes
 are never ranked as zero-noise sensitivity**: their inverse requirement is shown
 instead. No effect on inactive parameters is represented as a practical upgrade.
@@ -117,24 +113,12 @@ gain calculations remain vectorized; nested process pools are avoided. Use
 `workers=1` for environments that cannot create worker processes. Python API
 callers creating pools need the standard `if __name__ == '__main__'` guard.
 
-## Actuator CSV phase gate correction
+## Actuator CSV fit thresholds
 
-`[fit].maximum_rms_phase_deg` defaults to **5.0 degrees**, explicitly approved
+`[fit].maximum_rms_phase_deg` defaults to **5.0 degrees**, specified
 as an engineering fit criterion, not a value from a source. Override it globally
 or with `actuator.response.maximum_rms_phase_deg`. The magnitude/PSD gate remains
 0.5 dex. Output records the effective phase gate and whether the response metadata
 overrode it. The two gates do not establish apparatus calibration uncertainty.
 
-## Reproduction and validation
-
-```bash
-python scripts/validate/validate_stage3_c.py --quick
-python scripts/validate/validate_stage3_c.py --outputs --regression
-python scripts/validate/validate_stage3_c.py --full
-```
-
-Results are in `results/stage3_c/`; the full suite keeps the accepted T4 discrepancy
-as a validation limit, never as spectral agreement. The reference index and
-source links remain documented in [UNIVERSAL_INPUTS.md](UNIVERSAL_INPUTS.md).
-This part implements scientific reports and comparisons; the local browser
-interface and final English user guide remain part D.
+See [validation](VALIDATION.md) for numerical checks and discrepancies.

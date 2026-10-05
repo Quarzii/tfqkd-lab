@@ -3,10 +3,8 @@
 The instrument has no equipment or route preset library. Every apparatus value
 comes from your explicit input or an accepted CSV fit. Published equipment
 examples are demonstration inputs, not values inherited by another laboratory.
-The spectrum, integration, classical residual and protocol equations in the
-validated core are unchanged.
 
-The observation paths added after the audit are documented in
+Measured-input modes are documented in
 [MEASURED_INPUTS.md](MEASURED_INPUTS.md): residual sigma with a measured window,
 direct CSV without fitting, complete arm losses and two detector projections.
 These paths have mode-specific mandatory inputs and omit predictions not
@@ -23,10 +21,10 @@ python -m tfqkd.lab_ceiling SETUP.toml
 python -m tfqkd.lab_uncertainty SETUP.toml --workers 1
 ```
 
-The first command produces JSON, Markdown, standalone HTML, and two scientific
-plots. Part C includes ranked sensitivity, the existing conditional requirements,
-the four-rate ceiling, loop recommendation and variance contributions. The local
-browser interface and final user guide remain part D. See [PART_C_OUTPUTS.md](PART_C_OUTPUTS.md).
+The first command produces JSON, Markdown, standalone HTML, and scientific
+plots. Reports include sensitivity, conditional equipment requirements,
+compensation comparisons, and noise contributions. See [report details](OUTPUTS.md)
+and the [user guide](USER_GUIDE.md) for the browser interface.
 
 ## What must be supplied
 
@@ -64,15 +62,15 @@ protocol. Overhead is supplied by `operation.tau_ps_s`; a duplicate
 
 `laser.model`, arrangement/compensation and protocol-name defaults are model
 choices, not measured equipment properties. `configs/lab_defaults.toml` contains only
-these choices, numerical grid/search settings, the approved fit gate and inverse
+these choices, numerical grid/search settings, the configured fit gate and inverse
 loss target. The original `configs/config.toml` serves historical core validation only;
-the resolver does not import its apparatus/protocol values. The optional Python
+laboratory calculations do not import its apparatus/protocol values. The optional Python
 `core_config` argument transfers only computational settings and validation
 scenario labels, never physical values.
 
 ### The reference index exception
 
-If `physics.n` is omitted, the approved reference is **1.4682**, the typical
+If `physics.n` is omitted, the reference is **1.4682**, the typical
 effective **group index at 1550 nm** in Corning SMF-28 Ultra PI-1424-AEN,
 July 2025, **page 2, Performance Characterizations**. It is appropriate as a
 reference propagation-delay input, not an identification of every fiber or a
@@ -118,10 +116,10 @@ word “round-trip”: the correlation assumptions matter (Bertaina Eq.5).
 Uncalibrated SSB dBc/Hz is rejected, rather than treated as phase PSD.
 
 Fits use exactly F1 or Eq.6 with positive coefficients and equal log-residual
-weights, the B6 numerical method previously accepted by the user. The local
+weights, a log-space fitting method. The local
 finite-difference Jacobian SVD checks identifiability. Rank deficiency or
 unidentified coefficient uncertainty rejects the fit. RMS log residual must
-not exceed **0.5 dex**, the approved engineering gate, configurable through
+not exceed **0.5 dex**, the engineering gate, configurable through
 `[fit].maximum_rms_log10_residual` or that spectrum's setting of the same name.
 This gate is not a source-derived statistical confidence test. Fit coefficients,
 conditional local SE, residuals and normalization are retained in provenance.
@@ -132,7 +130,7 @@ The five B6 curves and exact digitization provenance are in `examples/b6/`.
 `*.json` contains the CSV specification; `*.csv` contains normalized positive
 one-sided single-pass phase PSD. Pixel coordinates, image anchors and source
 normalization evidence remain in `results/stage3_b_amendments/b6/` and
-`examples/b6/digitization_provenance.json`. Jiang passes the approved gate;
+`examples/b6/digitization_provenance.json`. Jiang passes the configured gate;
 NF6700/Droste fail residual checks and Orbits/Snigirev fail identifiability
 (Orbits also exceeds the residual gate). None is an equipment selector.
 
@@ -147,8 +145,8 @@ file = "response.csv"
 frequency_unit = "Hz"
 magnitude_unit = "linear" # or dB; amplitude dB uses 20 log10
 phase_unit = "deg"
-maximum_rms_phase_deg = 5.0 # user-approved engineering default; change as needed
-maximum_rms_log_magnitude_dex = 0.5 # approved magnitude residual gate, configurable
+maximum_rms_phase_deg = 5.0 # configurable engineering default; change as needed
+maximum_rms_log_magnitude_dex = 0.5 # configurable magnitude residual gate, configurable
 ```
 
 The user-adopted model has unit DC gain `1/(1+s/omega_a)`. The fit minimizes
@@ -156,7 +154,7 @@ the concatenated log amplitude residual and wrapped phase residual in radians,
 with equal dimensionless weights. This is an explicitly adopted engineering
 fit, not a Williams equipment-identification formula. It reports omega_a,
 conditional local SE and separate magnitude/phase residuals. Either excessive
-residual or unresolved pole causes refusal. The phase gate defaults to **5 degrees**, explicitly approved as an engineering
+residual or unresolved pole causes refusal. The phase gate defaults to **5 degrees**, specified as an engineering
 criterion, not a source value or apparatus calibration tolerance. Override it
 through `[fit].maximum_rms_phase_deg` or the response metadata field of that name. Magnitude calibration
 and the unit-DC convention must be appropriate to the measured tract.
@@ -208,7 +206,7 @@ For H<1.1 the report states that even ideal fiber stabilization offers less
 than a 10% gain under those inputs. With unknown amplitudes, this comparison is
 conditional on optimistic inputs, not a guaranteed prediction for the apparatus.
 
-Classical g obeys the approved safety fraction (default 0.5) times the numerically
+Classical g obeys the configured safety fraction (default 0.5) times the numerically
 found g_crit. Manual g is optional for the selected scheme; g≥g_crit is rejected.
 The four-rate ceiling always optimizes its classical comparison, even when the
 main selected calculation uses a manual g. Margin is `1-g/g_crit`, not degrees
@@ -223,7 +221,7 @@ does not declare that no operating window exists.
 
 ## User-supplied ranges
 
-The accepted B range layer remains available. A range uses a supported dotted
+Input ranges are supported. A range uses a supported dotted
 parameter and explicit `minimum`, `maximum`, `sources`. The program records
 your source references without claiming it independently verifies them. No
 percentage range is added by the instrument or derived from a conditional fit SE.
@@ -244,7 +242,7 @@ cases, inverse-search evaluations and spectral gain candidates separately.
 
 ## Applicability and sources
 
-The unchanged core uses the same PSD for both independent lasers; arbitrary
+The TF-QKD calculation uses the same PSD for both independent lasers; arbitrary
 different laser spectra require a separately specified extension. Protocol
 loss equalizes the shorter arm to the longer arm: `2 max(L_A,L_B) alpha`
 (Bertaina Sec.IV, authors' `calc_sigma_tau_loss`). Actual physical lengths enter
@@ -252,9 +250,8 @@ fiber noise and delay. The classical residual assumes uniform, uncorrelated
 spatial noise (Williams A8/A11); applying it to the common-laser geometry with
 the original K is the already documented engineering composition.
 
-Each user report prints only **Tool limitations** from [UNKNOWNS.md](UNKNOWNS.md).
-Research-stage assumptions and publication-validation limits are separate sections
-there and are not copied into user reports. Classical measurement-detection noise
+See [model limitations](UNKNOWNS.md) and [validation](VALIDATION.md)
+for assumptions and discrepancies. Classical measurement-detection noise
 is absent: R_classical and its realized ceiling share are optimistic, and the
 comparison is biased in favor of classical compensation.
 
@@ -275,8 +272,6 @@ comparison is biased in favor of classical compensation.
 - [Droste 2013](https://doi.org/10.1103/PhysRevLett.111.110801): Fig.4,Eq.2,
   single-pass intercity-line spectrum.
 
-Further reviewed B6 sources and exclusions remain in B6_SOURCE_AUDIT.md (`../reports/archive/B6_SOURCE_AUDIT.md`; research archive not included in the public snapshot).
+## SNS decoy normalization
 
-## SNS decoy normalization (audit clarification)
-
-`decoy_big`, `decoy_medium`, `decoy_mini` are **total two-user** mean photon numbers, following bertaina2024 Appendix D and QKD.ipynb Cell 23. For symmetric setups, multiply a publication’s per-user decoy intensities by two before input. The core fixes the per-user signal and not-send intensities to `decoy_big/2` and `decoy_mini/2`. Two asymmetric source sets are not represented by this wrapper. This clarification does not change the kernel.
+`decoy_big`, `decoy_medium`, `decoy_mini` are **total two-user** mean photon numbers, following bertaina2024 Appendix D and QKD.ipynb Cell 23. For symmetric setups, multiply a publication’s per-user decoy intensities by two before input. The core fixes the per-user signal and not-send intensities to `decoy_big/2` and `decoy_mini/2`. Two asymmetric source sets are not supported.

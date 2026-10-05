@@ -48,11 +48,8 @@ manifests. They do not carry a new blanket MIT licence over the underlying
 publications or third-party data. Mode-pairing exposure/count inputs cite the
 source table for each experiment in `sources/data/mode_pairing/`.
 
-## Evidence retained
+## Validation records
 
-Small Markdown/JSON records cover the independent implementation, Table I grid
-convergence, the held-out TF comparison, mode-pairing phase analysis and the Zhu
-diagnostics. Local absolute workspace paths have been made relative; numerical
-results have not been changed. Large arrays, reports from each scan, logs and
-the original Git history are deliberately omitted. No unpublished laboratory
-observations are required by the supplied examples.
+Small JSON records support the numerical checks and publication comparisons
+summarized in [validation](docs/VALIDATION.md). The supplied examples require
+no unpublished laboratory observations.

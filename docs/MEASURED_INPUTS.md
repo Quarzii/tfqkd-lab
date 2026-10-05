@@ -1,9 +1,9 @@
-# Measured inputs above the unchanged kernel
+# Measured phase, spectra, losses, and detectors
 
-This wrapper accepts an observed residual phase, a measured spectrum without a
+The tool accepts an observed residual phase, a measured spectrum without a
 fit, complete arm losses, and two separate detector descriptions. It does not
 import Bertaina apparatus parameters into an unspecified installation.
-The protocol remains the existing asymptotic author model.
+Key rates use the asymptotic protocol model.
 
 ## Residual phase observation
 
@@ -14,7 +14,7 @@ Use `[phase] mode="measured"` and explicitly supply all three quantities:
 mode = "measured"
 sigma_phi_rad = 0.104 # rad; Pittaluga Fig.2f at 605 km, NOT a measurement at another length
 tau_s = 0.00002504 # s; Pittaluga Note VI frame duration; conditional comparison window
-tau_ps_s = 0.0 # s; approved comparison idealization, not an apparatus default
+tau_ps_s = 0.0 # s; explicit timing idealization, not an apparatus default
 source = "Pittaluga2021 Fig.2f and Note VI; explicit phase-bound/window assumptions"
 description = "Phase bound from another length, not a same-window measurement."
 ```
@@ -140,19 +140,4 @@ The explicitly supplied dark and background rates are added for the scalar
 spurious-count input (Zhou Supplementary Note3/Table S3). Absence of a background
 field is not a claim that a measured apparatus has zero background.
 
-## Reproducibility
-
-```bash
-python scripts/validate/validate_measured_inputs.py --quick
-python scripts/validate/validate_measured_inputs.py --regression
-python scripts/validate/validate_measured_inputs.py --experiments
-python scripts/validate/validate_measured_inputs.py --full
-python scripts/report/report_measured_inputs.py
-```
-
-The full run retains T1–T7 on the reference grid, including the accepted T4
-validation discrepancy. It is lengthy; ordinary measured-phase runs do not
-execute it. See MEASURED_INPUTS_REPORT.md (`../reports/archive/MEASURED_INPUTS_REPORT.md`; research archive not included in the public snapshot) for executed
-comparisons, missing inputs, assumptions and source locations. The old incorrect
-Zhou phase/length attribution is explicitly withdrawn and archived. Part D is
-deferred.
+See [validation](VALIDATION.md) for numerical checks and discrepancies.

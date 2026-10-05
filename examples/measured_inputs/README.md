@@ -1,6 +1,6 @@
 # Measured-input examples and conditional experiment comparisons
 
-The eight Pittaluga/Zhou TOMLs execute the agreed phase **brackets**, not
+The eight Pittaluga/Zhou TOMLs execute explicit phase **brackets**, not
 same-window phase measurements at each key-rate length. Each file records its
 source and assumptions. Complete arm losses and both detector specifications
 are explicit. Missing intrinsic error and, for Pittaluga, missing fEC use labelled
@@ -13,7 +13,7 @@ reference/quantum equivalence for Zhou, and frame/duty idealization are
 comparison-specific. These are not built-in apparatus defaults.
 
 `regression/*_laser.csv` and `regression/*_line.csv` are **synthetic source-model
-fixtures**, generated with the unchanged Table III equations on65537 points.
+fixtures**, generated with the Table III equations on65537 points.
 They are not digitized experiments. `direct_table3.toml` uses one such F1 laser
 fixture and explicit Table III arm/protocol values to demonstrate direct mode.
 
@@ -22,7 +22,5 @@ python -m tfqkd.lab_run examples/measured_inputs/direct_table3.toml --output res
 python -m tfqkd.lab_run examples/measured_inputs/zhou2023_518.16_phase_bound.toml --output results/my_phase_run
 ```
 
-Executed reports and numeric comparison data are in `results/measured_inputs/`.
-The complete report is MEASURED_INPUTS_REPORT.md (`../../reports/archive/MEASURED_INPUTS_REPORT.md`; research archive not included in the public snapshot).
-Old erroneous phase assignments are preserved, marked withdrawn, in
-`results/audit/withdrawn_phase_attribution/`.
+See [validation](../../docs/VALIDATION.md) for conditional comparisons and
+[measured inputs](../../docs/MEASURED_INPUTS.md) for configuration details.

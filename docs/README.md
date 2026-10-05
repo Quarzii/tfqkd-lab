@@ -1,7 +1,7 @@
 # Documentation
 
 Start with the [user guide](USER_GUIDE.md) to run a calculation and understand
-its result. The [Russian overview](../README.ru.md) covers installation and scope.
+its result. The [Russian overview](../README.md#russian) covers installation and scope.
 
 - [TF-QKD input reference](UNIVERSAL_INPUTS.md): coefficients, units, CSV metadata, and unknown inputs.
 - [Measured inputs](MEASURED_INPUTS.md): residual phase RMS, direct spectra, arm losses, and detectors.

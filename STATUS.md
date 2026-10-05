@@ -26,7 +26,7 @@
 - Code, tests, explicit examples, documentation and small evidence only; fresh Git history.
 - Article PDFs, copied figures, large outputs, logs, credentials and caches are excluded.
 - Original contributions: MIT; Bertaina reference/adaptations: attributed CC BY 4.0.
-- No further model development is scheduled; review the scope before public publication.
+- Published: https://github.com/Quarzii/tfqkd-lab ; no further model development is scheduled.
 
 ## Run
 ```bash
